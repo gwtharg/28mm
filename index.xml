@@ -1,60 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ananke: Testing theme on Walmo Tries Hugo</title>
+    <title>Walmo SDLC Test</title>
     <link>https://gwtharg.github.io/28mm/</link>
-    <description>Recent content in Ananke: Testing theme on Walmo Tries Hugo</description>
+    <description>Recent content on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Tue, 07 Apr 2020 09:35:22 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 13:07:35 +0100</lastBuildDate>
     
 	<atom:link href="https://gwtharg.github.io/28mm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hcy More</title>
-      <link>https://gwtharg.github.io/28mm/docs/hcyb/hcy_more/</link>
-      <pubDate>Tue, 07 Apr 2020 09:35:22 +0100</pubDate>
+      <title>Branching and Merging Strategy</title>
+      <link>https://gwtharg.github.io/28mm/git/branchingstrategy/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/docs/hcyb/hcy_more/</guid>
-      <description>This is the more.md file Will need to look at theme and metadata</description>
+      <guid>https://gwtharg.github.io/28mm/git/branchingstrategy/</guid>
+      <description>Branching and Merging Strategy Most development is done on the internal Github but some code is shared with the external Bitbucket. In order to support this we have the same repo pushed to both GitHub and BitBucket.
+It is best to consider GitHub and BitBucket as simply copies of the same git repository. There is no merging between GitHub and BitBucket, merging is done at the branch level and the same commit history is pushed to both systems.</description>
     </item>
     
     <item>
-      <title>hvm More</title>
-      <link>https://gwtharg.github.io/28mm/docs/hvm/hvm_more/</link>
-      <pubDate>Tue, 07 Apr 2020 09:35:22 +0100</pubDate>
+      <title>TFS Teams</title>
+      <link>https://gwtharg.github.io/28mm/tfs/team_types/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/docs/hvm/hvm_more/</guid>
-      <description>This is the more.md file Will need to look at theme and metadata</description>
-    </item>
-    
-    <item>
-      <title>More</title>
-      <link>https://gwtharg.github.io/28mm/docs/more/</link>
-      <pubDate>Tue, 07 Apr 2020 09:35:22 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/docs/more/</guid>
-      <description>This is the more.md file Will need to look at theme and metadata</description>
-    </item>
-    
-    <item>
-      <title>TFS More Doc</title>
-      <link>https://gwtharg.github.io/28mm/tfs/more/</link>
-      <pubDate>Tue, 07 Apr 2020 09:35:22 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/tfs/more/</guid>
-      <description>This is the more.md file Will need to look at theme and metadata</description>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>https://gwtharg.github.io/28mm/docs/first/</link>
-      <pubDate>Tue, 07 Apr 2020 09:30:11 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/docs/first/</guid>
-      <description>Hugo on github https://gohugo.io/hosting-and-deployment/hosting-on-github/ github paging service https://help.github.com/en/github/working-with-github-pages/about-github-pages GitHub Pages sites shouldn&amp;rsquo;t be used for sensitive transactions like sending passwords or credit card numbers.
-Internal pages maybe differeProhibited uses GitHub Pages is not intended for or allowed to be used as a free web hosting service to run your online business, e-commerce site, or any other website that is primarily directed at either facilitating commercial transactions or providing commercial software as a service (SaaS).</description>
+      <guid>https://gwtharg.github.io/28mm/tfs/team_types/</guid>
+      <description>Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.
+We will run through an example using the IIB Technical Team to guide you through the process.
+Initial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve.</description>
     </item>
     
   </channel>
