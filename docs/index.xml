@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ananke: Testing theme on Walmo Tries Hugo</title>
-    <link>https://gwtharg.github.io/28mm/</link>
-    <description>Recent content in Ananke: Testing theme on Walmo Tries Hugo</description>
+    <title>Docs on Walmo Tries Hugo</title>
+    <link>https://gwtharg.github.io/28mm/docs/</link>
+    <description>Recent content in Docs on Walmo Tries Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Tue, 07 Apr 2020 09:35:22 +0100</lastBuildDate>
     
-	<atom:link href="https://gwtharg.github.io/28mm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gwtharg.github.io/28mm/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -35,15 +35,6 @@
       <pubDate>Tue, 07 Apr 2020 09:35:22 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/docs/more/</guid>
-      <description>This is the more.md file Will need to look at theme and metadata</description>
-    </item>
-    
-    <item>
-      <title>TFS More Doc</title>
-      <link>https://gwtharg.github.io/28mm/tfs/more/</link>
-      <pubDate>Tue, 07 Apr 2020 09:35:22 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/tfs/more/</guid>
       <description>This is the more.md file Will need to look at theme and metadata</description>
     </item>
     
