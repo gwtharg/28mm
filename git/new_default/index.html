@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
 
-    <title>Markdown Notes :: Walmo SDLC Test</title>
+    <title>New Default arch :: Walmo SDLC Test</title>
 
     
     <link href="/28mm/css/nucleus.css?1586798438" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/28mm/markdown/md_notes/">
+  <body class="" data-url="/28mm/git/new_default/">
     <nav id="sidebar" class="">
 
 
@@ -81,7 +81,7 @@
   
     
     <li data-nav-id="/28mm/git/" title="GIT Info" class="dd-item 
-        
+        parent
         
         
         ">
@@ -128,7 +128,7 @@
  
   
     
-      <li data-nav-id="/28mm/git/new_default/" title="New Default arch" class="dd-item ">
+      <li data-nav-id="/28mm/git/new_default/" title="New Default arch" class="dd-item active">
         <a href="/28mm/git/new_default/">
         <b>X. </b>New Default arch
         
@@ -157,7 +157,7 @@
   
     
     <li data-nav-id="/28mm/markdown/" title="Markdown" class="dd-item 
-        parent
+        
         
         
         ">
@@ -204,7 +204,7 @@
  
   
     
-      <li data-nav-id="/28mm/markdown/md_notes/" title="Markdown Notes" class="dd-item active">
+      <li data-nav-id="/28mm/markdown/md_notes/" title="Markdown Notes" class="dd-item ">
         <a href="/28mm/markdown/md_notes/">
         <b>X. </b>Markdown Notes
         
@@ -366,6 +366,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -380,7 +382,7 @@
             
           
           
-            <a href='/28mm/'>First Page</a> > <a href='/28mm/markdown/'>Markdown</a> > Markdown Notes
+            <a href='/28mm/'>First Page</a> > <a href='/28mm/git/'>GIT Info</a> > New Default arch
           
          
           
@@ -391,6 +393,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -398,50 +407,27 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              New Default arch
+            </h1>
           
 
         
 
 
 
-<h2 id="tables">Tables</h2>
-<p>You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:</p>
-<p>so this</p>
-<pre><code>
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-</code></pre><p>Renders as this</p>
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content from cell 1</td>
-<td>Content from cell 2</td>
-</tr>
-<tr>
-<td>Content in the first column</td>
-<td>Content in the second column</td>
-</tr>
-</tbody>
-</table>
+<p>This should inherit from <strong>archetypes/default.md</strong> and have a new author value available.</p>
+<p>{{ .Site.Params.author }}</p>
+<p>{{ $.Param &ldquo;author&rdquo; }}</p>
 
 
 <footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -473,57 +459,6 @@ Content in the first column | Content in the second column
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -579,6 +514,54 @@ Content in the first column | Content in the second column
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -648,10 +631,10 @@ Content in the first column | Content in the second column
 	 
 	 
 		
-			<a class="nav nav-prev" href="/28mm/markdown/flowcharts/" title="Flowcharts Notes"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/28mm/git/branchingstrategy/" title="Branching and Merging Strategy"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/28mm/test/" title="Test index" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/28mm/markdown/" title="Markdown" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

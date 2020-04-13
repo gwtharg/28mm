@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/test/not_me/</loc>
+    <lastmod>2020-04-13T15:56:55+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/git/branchingstrategy/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
@@ -33,13 +38,23 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/markdown/</loc>
+    <lastmod>2020-04-07T13:04:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/test/</loc>
+    <lastmod>2020-04-07T13:04:31+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tfs/</loc>
     <lastmod>2020-04-07T13:04:31+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/markdown/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+    <loc>https://gwtharg.github.io/28mm/git/new_default/</loc>
+    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
   </url>
   
   <url>

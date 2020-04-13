@@ -21,5 +21,16 @@
 It is best to consider GitHub and BitBucket as simply copies of the same git repository. There is no merging between GitHub and BitBucket, merging is done at the branch level and the same commit history is pushed to both systems.</description>
     </item>
     
+    <item>
+      <title>New Default arch</title>
+      <link>https://gwtharg.github.io/28mm/git/new_default/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/git/new_default/</guid>
+      <description>This should inherit from archetypes/default.md and have a new author value available.
+{{ .Site.Params.author }}
+{{ $.Param &amp;ldquo;author&amp;rdquo; }}</description>
+    </item>
+    
   </channel>
 </rss>

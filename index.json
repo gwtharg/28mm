@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://gwtharg.github.io/28mm/test/not_me/",
+	"title": "Not_me",
+	"tags": [],
+	"description": "",
+	"content": "So this is some text not written by Not Me\n"
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/git/branchingstrategy/",
 	"title": "Branching and Merging Strategy",
 	"tags": [],
@@ -22,7 +29,7 @@
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/team_types/",
-	"title": "TFS Teams",
+	"title": "Team Types",
 	"tags": [],
 	"description": "",
 	"content": "Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.\nWe will run through an example using the IIB Technical Team to guide you through the process.\nInitial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve. If teams require to view the results of queries from other teams \u0026amp; have the ability to show those on a common dashboard then this may be a reason to create a more complex structure. If the user just requires to be a member of many teams then this is not a valid reason to create a more complex structure.\nNote \u0026ndash; rights to view work/code/queries will be inherited with this model. So any team on a lower level must consent to this before creating any complex structure.\n"
@@ -39,21 +46,35 @@
 	"title": "GIT Info",
 	"tags": [],
 	"description": "",
-	"content": "Test from GIT information Based on notes from hCYB\n"
+	"content": "Test from GIT information Based on notes from old V: Drive\n "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/markdown/",
+	"title": "Markdown",
+	"tags": [],
+	"description": "",
+	"content": "Info on Markdown goes here  To do  "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/test/",
+	"title": "Test index",
+	"tags": [],
+	"description": "",
+	"content": "This is _index.html Is it a landing page?\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/",
 	"title": "TFS Info",
 	"tags": [],
 	"description": "",
-	"content": "Chapter Basic info Introduction to TFS Based on TFS 2017 in hVM Gosforth\n"
+	"content": "Chapter Basic info Introduction to TFS Based on test notes\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/markdown/",
-	"title": "Markdowns",
+	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
+	"title": "New Default arch",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "This should inherit from archetypes/default.md and have a new author value available.\n{{ .Site.Params.author }}\n{{ $.Param \u0026ldquo;author\u0026rdquo; }}\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/categories/",
