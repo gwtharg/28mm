@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mermaid on Walmo SDLC Test</title>
+    <link>https://gwtharg.github.io/28mm/tags/mermaid/</link>
+    <description>Recent content in mermaid on Walmo SDLC Test</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Tue, 07 Apr 2020 13:07:35 +0100</lastBuildDate>
+    
+	<atom:link href="https://gwtharg.github.io/28mm/tags/mermaid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flowcharts Notes</title>
+      <link>https://gwtharg.github.io/28mm/markdown/flowcharts/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/markdown/flowcharts/</guid>
+      <description>Straight html &amp;lt;div class=&amp;#34;mermaid&amp;#34;&amp;gt; graph LR; A--&amp;gt;B; &amp;lt;/div&amp;gt; Mermaid not rendering yet!!! graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Used external website to create png Rendering from local png files /content/markdown/flowcharts/name.png as referenced from flowcharts.md file
+m1.png m2.png From online link</description>
+    </item>
+    
+  </channel>
+</rss>

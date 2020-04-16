@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TFS on Walmo SDLC Test</title>
+    <link>https://gwtharg.github.io/28mm/catagories/tfs/</link>
+    <description>Recent content in TFS on Walmo SDLC Test</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Tue, 07 Apr 2020 13:07:35 +0100</lastBuildDate>
+    
+	<atom:link href="https://gwtharg.github.io/28mm/catagories/tfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Team Types</title>
+      <link>https://gwtharg.github.io/28mm/tfs/team_types/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tfs/team_types/</guid>
+      <description>Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.
+We will run through an example using the IIB Technical Team to guide you through the process.
+Initial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve.</description>
+    </item>
+    
+    <item>
+      <title>TFS Info</title>
+      <link>https://gwtharg.github.io/28mm/tfs/</link>
+      <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tfs/</guid>
+      <description>Chapter Basic info Introduction to TFS Based on test notes</description>
+    </item>
+    
+  </channel>
+</rss>

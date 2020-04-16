@@ -6,9 +6,64 @@
     <description>Recent content in Tags on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
+    <lastBuildDate>Mon, 13 Apr 2020 17:36:16 +0100</lastBuildDate>
     
 	<atom:link href="https://gwtharg.github.io/28mm/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git</title>
+      <link>https://gwtharg.github.io/28mm/tags/git/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://gwtharg.github.io/28mm/tags/html/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>help</title>
+      <link>https://gwtharg.github.io/28mm/tags/help/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/help/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://gwtharg.github.io/28mm/tags/markdown/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mermaid</title>
+      <link>https://gwtharg.github.io/28mm/tags/mermaid/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/mermaid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TFS User Document</title>
+      <link>https://gwtharg.github.io/28mm/tags/tfs-user-document/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/tfs-user-document/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

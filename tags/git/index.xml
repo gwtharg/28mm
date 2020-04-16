@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GIT Info on Walmo SDLC Test</title>
-    <link>https://gwtharg.github.io/28mm/git/</link>
-    <description>Recent content in GIT Info on Walmo SDLC Test</description>
+    <title>git on Walmo SDLC Test</title>
+    <link>https://gwtharg.github.io/28mm/tags/git/</link>
+    <description>Recent content in git on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Tue, 07 Apr 2020 13:04:31 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 17:36:16 +0100</lastBuildDate>
     
-	<atom:link href="https://gwtharg.github.io/28mm/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gwtharg.github.io/28mm/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,6 +19,16 @@
       <guid>https://gwtharg.github.io/28mm/git/branchingstrategy/</guid>
       <description>Branching and Merging Strategy Most development is done on the internal Github but some code is shared with the external Bitbucket. In order to support this we have the same repo pushed to both GitHub and BitBucket.
 It is best to consider GitHub and BitBucket as simply copies of the same git repository. There is no merging between GitHub and BitBucket, merging is done at the branch level and the same commit history is pushed to both systems.</description>
+    </item>
+    
+    <item>
+      <title>GIT Info</title>
+      <link>https://gwtharg.github.io/28mm/git/</link>
+      <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/git/</guid>
+      <description>Test from GIT information Based on notes from old V: Drive
+ </description>
     </item>
     
     <item>

@@ -9,28 +9,28 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/git/branchingstrategy/",
 	"title": "Branching and Merging Strategy",
-	"tags": [],
+	"tags": ["git"],
 	"description": "",
 	"content": "Branching and Merging Strategy Most development is done on the internal Github but some code is shared with the external Bitbucket. In order to support this we have the same repo pushed to both GitHub and BitBucket.\nIt is best to consider GitHub and BitBucket as simply copies of the same git repository. There is no merging between GitHub and BitBucket, merging is done at the branch level and the same commit history is pushed to both systems.\nThere are slightly different strategies depending on what we are modifying.\nCommon Libraries Common libraries are strongly synchronised. All work for PaaS is done on a 2.0 branch and whenever a change is made on bitbucket/2.0 is must also be pushed to github/2.0 or vice versa.\nAs required the latest DYB changes on bitbucket/master branch will be merged into bitbucket/2.0 and pushed to github/2.0.\nNew Microservices This is the simplest scenario where a new repo is created on Github and development continues on github/master.\nOn a regular basis github/master is pushed to bitbucket/master so that in theory work could be done by people not on the network.\nExisting Microservices Initially bitbucket/master is pushed to github/master and a bitbucket/2.0 marker branch is created pointing to the same commit. Migration then continues on github/master.\nPeriodically we will have to synchronise any changes that have been made by DYB which involves merging bitbucket/master into github/master. The bitbucket/2.0 marker is moved to point to the merge commit and is pushed back to bitbucket.\nNote: Be very careful not to merge any PaaS work back into bitbucket/master since that belongs to DYB.\nAlexa - ScreenMedia ScreenMedia have their own git workflow and will periodically raise a pull request to merge their development branch into bitbucket/master. When this is merged it is pushed to github/master so that it can be built and deployed to the PaaS.\nNote: Since they are using a different workflow which uses a long lived development branch you should NOT delete their branch when merging. For the same reason do not rewrite history by rebasing or squashing during the merge, stick with standard merges.\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/markdown/flowcharts/",
 	"title": "Flowcharts Notes",
-	"tags": [],
+	"tags": ["html", "mermaid"],
 	"description": "",
 	"content": "Straight html \u0026lt;div class=\u0026#34;mermaid\u0026#34;\u0026gt; graph LR; A--\u0026gt;B; \u0026lt;/div\u0026gt; Mermaid not rendering yet!!! graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Used external website to create png Rendering from local png files /content/markdown/flowcharts/name.png as referenced from flowcharts.md file\nm1.png m2.png From online link \n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/markdown/md_notes/",
 	"title": "Markdown Notes",
-	"tags": [],
+	"tags": ["markdown", "help"],
 	"description": "",
 	"content": "Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:\nso this\n First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this\n   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/team_types/",
 	"title": "Team Types",
-	"tags": [],
+	"tags": ["TFS User Document"],
 	"description": "",
 	"content": "Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.\nWe will run through an example using the IIB Technical Team to guide you through the process.\nInitial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve. If teams require to view the results of queries from other teams \u0026amp; have the ability to show those on a common dashboard then this may be a reason to create a more complex structure. If the user just requires to be a member of many teams then this is not a valid reason to create a more complex structure.\nNote \u0026ndash; rights to view work/code/queries will be inherited with this model. So any team on a lower level must consent to this before creating any complex structure.\n"
 },
@@ -39,19 +39,19 @@
 	"title": "First Page",
 	"tags": [],
 	"description": "",
-	"content": "This is _index.html Is it a landing page?\n"
+	"content": "Sample Front Matter Hugo Frontmatter is the sites Metadata\n--- title: \u0026#34;You Title goes here\u0026#34; date: 2020-04-13T17:36:16+01:00 draft: true pre: \u0026#34;\u0026lt;b\u0026gt;X. \u0026lt;/b\u0026gt;\u0026#34; authors: [\u0026#34;Your name \u0026#34;] catagories: [ \u0026#34;Your catagory here ] tags: [ \u0026#34;if required\u0026#34; ] --- landing page? {{ path.Dir \u0026ldquo;http://localhost:1313/28mm/catagories/\u0026quot;}}\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/git/",
 	"title": "GIT Info",
-	"tags": [],
+	"tags": ["git"],
 	"description": "",
 	"content": "Test from GIT information Based on notes from old V: Drive\n "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/markdown/",
 	"title": "Markdown",
-	"tags": [],
+	"tags": ["markdown"],
 	"description": "",
 	"content": "Info on Markdown goes here  To do  "
 },
@@ -70,22 +70,92 @@
 	"content": "Chapter Basic info Introduction to TFS Based on test notes\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
-	"title": "New Default arch",
-	"tags": [],
-	"description": "",
-	"content": "This should inherit from archetypes/default.md and have a new author value available.\n{{ .Site.Params.author }}\n{{ $.Param \u0026ldquo;author\u0026rdquo; }}\n"
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/categories/",
-	"title": "Categories",
+	"uri": "https://gwtharg.github.io/28mm/authors/",
+	"title": "Authors",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/tags/git/",
+	"title": "git",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/html/",
+	"title": "html",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
+	"title": "HTML Page Contents",
+	"tags": ["html", "git"],
+	"description": "",
+	"content": "{{.Site.Params.authors}}  \u0026nbsp;\nBackgroundWhen the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n "
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
+	"title": "Walmo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/catagories/",
+	"title": "Catagories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/help/",
+	"title": "help",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/markdown/",
+	"title": "markdown",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/mermaid/",
+	"title": "mermaid",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/catagories/tfs/",
+	"title": "TFS",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/tfs-user-document/",
+	"title": "TFS User Document",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/catagories/markdown/",
+	"title": "markdown",
 	"tags": [],
 	"description": "",
 	"content": ""

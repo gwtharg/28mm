@@ -64,14 +64,26 @@ Initial Considerations Most importantly is that we have had a discussion with th
     </item>
     
     <item>
-      <title>New Default arch</title>
+      <title>HTML Page Contents</title>
       <link>https://gwtharg.github.io/28mm/git/new_default/</link>
       <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/git/new_default/</guid>
-      <description>This should inherit from archetypes/default.md and have a new author value available.
-{{ .Site.Params.author }}
-{{ $.Param &amp;ldquo;author&amp;rdquo; }}</description>
+      <description>{{.Site.Params.authors}}  &amp;nbsp;
+BackgroundWhen the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
+Process/MethodType of requestREAP Process / EPM
+Planned project requests - Low detail and uncertain timingsEmailsUnplanned requests
+Service Requests
+Incidents
+OCSMS Teams / HipchatWalkupService NowService Requests
+Incident Records
+Problem Records
+JiraPlanned Requests
+Unplanned Requests
+Incidents
+RTCIncidents
+Unplanned Requests
+SharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:</description>
     </item>
     
   </channel>
