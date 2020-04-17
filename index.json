@@ -63,6 +63,13 @@
 	"content": "Info on Markdown goes here  To do  "
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/paas/",
+	"title": "Paas",
+	"tags": ["openshift"],
+	"description": "",
+	"content": "Pages from Platform Training Notes  Openshift  "
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/test/",
 	"title": "Test index",
 	"tags": [],
@@ -177,13 +184,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
 	"title": "openshift",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/paas/",
-	"title": "Paas",
 	"tags": [],
 	"description": "",
 	"content": ""
