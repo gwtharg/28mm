@@ -1,7 +1,7 @@
 [
 {
 	"uri": "https://gwtharg.github.io/28mm/test/not_me/",
-	"title": "Not_me",
+	"title": "Not me",
 	"tags": [],
 	"description": "",
 	"content": "So this is some text not written by Not Me\n"
@@ -60,7 +60,7 @@
 	"title": "Test index",
 	"tags": [],
 	"description": "",
-	"content": "This is _index.html Is it a landing page?\n"
+	"content": "This is _index.html Is it a landing page?\nHugo TOML YAML Mix config.toml uses TOML format:\ntitle = \u0026ldquo;My New Hugo Site\u0026rdquo;\nbut archetypes/default.md uses YAML\ntitle: \u0026ldquo;Test index\u0026rdquo;\nhttps://github.com/gohugoio/hugo/issues/5241\nThe reason is GitHub\u0026rsquo;s support for YAML front matter. Currently they do not support TOML front matter (Metadata).\nSo we are going to use **TOML** for the **config.toml** file then **YAML** for the rest of the contents. "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/",
@@ -70,6 +70,13 @@
 	"content": "Chapter Basic info Introduction to TFS Based on test notes\n"
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
+	"title": "New Default arch",
+	"tags": [],
+	"description": "",
+	"content": "This should inherit from archetypes/default.md and have a new author value available.\n{{ .Site.Params.author }}\n{{ $.Param \u0026ldquo;author\u0026rdquo; }}\n"
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/authors/",
 	"title": "Authors",
 	"tags": [],
@@ -77,36 +84,8 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/git/",
-	"title": "git",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/html/",
-	"title": "html",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
-	"title": "HTML Page Contents",
-	"tags": ["html", "git"],
-	"description": "",
-	"content": "{{.Site.Params.authors}}  \u0026nbsp;\nBackgroundWhen the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n "
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/",
-	"title": "Tags",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
-	"title": "Walmo",
+	"title": "walmo",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -119,8 +98,22 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/tags/git/",
+	"title": "git",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/help/",
 	"title": "help",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/html/",
+	"title": "html",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -135,6 +128,13 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/mermaid/",
 	"title": "mermaid",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/",
+	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""

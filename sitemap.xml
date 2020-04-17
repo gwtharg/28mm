@@ -53,33 +53,18 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/authors/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/git/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/html/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/git/new_default/</loc>
     <lastmod>2020-04-13T17:36:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/tags/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
+    <loc>https://gwtharg.github.io/28mm/authors/</loc>
+    <lastmod>2020-04-13T15:56:55+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/authors/walmo/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
+    <lastmod>2020-04-13T15:56:55+01:00</lastmod>
   </url>
   
   <url>
@@ -88,7 +73,17 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/tags/git/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tags/help/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/html/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   
@@ -99,6 +94,11 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/tags/mermaid/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   
