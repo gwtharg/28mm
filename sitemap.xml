@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/paas/openshift/openshift/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tfs/team_types/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
@@ -73,6 +78,21 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/components/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/authors/cybg/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/docker/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tags/git/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
@@ -88,12 +108,37 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/tags/kubernetes/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tags/markdown/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/tags/mermaid/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/openshift/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/openshift/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/paas/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/catagories/paas/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   

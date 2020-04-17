@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
 
-    <title>Team Types :: Walmo SDLC Test</title>
+    <title>OpenShift Container Platform :: Walmo SDLC Test</title>
 
     
     <link href="/28mm/css/nucleus.css?1587147728" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/28mm/tfs/team_types/">
+  <body class="" data-url="/28mm/paas/openshift/openshift/">
     <nav id="sidebar" class="">
 
 
@@ -288,7 +288,7 @@
   
     
     <li data-nav-id="/28mm/tfs/" title="TFS Info" class="dd-item 
-        parent
+        
         
         
         ">
@@ -314,7 +314,7 @@
  
   
     
-      <li data-nav-id="/28mm/tfs/team_types/" title="Team Types" class="dd-item active">
+      <li data-nav-id="/28mm/tfs/team_types/" title="Team Types" class="dd-item ">
         <a href="/28mm/tfs/team_types/">
         <b>X. </b>Team Types
         
@@ -343,7 +343,7 @@
   
     
     <li data-nav-id="/28mm/paas/" title="Paas" class="dd-item 
-        
+        parent
         
         
         ">
@@ -369,7 +369,7 @@
  
   
     
-      <li data-nav-id="/28mm/paas/openshift/openshift/" title="OpenShift Container Platform" class="dd-item ">
+      <li data-nav-id="/28mm/paas/openshift/openshift/" title="OpenShift Container Platform" class="dd-item active">
         <a href="/28mm/paas/openshift/openshift/">
         <b>X. </b>OpenShift Container Platform
         
@@ -421,8 +421,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -437,7 +435,7 @@
             
           
           
-            <a href='/28mm/'>First Page</a> > <a href='/28mm/tfs/'>TFS Info</a> > Team Types
+            <a href='/28mm/'>First Page</a> > <a href='/28mm/paas/'>Paas</a> > OpenShift Container Platform
           
          
           
@@ -448,21 +446,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -470,47 +453,130 @@
         
 <div class="tags">
 
-  <a class="tag-link" href="/28mm/tags/tfs-user-document">TFS User Document</a>
+  <a class="tag-link" href="/28mm/tags/docker">docker</a>
+
+  <a class="tag-link" href="/28mm/tags/openshift">openshift</a>
+
+  <a class="tag-link" href="/28mm/tags/kubernetes">kubernetes</a>
 
 </div>
 
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              Team Types
-            </h1>
           
 
         
 
 
 
-<h1 id="test-clip-from-document">Test clip from document</h1>
-<h4 id="aim-of-the-document">Aim of the Document</h4>
-<p>This document is an attempt to guide TFS administrators through the
-process required to create a more complex hierarchical structure under
-the VM project folder.</p>
-<p>We will run through an example using the IIB Technical Team to guide you
-through the process.</p>
-<h4 id="initial-considerations">Initial Considerations</h4>
-<p>Most importantly is that we have had a discussion with the users to
-understand what it they wish to achieve. If teams require to view the
-results of queries from other teams &amp; have the ability to show those on
-a common dashboard then this may be a reason to create a more complex
-structure. If the user just requires to be a member of many teams then
-this is not a valid reason to create a more complex structure.</p>
-<p><em><strong>Note</strong> &ndash; rights to view work/code/queries will be inherited with
-this model. So <strong>any</strong> team on a lower level must consent to this before
-creating any complex structure.</em></p>
+<h1 id="openshift-container-platform">OpenShift Container Platform</h1>
+<p><a href="https://docs.openshift.com/container-platform/3.5/welcome/index.html">Openshift</a> is a Platform as a Service (PaaS) technology from Redhat based on <a href="docs/docker.md">Docker</a> and <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">Kubernetes</a>.</p>
+<p>Openshift provides the ability to orchistrate docker containers, providing request routing, health checks and automated scaling amongst other things.</p>
+<h2 id="architecture">Architecture</h2>
+<p>Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS&rsquo; deployed within the bank each with it&rsquo;s own purpose.</p>
+<table>
+<thead>
+<tr>
+<th>PaaS Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Non Production</td>
+<td>This PaaS is used for running the non production workloads, this will be where development and test purposes are deployed.</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>This PaaS is used to run production workloads which provide services to the customer.</td>
+</tr>
+<tr>
+<td>Shared Services</td>
+<td>This PaaS is used to run the Operational Platform applications that are shared between Production and NonProduction PaaS&rsquo;s. This is designed to run workloads that do not provide functionality to a customer but used to manage the Platform. This will run things like Composer, Kit CD services, Caboodle and Chieftain.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="./openshift-paas-environments.jpg" alt="OpenShift Environment Architecture"></p>
+<h2 id="openshiftkubernetes-important-objects">Openshift/Kubernetes Important Objects</h2>
+<p>There are only a few important components that need to be understood to get started with Openshift.</p>
+<p>All Openshift objects can be viewed and edited either in the UI or using the command line tool <a href="https://github.com/openshift/origin/releases">oc</a> which is available from github.com (this will be packaged up eventually :-))</p>
+<p><code>oc get ${object}</code> will return the objects that you have access to.</p>
+<p>This table provides a quick intro to some of the objects, further info can be found at the online documentation for <a href="https://docs.openshift.com/container-platform/3.5/welcome/index.html">Openshift</a> and <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">Kubernetes</a></p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>oc get type (shortcut)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project</td>
+<td>projects</td>
+<td>An area where a user can create and configure objects.</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td>namespaces(ns)</td>
+<td>An extention of the project object, the namespace is a section of the SDN which is logically seperated from other namespaces.</td>
+</tr>
+<tr>
+<td>Image Streams</td>
+<td>imagestreams (is)</td>
+<td>An object which is linked to a docker image deployed in the local docker registry of the PaaS. Other objects will refer to the imagestream rather than the docker images themselves. The image stream will track updates which can be used as a trigger for running deploys. Image streams also have tags similar to docker images (but they do not have to match the docker image tag)</td>
+</tr>
+<tr>
+<td>Pod</td>
+<td>pods(po)</td>
+<td>A single deployable component which can be made up of 1 or more docker containers. This allows multiple docker containers to share a memory space, filesystem and network where there are tight dependencies.</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>services (svc)</td>
+<td>This is equivalent of a DNS entry and a load balancer when there are multiple instances of a pod running. This is only resolvable from containers running within the SDN of the PaaS.</td>
+</tr>
+<tr>
+<td>Route</td>
+<td>routes</td>
+<td>This is the object that is used to configure the HA proxy&rsquo;s when access is required to a service from outside of the PaaS.</td>
+</tr>
+<tr>
+<td>Deployment Config</td>
+<td>deploymentconfigs(dc)</td>
+<td>Deployment configs are used to define how a docker image referenced by an imagestream should be deployed.</td>
+</tr>
+<tr>
+<td>Replication Controllers</td>
+<td>replicationcontrollers(rc)</td>
+<td>A deployment config will create a replication controller rather than a pod. It is the replication controllers responsibility to create the pods, montior the health of the pods and start new pods if there are not enough pods running.</td>
+</tr>
+<tr>
+<td>Persistent Volumes</td>
+<td>persistentvolumes(pv)</td>
+<td>These are filesystems which are shared amongst the nodes which can be mounted into a Pod when the docker container requests a Volume. This is a cluster level object whith various properties including size and write mode i.e. readWriteOnce(only a single instance of a pod can mount), readWriteMany(multiple instances of pods can mount), readOnly.</td>
+</tr>
+<tr>
+<td>Persistent Volume Claim</td>
+<td>persistentvolumeclaims (pvc)</td>
+<td>These are used to allow a project to mark a persistent volume as used. A claim is really a request for a persistent volume which will then be matched and bound to a free volume. Each volume can only be bound to a single claim.</td>
+</tr>
+</tbody>
+</table>
+<p>Whilst working on the PaaS it is possible to use a template to create multiple objects at a time. This is what elements relies on to do deploy applications to the Paas.</p>
+<h2 id="underlying-fabric-of-the-paas">Underlying Fabric of the PaaS</h2>
+<p>The PaaS is constructed with multiple types of physical servers. There are OpenShift Masters which are used to run the components used to manage the PaaS and OpenShift Nodes which are used to run the Pod workload.</p>
 
 
 <footer class="footline">
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -673,7 +739,6 @@ creating any complex structure.</em></p>
             
                 
                     
-                    
                 
                 
 
@@ -686,7 +751,6 @@ creating any complex structure.</em></p>
             
             
                 
-                    
                     
                 
                 
@@ -707,8 +771,6 @@ creating any complex structure.</em></p>
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -722,6 +784,7 @@ creating any complex structure.</em></p>
             
             
                 
+                    
                     
                 
                 
@@ -746,10 +809,10 @@ creating any complex structure.</em></p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/28mm/tfs/" title="TFS Info"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/28mm/paas/" title="Paas"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/28mm/paas/" title="Paas" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/28mm/git/" title="GIT Info" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -28,6 +28,13 @@
 	"content": "Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:\nso this\n First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this\n   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    "
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/paas/openshift/openshift/",
+	"title": "OpenShift Container Platform",
+	"tags": ["docker", "openshift", "kubernetes"],
+	"description": "",
+	"content": "OpenShift Container Platform Openshift is a Platform as a Service (PaaS) technology from Redhat based on Docker and Kubernetes.\nOpenshift provides the ability to orchistrate docker containers, providing request routing, health checks and automated scaling amongst other things.\nArchitecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS\u0026rsquo; deployed within the bank each with it\u0026rsquo;s own purpose.\n   PaaS Name Purpose     Non Production This PaaS is used for running the non production workloads, this will be where development and test purposes are deployed.   Production This PaaS is used to run production workloads which provide services to the customer.   Shared Services This PaaS is used to run the Operational Platform applications that are shared between Production and NonProduction PaaS\u0026rsquo;s. This is designed to run workloads that do not provide functionality to a customer but used to manage the Platform. This will run things like Composer, Kit CD services, Caboodle and Chieftain.    Openshift/Kubernetes Important Objects There are only a few important components that need to be understood to get started with Openshift.\nAll Openshift objects can be viewed and edited either in the UI or using the command line tool oc which is available from github.com (this will be packaged up eventually :-))\noc get ${object} will return the objects that you have access to.\nThis table provides a quick intro to some of the objects, further info can be found at the online documentation for Openshift and Kubernetes\n   Object oc get type (shortcut) Description     Project projects An area where a user can create and configure objects.   Namespace namespaces(ns) An extention of the project object, the namespace is a section of the SDN which is logically seperated from other namespaces.   Image Streams imagestreams (is) An object which is linked to a docker image deployed in the local docker registry of the PaaS. Other objects will refer to the imagestream rather than the docker images themselves. The image stream will track updates which can be used as a trigger for running deploys. Image streams also have tags similar to docker images (but they do not have to match the docker image tag)   Pod pods(po) A single deployable component which can be made up of 1 or more docker containers. This allows multiple docker containers to share a memory space, filesystem and network where there are tight dependencies.   Service services (svc) This is equivalent of a DNS entry and a load balancer when there are multiple instances of a pod running. This is only resolvable from containers running within the SDN of the PaaS.   Route routes This is the object that is used to configure the HA proxy\u0026rsquo;s when access is required to a service from outside of the PaaS.   Deployment Config deploymentconfigs(dc) Deployment configs are used to define how a docker image referenced by an imagestream should be deployed.   Replication Controllers replicationcontrollers(rc) A deployment config will create a replication controller rather than a pod. It is the replication controllers responsibility to create the pods, montior the health of the pods and start new pods if there are not enough pods running.   Persistent Volumes persistentvolumes(pv) These are filesystems which are shared amongst the nodes which can be mounted into a Pod when the docker container requests a Volume. This is a cluster level object whith various properties including size and write mode i.e. readWriteOnce(only a single instance of a pod can mount), readWriteMany(multiple instances of pods can mount), readOnly.   Persistent Volume Claim persistentvolumeclaims (pvc) These are used to allow a project to mark a persistent volume as used. A claim is really a request for a persistent volume which will then be matched and bound to a free volume. Each volume can only be bound to a single claim.    Whilst working on the PaaS it is possible to use a template to create multiple objects at a time. This is what elements relies on to do deploy applications to the Paas.\nUnderlying Fabric of the PaaS The PaaS is constructed with multiple types of physical servers. There are OpenShift Masters which are used to run the components used to manage the PaaS and OpenShift Nodes which are used to run the Pod workload.\n"
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tfs/team_types/",
 	"title": "Team Types",
 	"tags": ["TFS User Document"],
@@ -98,6 +105,27 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/components/",
+	"title": "Components",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/authors/cybg/",
+	"title": "cybg",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/docker/",
+	"title": "docker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/git/",
 	"title": "git",
 	"tags": [],
@@ -119,6 +147,13 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/tags/kubernetes/",
+	"title": "kubernetes",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/markdown/",
 	"title": "markdown",
 	"tags": [],
@@ -128,6 +163,34 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/mermaid/",
 	"title": "mermaid",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
+	"title": "openshift",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
+	"title": "openshift",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/",
+	"title": "Paas",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/catagories/paas/",
+	"title": "paas",
 	"tags": [],
 	"description": "",
 	"content": ""
