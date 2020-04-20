@@ -60,7 +60,7 @@
 	"title": "GIT Info",
 	"tags": ["git"],
 	"description": "",
-	"content": "Test from GIT information Based on notes from old V: Drive\n "
+	"content": "Test from GIT information Based on notes from old V: Drive\n Tags based on Git Git\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/markdown/",
@@ -112,6 +112,62 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/tags/content/",
+	"title": "content",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/help/",
+	"title": "Content Info",
+	"tags": ["content", "help", "taxonomy"],
+	"description": "",
+	"content": "Basic help about site   Our basic taxonomy comes from the Metadata in our \u0026lsquo;Front Matter\u0026rsquo;\nThis page has the following \u0026lsquo;Front Matter\u0026rsquo; taxonomy.\ntags: [\u0026quot;content\u0026quot; , \u0026quot;help\u0026quot; , \u0026quot;taxonomy\u0026quot;] catagories: [\u0026quot;help\u0026quot;] components: [\u0026quot;hugo\u0026quot;] authors: [\u0026quot;walmo\u0026quot;] Our types of taxonomy we are using are based on our configuration file.\nThe contents [\u0026ldquo;git\u0026rdquo; , \u0026ldquo;html\u0026rdquo;] we add when we create our file.\nMore accurate content in our Metadata will help users navigate the documents contained within the site.\n Content based on Catagories\nComponents\nTags\nAuthors\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/help/",
+	"title": "help",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/catagories/help/",
+	"title": "help",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/hugo/",
+	"title": "hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/taxonomy/",
+	"title": "taxonomy",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
+	"title": "Walmo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/authors/cybg/",
 	"title": "cybg",
 	"tags": [],
@@ -140,43 +196,29 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/",
-	"title": "Tags",
+	"uri": "https://gwtharg.github.io/28mm/tags/html/",
+	"title": "html",
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/git/all_html/",
+	"title": "HTML Based Pages",
+	"tags": ["html"],
+	"description": "",
+	"content": "{{.Params.Author}}  Trying colours  You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n\u0026nbsp;\nSome Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n Trying colours  You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
 	"title": "New Default arch",
 	"tags": [],
 	"description": "",
-	"content": "This should inherit from archetypes/default.md and have a new author value available.\n{{ .Site.Params.author }}\n{{ $.Param \u0026ldquo;author\u0026rdquo; }}\n"
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
-	"title": "walmo",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": "This should inherit from archetypes/default.md and have a new author value available.\nComplete\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/docker/",
 	"title": "docker",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/help/",
-	"title": "help",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/html/",
-	"title": "html",
 	"tags": [],
 	"description": "",
 	"content": ""

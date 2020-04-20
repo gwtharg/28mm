@@ -6,10 +6,19 @@
     <description>Recent content in Catagories on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Mon, 20 Apr 2020 10:50:16 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 15:16:11 +0100</lastBuildDate>
     
 	<atom:link href="https://gwtharg.github.io/28mm/catagories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>help</title>
+      <link>https://gwtharg.github.io/28mm/catagories/help/</link>
+      <pubDate>Mon, 20 Apr 2020 15:16:11 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/catagories/help/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>paas</title>

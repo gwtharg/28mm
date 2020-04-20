@@ -6,7 +6,7 @@
     <description>Recent content in html on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Tue, 07 Apr 2020 13:07:35 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 17:36:16 +0100</lastBuildDate>
     
 	<atom:link href="https://gwtharg.github.io/28mm/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,20 @@
       <guid>https://gwtharg.github.io/28mm/markdown/flowcharts/</guid>
       <description>Straight html &amp;lt;div class=&amp;#34;mermaid&amp;#34;&amp;gt; graph LR; A--&amp;gt;B; &amp;lt;/div&amp;gt; Mermaid not rendering yet!!! graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Used external website to create png Rendering from local png files /content/markdown/flowcharts/name.png as referenced from flowcharts.md file
 m1.png m2.png From online link</description>
+    </item>
+    
+    <item>
+      <title>HTML Based Pages</title>
+      <link>https://gwtharg.github.io/28mm/git/all_html/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/git/all_html/</guid>
+      <description>{{.Params.Author}}  Trying colours  You need to do this in html as markdown does not use colours by default.
+ Some Markdown text with Simple blue coloured text.
+Back to normal text. Now we can highlight in red this is red.
+&amp;nbsp;
+Some Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
+Process/MethodType of requestREAP Process / EPM</description>
     </item>
     
   </channel>

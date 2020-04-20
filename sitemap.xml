@@ -69,17 +69,57 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/authors/</loc>
-    <lastmod>2020-04-20T10:50:16+01:00</lastmod>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/catagories/</loc>
-    <lastmod>2020-04-20T10:50:16+01:00</lastmod>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/components/</loc>
-    <lastmod>2020-04-20T10:50:16+01:00</lastmod>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/content/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/help/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/help/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/catagories/help/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/hugo/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/taxonomy/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/authors/walmo/</loc>
+    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
   </url>
   
   <url>
@@ -103,8 +143,13 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/tags/</loc>
-    <lastmod>2020-04-20T10:50:16+01:00</lastmod>
+    <loc>https://gwtharg.github.io/28mm/tags/html/</loc>
+    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/git/all_html/</loc>
+    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
   </url>
   
   <url>
@@ -113,22 +158,7 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/authors/walmo/</loc>
-    <lastmod>2020-04-13T15:56:55+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/tags/docker/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/help/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/html/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   
