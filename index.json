@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://gwtharg.github.io/28mm/git/semanticversionenforcement/",
+	"title": "Semantic Version Enforcement",
+	"tags": ["git"],
+	"description": "",
+	"content": "Semantic Version Enforcement Going forward the commit comment format will be enforced in GitHub, to allow semantic versioning of the builds. This is a basic development discipline to allow control and automation of code delivery.\nThis enforcement will be rolled out sympathetically to all GitHub repositories, so as not to interfere with the in flight releases.\nThis change consists off the format of the commit comments, from which the semantic version is derived and set of scripts to enforce and help with commits.\nCommit Comment Format Development will be done on branches, created from the mainline streams. Currently only have the master mainline stream, but as process matures will have stream for each major semantic version.\nThere will be two types of branches, normal development and hotfix. Normal development will be branched from the head of the mainline stream (master), while hotfix will be branched from a tagged release. All work must be done from a JIRA ticket.\nFor a normal development release the commit comment should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : (MAJOR|MINOR|PATCH) : [[:alnum:]]+\nThe first part if the JIRA ticket id, the second part is the semantic change, the third part is a description of the change. For example\nDYB-12345 : MINOR : An example comment\nNote the spacing around field separator (:), this is to simplify reading, making it consistently formatted.\nThe semantic version part, should should take the value, MAJOR, MINOR or PATCH, all upper case; as explained below\n MAJOR : A change that is backward breaking, currently this isn\u0026rsquo;t supported MINOR : A change that adds new functionality PATCH : A fix for existing functionality  The decision on the semantic version value should be done by the developer, the ticket author and if required the appropriate technical consultant.\nFor a hotfix the commit message should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : HOTFIX : [[:alnum:]]+\nFor example\nDYB-54321 : HOTFIX : Need this fixed now\nThese formats should be applied to all commits, including when merging pull requests. Github isn\u0026rsquo;t helpful here, as it pre-fills the merge commit message, the title of the merge box; this should be edited manually when merging.\nDetermination of Semantic Version The reason for enforcement of the commit comment is to determine the semantic version of the generated artefact.\nFor a normal change, on a mainline stream, the version of the generated artefact will be major.minor.patch for example 3.4.12.\nA build which publishes an artefact will check the last published release, by looking for the the last tag. If none is found it will take a default value. It will then look at all the commit comments since that tag, and look for the highest semantic version value in all the commit comments (MAJOR \u0026gt; MINOR |\u0026gt; PATCH). It will increment the semantic version and tag the code with the new version.\nFor example if the last tag was 3.4.12 and the commit comments since then are\nPE-3567 : PATCH : A bugfix\nPE-3371 : PATCH : Fix logic\nPE-3371 : MINOR : Add new endpoint\nThe highest semantic version value is MINOR, so the semantic version will be incremented to 3.5.0\nSee the document about versioning strategy for a fuller description of this semantic version incrementing.\nFor a hotfix release the semantic version will take the format major.minor.patch-hotfix.buildnumberfor example 3.4.12-hotfix.22.\nWhen the release build is run against a hotfix branch, it will find the last tag, which will be the tag that the hotfix branch was created against. It will take this tag and add the term -hotfix and its build number to the tag and then tag the code with the new tag. The use of the original tag allows multiple hotfix developments, and the use of the build number allows multiple attempts at each of the hot fixes.\nSemantic Version Tools A new directory has been added to the ms-template, called setup, which contains the tools to control semantic versioning. This will also be added to all other template used by auto-mate.\nThe scripts in this directory includes the hooks to enforce the commit patterns and scripts to work out the semantic version from the commit comments. See the README in the directory for more details.\nThere are two script of interest for any development activities.\nThe first is development-setup.sh, this sets up the hooks on the developers local copy of the git project. This is called by default for every build but running\ngradle setupDevelopment\nWill do it without running a build.\nThe second is create-hotfix.sh , this creates the hotfix branch. It requires the release tag of the artefact to be hot fixed as its only argument.\nThe other scripts are described at the end of the README.\n"
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/test/not_me/",
 	"title": "Not me",
 	"tags": [],
@@ -25,7 +32,7 @@
 	"title": "Markdown Notes",
 	"tags": ["markdown", "help"],
 	"description": "",
-	"content": "Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:\nso this\n First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this\n   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    "
+	"content": "Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:\nso this\n First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this\n   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    shopping list pt 1  allen wrenches gerbil feeders toilet seats electric heaters Trash compactors juice extractor shower rods and water meters   shopping list pt 2  Walkie-talkies   copper wires safety goggles radial tires   shopping list pt 3  BB pellets rubber mallets fans and dehumidifiers   shopping list pt 4  Picture hangers  paper cutters  waffle irons      "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/paas/openshift/openshift/",
@@ -84,22 +91,8 @@
 	"content": "Chapter Basic info Introduction to TFS Based on test notes\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
-	"title": "New Default arch",
-	"tags": [],
-	"description": "",
-	"content": "This should inherit from archetypes/default.md and have a new author value available.\n{{ .Site.Params.author }}\n{{ $.Param \u0026ldquo;author\u0026rdquo; }}\n"
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/authors/",
 	"title": "Authors",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
-	"title": "walmo",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -126,15 +119,50 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/docker/",
-	"title": "docker",
+	"uri": "https://gwtharg.github.io/28mm/tags/git/",
+	"title": "git",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/git/",
-	"title": "git",
+	"uri": "https://gwtharg.github.io/28mm/catagories/paas/",
+	"title": "paas",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/sdlc/",
+	"title": "sdlc",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
+	"title": "New Default arch",
+	"tags": [],
+	"description": "",
+	"content": "This should inherit from archetypes/default.md and have a new author value available.\n{{ .Site.Params.author }}\n{{ $.Param \u0026ldquo;author\u0026rdquo; }}\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
+	"title": "walmo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/docker/",
+	"title": "docker",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -184,20 +212,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
 	"title": "openshift",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/catagories/paas/",
-	"title": "paas",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""

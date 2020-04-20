@@ -30,7 +30,7 @@ m1.png m2.png From online link</description>
       <description>Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
 so this
  First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this
-   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    </description>
+   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    shopping list pt 1  allen wrenches gerbil feeders toilet seats electric heaters Trash compactors juice extractor shower rods and water meters   shopping list pt 2  Walkie-talkies   copper wires safety goggles radial tires   shopping list pt 3  BB pellets rubber mallets fans and dehumidifiers   shopping list pt 4  Picture hangers  paper cutters  waffle irons      </description>
     </item>
     
   </channel>
