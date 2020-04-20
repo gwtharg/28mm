@@ -123,7 +123,7 @@
 	"title": "Content Info",
 	"tags": ["content", "help", "taxonomy"],
 	"description": "",
-	"content": "Basic help about site   Our basic taxonomy comes from the Metadata in our \u0026lsquo;Front Matter\u0026rsquo;\nThis page has the following \u0026lsquo;Front Matter\u0026rsquo; taxonomy.\ntags: [\u0026quot;content\u0026quot; , \u0026quot;help\u0026quot; , \u0026quot;taxonomy\u0026quot;] catagories: [\u0026quot;help\u0026quot;] components: [\u0026quot;hugo\u0026quot;] authors: [\u0026quot;walmo\u0026quot;] Our types of taxonomy we are using are based on our configuration file.\nThe contents [\u0026ldquo;git\u0026rdquo; , \u0026ldquo;html\u0026rdquo;] we add when we create our file.\nMore accurate content in our Metadata will help users navigate the documents contained within the site.\n Content based on Catagories\nComponents\nTags\nAuthors\n"
+	"content": "Basic help about site   Our basic taxonomy comes from the Metadata in our \u0026lsquo;Front Matter\u0026rsquo;\nThis page has the following \u0026lsquo;Front Matter\u0026rsquo; taxonomy.\ntags: [\u0026quot;content\u0026quot; , \u0026quot;help\u0026quot; , \u0026quot;taxonomy\u0026quot;] catagories: [\u0026quot;help\u0026quot;] components: [\u0026quot;hugo\u0026quot;] authors: [\u0026quot;walmo\u0026quot;] Our types of taxonomy we are using are based on our configuration file.\nThe contents [\u0026ldquo;content\u0026rdquo; , \u0026ldquo;help\u0026rdquo; , \u0026ldquo;taxonomy\u0026rdquo;] we add when we create our file.\nMore accurate content in our Metadata will help users navigate the documents contained within the site.\n Content based on Catagories\nComponents\nTags\nAuthors\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/help/",
@@ -162,7 +162,7 @@
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
-	"title": "Walmo",
+	"title": "walmo",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -203,11 +203,11 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/git/all_html/",
+	"uri": "https://gwtharg.github.io/28mm/help/html_info/",
 	"title": "HTML Based Pages",
 	"tags": ["html"],
 	"description": "",
-	"content": "{{.Params.Author}}  Trying colours  You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n\u0026nbsp;\nSome Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n Trying colours  You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n"
+	"content": "\n Trying colours  You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n Below is the html for the colours    Some Markdown text with \u0026#x3C;span style=\u0026#x22;color:blue\u0026#x22;\u0026#x3E; Simple \u0026#x3C;b\u0026#x3E;blue\u0026#x3C;/b\u0026#x3E; coloured text.\u0026#x3C;br\u0026#x3E; \u0026#x3C;/span\u0026#x3E;Back to normal text. Now we can highlight in \u0026#x3C;span style=\u0026#x22;color:red\u0026#x22;\u0026#x3E; \u0026#x3C;b\u0026#x3E;red\u0026#x3C;/b\u0026#x3E; this is red.\u0026#x3C;/span\u0026#x3E;\u0026#x3C;br\u0026#x3E;    Remember to use HTML entities so the HTML is not interpreted as HTML"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
@@ -215,6 +215,13 @@
 	"tags": [],
 	"description": "",
 	"content": "This should inherit from archetypes/default.md and have a new author value available.\nComplete\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/all_html/",
+	"title": "Platform Engineering Backgound",
+	"tags": ["html"],
+	"description": "",
+	"content": "\n \u0026nbsp;\nSome Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/docker/",

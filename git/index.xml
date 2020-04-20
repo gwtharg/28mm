@@ -33,20 +33,6 @@ It is best to consider GitHub and BitBucket as simply copies of the same git rep
     </item>
     
     <item>
-      <title>HTML Based Pages</title>
-      <link>https://gwtharg.github.io/28mm/git/all_html/</link>
-      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/git/all_html/</guid>
-      <description>{{.Params.Author}}  Trying colours  You need to do this in html as markdown does not use colours by default.
- Some Markdown text with Simple blue coloured text.
-Back to normal text. Now we can highlight in red this is red.
-&amp;nbsp;
-Some Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
-Process/MethodType of requestREAP Process / EPM</description>
-    </item>
-    
-    <item>
       <title>New Default arch</title>
       <link>https://gwtharg.github.io/28mm/git/new_default/</link>
       <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>

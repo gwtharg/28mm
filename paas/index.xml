@@ -22,5 +22,28 @@ Openshift provides the ability to orchistrate docker containers, providing reque
 Architecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS&amp;rsquo; deployed within the bank each with it&amp;rsquo;s own purpose.</description>
     </item>
     
+    <item>
+      <title>Platform Engineering Backgound</title>
+      <link>https://gwtharg.github.io/28mm/paas/all_html/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/all_html/</guid>
+      <description>&amp;nbsp;
+Some Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
+Process/MethodType of requestREAP Process / EPM
+Planned project requests - Low detail and uncertain timingsEmailsUnplanned requests
+Service Requests
+Incidents
+OCSMS Teams / HipchatWalkupService NowService Requests
+Incident Records
+Problem Records
+JiraPlanned Requests
+Unplanned Requests
+Incidents
+RTCIncidents
+Unplanned Requests
+SharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:</description>
+    </item>
+    
   </channel>
 </rss>

@@ -148,12 +148,17 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/git/all_html/</loc>
+    <loc>https://gwtharg.github.io/28mm/help/html_info/</loc>
     <lastmod>2020-04-13T17:36:16+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/git/new_default/</loc>
+    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/paas/all_html/</loc>
     <lastmod>2020-04-13T17:36:16+01:00</lastmod>
   </url>
   
