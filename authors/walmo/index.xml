@@ -12,20 +12,33 @@
     
     
     <item>
-      <title>Not me</title>
-      <link>https://gwtharg.github.io/28mm/test/not_me/</link>
-      <pubDate>Mon, 13 Apr 2020 15:56:55 +0100</pubDate>
+      <title>HTML Based Pages</title>
+      <link>https://gwtharg.github.io/28mm/site-documentation/html_based_pages/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/test/not_me/</guid>
-      <description>So this is some text not written by Not Me</description>
+      <guid>https://gwtharg.github.io/28mm/site-documentation/html_based_pages/</guid>
+      <description>Trying colours You need to do this in html as markdown does not use colours by default.
+ Some Markdown text with Simple blue coloured text.
+Back to normal text. Now we can highlight in red this is red.
+ Below is the html for the colours    Some Markdown text with &amp;#x3C;span style=&amp;#x22;color:blue&amp;#x22;&amp;#x3E; Simple &amp;#x3C;b&amp;#x3E;blue&amp;#x3C;/b&amp;#x3E; coloured text.&amp;#x3C;br&amp;#x3E; &amp;#x3C;/span&amp;#x3E;Back to normal text. Now we can highlight in &amp;#x3C;span style=&amp;#x22;color:red&amp;#x22;&amp;#x3E; &amp;#x3C;b&amp;#x3E;red&amp;#x3C;/b&amp;#x3E; this is red.</description>
     </item>
     
     <item>
-      <title>Markdown Notes</title>
-      <link>https://gwtharg.github.io/28mm/markdown/md_notes/</link>
+      <title>Flowcharts Notes</title>
+      <link>https://gwtharg.github.io/28mm/site-documentation/flowcharts/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/markdown/md_notes/</guid>
+      <guid>https://gwtharg.github.io/28mm/site-documentation/flowcharts/</guid>
+      <description>Straight html &amp;lt;div class=&amp;#34;mermaid&amp;#34;&amp;gt; graph LR; A--&amp;gt;B; &amp;lt;/div&amp;gt; Mermaid not rendering yet!!! graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Used external website to create png Rendering from local png files /content/markdown/flowcharts/name.png as referenced from flowcharts.md file
+m1.png m2.png From online link</description>
+    </item>
+    
+    <item>
+      <title>Markdown Tables</title>
+      <link>https://gwtharg.github.io/28mm/site-documentation/md_table_notes/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site-documentation/md_table_notes/</guid>
       <description>Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
 so this
  First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this
@@ -33,11 +46,40 @@ so this
     </item>
     
     <item>
-      <title>Content Info</title>
-      <link>https://gwtharg.github.io/28mm/help/</link>
+      <title>GIT Info</title>
+      <link>https://gwtharg.github.io/28mm/git/</link>
+      <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/git/</guid>
+      <description>Test from GIT information Based on notes from old V: Drive from hVM
+ Tags based on Git</description>
+    </item>
+    
+    <item>
+      <title>First Page</title>
+      <link>https://gwtharg.github.io/28mm/</link>
+      <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/</guid>
+      <description>Sample Front Matter Hugo Front Matter is the sites Metadata
+--- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true pre: &amp;#34;&amp;lt;b&amp;gt;X. &amp;lt;/b&amp;gt;&amp;#34; tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- landing page? </description>
+    </item>
+    
+    <item>
+      <title>TFS Info</title>
+      <link>https://gwtharg.github.io/28mm/tfs/</link>
+      <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tfs/</guid>
+      <description>Chapter Basic info Introduction to TFS Based on test notes</description>
+    </item>
+    
+    <item>
+      <title>Site Content Info</title>
+      <link>https://gwtharg.github.io/28mm/site-documentation/</link>
       <pubDate>Mon, 20 Apr 2020 15:16:11 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/help/</guid>
+      <guid>https://gwtharg.github.io/28mm/site-documentation/</guid>
       <description>Basic help about site   Our basic taxonomy comes from the Metadata in our &amp;lsquo;Front Matter&amp;rsquo;
 This page has the following &amp;lsquo;Front Matter&amp;rsquo; taxonomy.
 tags: [&amp;quot;content&amp;quot; , &amp;quot;help&amp;quot; , &amp;quot;taxonomy&amp;quot;] catagories: [&amp;quot;help&amp;quot;] components: [&amp;quot;hugo&amp;quot;] authors: [&amp;quot;walmo&amp;quot;] Our types of taxonomy we are using are based on our configuration file.
@@ -46,38 +88,14 @@ More accurate content in our Metadata will help users navigate the documents con
     </item>
     
     <item>
-      <title>HTML Based Pages</title>
-      <link>https://gwtharg.github.io/28mm/help/html_info/</link>
-      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      <title>Team Types</title>
+      <link>https://gwtharg.github.io/28mm/tfs/team_types/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/help/html_info/</guid>
-      <description>Trying colours  You need to do this in html as markdown does not use colours by default.
- Some Markdown text with Simple blue coloured text.
-Back to normal text. Now we can highlight in red this is red.
- Below is the html for the colours    Some Markdown text with &amp;#x3C;span style=&amp;#x22;color:blue&amp;#x22;&amp;#x3E; Simple &amp;#x3C;b&amp;#x3E;blue&amp;#x3C;/b&amp;#x3E; coloured text.&amp;#x3C;br&amp;#x3E; &amp;#x3C;/span&amp;#x3E;Back to normal text. Now we can highlight in &amp;#x3C;span style=&amp;#x22;color:red&amp;#x22;&amp;#x3E; &amp;#x3C;b&amp;#x3E;red&amp;#x3C;/b&amp;#x3E; this is red.</description>
-    </item>
-    
-    <item>
-      <title>Platform Engineering Backgound</title>
-      <link>https://gwtharg.github.io/28mm/paas/all_html/</link>
-      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/paas/all_html/</guid>
-      <description>&amp;nbsp;
-Some Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
-Process/MethodType of requestREAP Process / EPM
-Planned project requests - Low detail and uncertain timingsEmailsUnplanned requests
-Service Requests
-Incidents
-OCSMS Teams / HipchatWalkupService NowService Requests
-Incident Records
-Problem Records
-JiraPlanned Requests
-Unplanned Requests
-Incidents
-RTCIncidents
-Unplanned Requests
-SharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:</description>
+      <guid>https://gwtharg.github.io/28mm/tfs/team_types/</guid>
+      <description>Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.
+We will run through an example using the IIB Technical Team to guide you through the process.
+Initial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve.</description>
     </item>
     
   </channel>

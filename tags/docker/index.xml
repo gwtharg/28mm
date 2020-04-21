@@ -17,9 +17,10 @@
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/paas/openshift/openshift/</guid>
-      <description>OpenShift Container Platform Openshift is a Platform as a Service (PaaS) technology from Redhat based on Docker and Kubernetes.
+      <description>Openshift is a Platform as a Service (PaaS) technology from Redhat based on Docker and Kubernetes.
 Openshift provides the ability to orchistrate docker containers, providing request routing, health checks and automated scaling amongst other things.
-Architecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS&amp;rsquo; deployed within the bank each with it&amp;rsquo;s own purpose.</description>
+Architecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS&amp;rsquo; deployed within the bank each with it&amp;rsquo;s own purpose.
+   PaaS Name Purpose     Non Production This PaaS is used for running the non production workloads, this will be where development and test purposes are deployed.</description>
     </item>
     
   </channel>

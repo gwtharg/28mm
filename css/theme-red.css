@@ -13,15 +13,7 @@
     --MENU-SEARCH-BG-color:#b90000; /* Search field background color (by default borders + icons) */
     --MENU-SEARCH-BOX-color: #ef2020; /* Override search field border color */
     --MENU-SEARCH-BOX-ICONS-color: #fda1a1; /* Override search field icons color */
-
-    --MENU-SECTIONS-ACTIVE-BG-color:#2b2020; /* Background color of the active section and its childs */
-    --MENU-SECTIONS-BG-color:#312525; /* Background color of other sections */
-    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
-    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
-    
-    --MENU-VISITED-color: #ff3333; /* Color of 'page visited' icons in menu */
+    d021bb69-4f85-8670-07cd-3a2da0bd7e3533; /* Color of 'page visited' icons in menu */
     --MENU-SECTION-HR-color: #2b2020; /* Color of <hr> separator in menu */
     
 }

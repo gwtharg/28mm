@@ -17,17 +17,18 @@
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/paas/openshift/openshift/</guid>
-      <description>OpenShift Container Platform Openshift is a Platform as a Service (PaaS) technology from Redhat based on Docker and Kubernetes.
+      <description>Openshift is a Platform as a Service (PaaS) technology from Redhat based on Docker and Kubernetes.
 Openshift provides the ability to orchistrate docker containers, providing request routing, health checks and automated scaling amongst other things.
-Architecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS&amp;rsquo; deployed within the bank each with it&amp;rsquo;s own purpose.</description>
+Architecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS&amp;rsquo; deployed within the bank each with it&amp;rsquo;s own purpose.
+   PaaS Name Purpose     Non Production This PaaS is used for running the non production workloads, this will be where development and test purposes are deployed.</description>
     </item>
     
     <item>
-      <title>Platform Engineering Backgound</title>
-      <link>https://gwtharg.github.io/28mm/paas/all_html/</link>
+      <title>Platform Engineering Background</title>
+      <link>https://gwtharg.github.io/28mm/paas/pe_background/</link>
       <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/paas/all_html/</guid>
+      <guid>https://gwtharg.github.io/28mm/paas/pe_background/</guid>
       <description>&amp;nbsp;
 Some Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
 Process/MethodType of requestREAP Process / EPM

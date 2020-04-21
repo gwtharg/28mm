@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>paas on Walmo SDLC Test</title>
+    <link>https://gwtharg.github.io/28mm/categories/paas/</link>
+    <description>Recent content in paas on Walmo SDLC Test</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Mon, 20 Apr 2020 10:50:16 +0100</lastBuildDate>
+    
+	<atom:link href="https://gwtharg.github.io/28mm/categories/paas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Branching and Merging Strategy</title>
+      <link>https://gwtharg.github.io/28mm/git/branchingstrategy/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/git/branchingstrategy/</guid>
+      <description>Most development is done on the internal Github but some code is shared with the external Bitbucket. In order to support this we have the same repo pushed to both GitHub and BitBucket.
+It is best to consider GitHub and BitBucket as simply copies of the same git repository. There is no merging between GitHub and BitBucket, merging is done at the branch level and the same commit history is pushed to both systems.</description>
+    </item>
+    
+    <item>
+      <title>Semantic Version Enforcement</title>
+      <link>https://gwtharg.github.io/28mm/git/semanticversionenforcement/</link>
+      <pubDate>Mon, 20 Apr 2020 10:50:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/git/semanticversionenforcement/</guid>
+      <description>Going forward the commit comment format will be enforced in GitHub, to allow semantic versioning of the builds. This is a basic development discipline to allow control and automation of code delivery.
+This enforcement will be rolled out sympathetically to all GitHub repositories, so as not to interfere with the in flight releases.
+This change consists off the format of the commit comments, from which the semantic version is derived and set of scripts to enforce and help with commits.</description>
+    </item>
+    
+  </channel>
+</rss>

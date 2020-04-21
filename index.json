@@ -1,87 +1,66 @@
 [
 {
-	"uri": "https://gwtharg.github.io/28mm/git/semanticversionenforcement/",
-	"title": "Semantic Version Enforcement",
-	"tags": ["git"],
+	"uri": "https://gwtharg.github.io/28mm/paas/openshift/openshift/",
+	"title": "OpenShift Container Platform",
+	"tags": ["docker", "openshift", "kubernetes"],
 	"description": "",
-	"content": "Semantic Version Enforcement Going forward the commit comment format will be enforced in GitHub, to allow semantic versioning of the builds. This is a basic development discipline to allow control and automation of code delivery.\nThis enforcement will be rolled out sympathetically to all GitHub repositories, so as not to interfere with the in flight releases.\nThis change consists off the format of the commit comments, from which the semantic version is derived and set of scripts to enforce and help with commits.\nCommit Comment Format Development will be done on branches, created from the mainline streams. Currently only have the master mainline stream, but as process matures will have stream for each major semantic version.\nThere will be two types of branches, normal development and hotfix. Normal development will be branched from the head of the mainline stream (master), while hotfix will be branched from a tagged release. All work must be done from a JIRA ticket.\nFor a normal development release the commit comment should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : (MAJOR|MINOR|PATCH) : [[:alnum:]]+\nThe first part if the JIRA ticket id, the second part is the semantic change, the third part is a description of the change. For example\nDYB-12345 : MINOR : An example comment\nNote the spacing around field separator (:), this is to simplify reading, making it consistently formatted.\nThe semantic version part, should should take the value, MAJOR, MINOR or PATCH, all upper case; as explained below\n MAJOR : A change that is backward breaking, currently this isn\u0026rsquo;t supported MINOR : A change that adds new functionality PATCH : A fix for existing functionality  The decision on the semantic version value should be done by the developer, the ticket author and if required the appropriate technical consultant.\nFor a hotfix the commit message should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : HOTFIX : [[:alnum:]]+\nFor example\nDYB-54321 : HOTFIX : Need this fixed now\nThese formats should be applied to all commits, including when merging pull requests. Github isn\u0026rsquo;t helpful here, as it pre-fills the merge commit message, the title of the merge box; this should be edited manually when merging.\nDetermination of Semantic Version The reason for enforcement of the commit comment is to determine the semantic version of the generated artefact.\nFor a normal change, on a mainline stream, the version of the generated artefact will be major.minor.patch for example 3.4.12.\nA build which publishes an artefact will check the last published release, by looking for the the last tag. If none is found it will take a default value. It will then look at all the commit comments since that tag, and look for the highest semantic version value in all the commit comments (MAJOR \u0026gt; MINOR |\u0026gt; PATCH). It will increment the semantic version and tag the code with the new version.\nFor example if the last tag was 3.4.12 and the commit comments since then are\nPE-3567 : PATCH : A bugfix\nPE-3371 : PATCH : Fix logic\nPE-3371 : MINOR : Add new endpoint\nThe highest semantic version value is MINOR, so the semantic version will be incremented to 3.5.0\nSee the document about versioning strategy for a fuller description of this semantic version incrementing.\nFor a hotfix release the semantic version will take the format major.minor.patch-hotfix.buildnumberfor example 3.4.12-hotfix.22.\nWhen the release build is run against a hotfix branch, it will find the last tag, which will be the tag that the hotfix branch was created against. It will take this tag and add the term -hotfix and its build number to the tag and then tag the code with the new tag. The use of the original tag allows multiple hotfix developments, and the use of the build number allows multiple attempts at each of the hot fixes.\nSemantic Version Tools A new directory has been added to the ms-template, called setup, which contains the tools to control semantic versioning. This will also be added to all other template used by auto-mate.\nThe scripts in this directory includes the hooks to enforce the commit patterns and scripts to work out the semantic version from the commit comments. See the README in the directory for more details.\nThere are two script of interest for any development activities.\nThe first is development-setup.sh, this sets up the hooks on the developers local copy of the git project. This is called by default for every build but running\ngradle setupDevelopment\nWill do it without running a build.\nThe second is create-hotfix.sh , this creates the hotfix branch. It requires the release tag of the artefact to be hot fixed as its only argument.\nThe other scripts are described at the end of the README.\n"
+	"content": "Openshift is a Platform as a Service (PaaS) technology from Redhat based on Docker and Kubernetes.\nOpenshift provides the ability to orchistrate docker containers, providing request routing, health checks and automated scaling amongst other things.\nArchitecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS\u0026rsquo; deployed within the bank each with it\u0026rsquo;s own purpose.\n   PaaS Name Purpose     Non Production This PaaS is used for running the non production workloads, this will be where development and test purposes are deployed.   Production This PaaS is used to run production workloads which provide services to the customer.   Shared Services This PaaS is used to run the Operational Platform applications that are shared between Production and NonProduction PaaS\u0026rsquo;s. This is designed to run workloads that do not provide functionality to a customer but used to manage the Platform. This will run things like Composer, Kit CD services, Caboodle and Chieftain.    Openshift/Kubernetes Important Objects There are only a few important components that need to be understood to get started with Openshift.\nAll Openshift objects can be viewed and edited either in the UI or using the command line tool oc which is available from github.com (this will be packaged up eventually :-))\noc get ${object} will return the objects that you have access to.\nThis table provides a quick intro to some of the objects, further info can be found at the online documentation for Openshift and Kubernetes\n   Object oc get type (shortcut) Description     Project projects An area where a user can create and configure objects.   Namespace namespaces(ns) An extention of the project object, the namespace is a section of the SDN which is logically seperated from other namespaces.   Image Streams imagestreams (is) An object which is linked to a docker image deployed in the local docker registry of the PaaS. Other objects will refer to the imagestream rather than the docker images themselves. The image stream will track updates which can be used as a trigger for running deploys. Image streams also have tags similar to docker images (but they do not have to match the docker image tag)   Pod pods(po) A single deployable component which can be made up of 1 or more docker containers. This allows multiple docker containers to share a memory space, filesystem and network where there are tight dependencies.   Service services (svc) This is equivalent of a DNS entry and a load balancer when there are multiple instances of a pod running. This is only resolvable from containers running within the SDN of the PaaS.   Route routes This is the object that is used to configure the HA proxy\u0026rsquo;s when access is required to a service from outside of the PaaS.   Deployment Config deploymentconfigs(dc) Deployment configs are used to define how a docker image referenced by an imagestream should be deployed.   Replication Controllers replicationcontrollers(rc) A deployment config will create a replication controller rather than a pod. It is the replication controllers responsibility to create the pods, montior the health of the pods and start new pods if there are not enough pods running.   Persistent Volumes persistentvolumes(pv) These are filesystems which are shared amongst the nodes which can be mounted into a Pod when the docker container requests a Volume. This is a cluster level object whith various properties including size and write mode i.e. readWriteOnce(only a single instance of a pod can mount), readWriteMany(multiple instances of pods can mount), readOnly.   Persistent Volume Claim persistentvolumeclaims (pvc) These are used to allow a project to mark a persistent volume as used. A claim is really a request for a persistent volume which will then be matched and bound to a free volume. Each volume can only be bound to a single claim.    Whilst working on the PaaS it is possible to use a template to create multiple objects at a time. This is what elements relies on to do deploy applications to the Paas.\nUnderlying Fabric of the PaaS The PaaS is constructed with multiple types of physical servers. There are OpenShift Masters which are used to run the components used to manage the PaaS and OpenShift Nodes which are used to run the Pod workload.\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/test/not_me/",
-	"title": "Not me",
-	"tags": [],
+	"uri": "https://gwtharg.github.io/28mm/site-documentation/html_based_pages/",
+	"title": "HTML Based Pages",
+	"tags": ["html", "help"],
 	"description": "",
-	"content": "So this is some text not written by Not Me\n"
+	"content": "\n Trying colours You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n Below is the html for the colours    Some Markdown text with \u0026#x3C;span style=\u0026#x22;color:blue\u0026#x22;\u0026#x3E; Simple \u0026#x3C;b\u0026#x3E;blue\u0026#x3C;/b\u0026#x3E; coloured text.\u0026#x3C;br\u0026#x3E; \u0026#x3C;/span\u0026#x3E;Back to normal text. Now we can highlight in \u0026#x3C;span style=\u0026#x22;color:red\u0026#x22;\u0026#x3E; \u0026#x3C;b\u0026#x3E;red\u0026#x3C;/b\u0026#x3E; this is red.\u0026#x3C;/span\u0026#x3E;\u0026#x3C;br\u0026#x3E;    Remember to use HTML entities so the HTML is not interpreted as HTML"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/pe_background/",
+	"title": "Platform Engineering Background",
+	"tags": ["openshift", "html"],
+	"description": "",
+	"content": "\n \u0026nbsp;\nSome Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/git/branchingstrategy/",
 	"title": "Branching and Merging Strategy",
 	"tags": ["git"],
 	"description": "",
-	"content": "Branching and Merging Strategy Most development is done on the internal Github but some code is shared with the external Bitbucket. In order to support this we have the same repo pushed to both GitHub and BitBucket.\nIt is best to consider GitHub and BitBucket as simply copies of the same git repository. There is no merging between GitHub and BitBucket, merging is done at the branch level and the same commit history is pushed to both systems.\nThere are slightly different strategies depending on what we are modifying.\nCommon Libraries Common libraries are strongly synchronised. All work for PaaS is done on a 2.0 branch and whenever a change is made on bitbucket/2.0 is must also be pushed to github/2.0 or vice versa.\nAs required the latest DYB changes on bitbucket/master branch will be merged into bitbucket/2.0 and pushed to github/2.0.\nNew Microservices This is the simplest scenario where a new repo is created on Github and development continues on github/master.\nOn a regular basis github/master is pushed to bitbucket/master so that in theory work could be done by people not on the network.\nExisting Microservices Initially bitbucket/master is pushed to github/master and a bitbucket/2.0 marker branch is created pointing to the same commit. Migration then continues on github/master.\nPeriodically we will have to synchronise any changes that have been made by DYB which involves merging bitbucket/master into github/master. The bitbucket/2.0 marker is moved to point to the merge commit and is pushed back to bitbucket.\nNote: Be very careful not to merge any PaaS work back into bitbucket/master since that belongs to DYB.\nAlexa - ScreenMedia ScreenMedia have their own git workflow and will periodically raise a pull request to merge their development branch into bitbucket/master. When this is merged it is pushed to github/master so that it can be built and deployed to the PaaS.\nNote: Since they are using a different workflow which uses a long lived development branch you should NOT delete their branch when merging. For the same reason do not rewrite history by rebasing or squashing during the merge, stick with standard merges.\n"
+	"content": "Most development is done on the internal Github but some code is shared with the external Bitbucket. In order to support this we have the same repo pushed to both GitHub and BitBucket.\nIt is best to consider GitHub and BitBucket as simply copies of the same git repository. There is no merging between GitHub and BitBucket, merging is done at the branch level and the same commit history is pushed to both systems.\nThere are slightly different strategies depending on what we are modifying.\nCommon Libraries Common libraries are strongly synchronised. All work for PaaS is done on a 2.0 branch and whenever a change is made on bitbucket/2.0 is must also be pushed to github/2.0 or vice versa.\nAs required the latest DYB changes on bitbucket/master branch will be merged into bitbucket/2.0 and pushed to github/2.0.\nNew Microservices This is the simplest scenario where a new repo is created on Github and development continues on github/master.\nOn a regular basis github/master is pushed to bitbucket/master so that in theory work could be done by people not on the network.\nExisting Microservices Initially bitbucket/master is pushed to github/master and a bitbucket/2.0 marker branch is created pointing to the same commit. Migration then continues on github/master.\nPeriodically we will have to synchronise any changes that have been made by DYB which involves merging bitbucket/master into github/master. The bitbucket/2.0 marker is moved to point to the merge commit and is pushed back to bitbucket.\nNote: Be very careful not to merge any PaaS work back into bitbucket/master since that belongs to DYB.\nAlexa - ScreenMedia ScreenMedia have their own git workflow and will periodically raise a pull request to merge their development branch into bitbucket/master. When this is merged it is pushed to github/master so that it can be built and deployed to the PaaS.\nNote: Since they are using a different workflow which uses a long lived development branch you should NOT delete their branch when merging. For the same reason do not rewrite history by rebasing or squashing during the merge, stick with standard merges.\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/markdown/flowcharts/",
+	"uri": "https://gwtharg.github.io/28mm/site-documentation/flowcharts/",
 	"title": "Flowcharts Notes",
 	"tags": ["html", "mermaid"],
 	"description": "",
 	"content": "Straight html \u0026lt;div class=\u0026#34;mermaid\u0026#34;\u0026gt; graph LR; A--\u0026gt;B; \u0026lt;/div\u0026gt; Mermaid not rendering yet!!! graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Used external website to create png Rendering from local png files /content/markdown/flowcharts/name.png as referenced from flowcharts.md file\nm1.png m2.png From online link \n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/markdown/md_notes/",
-	"title": "Markdown Notes",
+	"uri": "https://gwtharg.github.io/28mm/site-documentation/md_table_notes/",
+	"title": "Markdown Tables",
 	"tags": ["markdown", "help"],
 	"description": "",
 	"content": "Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:\nso this\n First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this\n   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    shopping list pt 1  allen wrenches gerbil feeders toilet seats electric heaters Trash compactors juice extractor shower rods and water meters   shopping list pt 2  Walkie-talkies   copper wires safety goggles radial tires   shopping list pt 3  BB pellets rubber mallets fans and dehumidifiers   shopping list pt 4  Picture hangers  paper cutters  waffle irons      "
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/paas/openshift/openshift/",
-	"title": "OpenShift Container Platform",
-	"tags": ["docker", "openshift", "kubernetes"],
-	"description": "",
-	"content": "OpenShift Container Platform Openshift is a Platform as a Service (PaaS) technology from Redhat based on Docker and Kubernetes.\nOpenshift provides the ability to orchistrate docker containers, providing request routing, health checks and automated scaling amongst other things.\nArchitecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS\u0026rsquo; deployed within the bank each with it\u0026rsquo;s own purpose.\n   PaaS Name Purpose     Non Production This PaaS is used for running the non production workloads, this will be where development and test purposes are deployed.   Production This PaaS is used to run production workloads which provide services to the customer.   Shared Services This PaaS is used to run the Operational Platform applications that are shared between Production and NonProduction PaaS\u0026rsquo;s. This is designed to run workloads that do not provide functionality to a customer but used to manage the Platform. This will run things like Composer, Kit CD services, Caboodle and Chieftain.    Openshift/Kubernetes Important Objects There are only a few important components that need to be understood to get started with Openshift.\nAll Openshift objects can be viewed and edited either in the UI or using the command line tool oc which is available from github.com (this will be packaged up eventually :-))\noc get ${object} will return the objects that you have access to.\nThis table provides a quick intro to some of the objects, further info can be found at the online documentation for Openshift and Kubernetes\n   Object oc get type (shortcut) Description     Project projects An area where a user can create and configure objects.   Namespace namespaces(ns) An extention of the project object, the namespace is a section of the SDN which is logically seperated from other namespaces.   Image Streams imagestreams (is) An object which is linked to a docker image deployed in the local docker registry of the PaaS. Other objects will refer to the imagestream rather than the docker images themselves. The image stream will track updates which can be used as a trigger for running deploys. Image streams also have tags similar to docker images (but they do not have to match the docker image tag)   Pod pods(po) A single deployable component which can be made up of 1 or more docker containers. This allows multiple docker containers to share a memory space, filesystem and network where there are tight dependencies.   Service services (svc) This is equivalent of a DNS entry and a load balancer when there are multiple instances of a pod running. This is only resolvable from containers running within the SDN of the PaaS.   Route routes This is the object that is used to configure the HA proxy\u0026rsquo;s when access is required to a service from outside of the PaaS.   Deployment Config deploymentconfigs(dc) Deployment configs are used to define how a docker image referenced by an imagestream should be deployed.   Replication Controllers replicationcontrollers(rc) A deployment config will create a replication controller rather than a pod. It is the replication controllers responsibility to create the pods, montior the health of the pods and start new pods if there are not enough pods running.   Persistent Volumes persistentvolumes(pv) These are filesystems which are shared amongst the nodes which can be mounted into a Pod when the docker container requests a Volume. This is a cluster level object whith various properties including size and write mode i.e. readWriteOnce(only a single instance of a pod can mount), readWriteMany(multiple instances of pods can mount), readOnly.   Persistent Volume Claim persistentvolumeclaims (pvc) These are used to allow a project to mark a persistent volume as used. A claim is really a request for a persistent volume which will then be matched and bound to a free volume. Each volume can only be bound to a single claim.    Whilst working on the PaaS it is possible to use a template to create multiple objects at a time. This is what elements relies on to do deploy applications to the Paas.\nUnderlying Fabric of the PaaS The PaaS is constructed with multiple types of physical servers. There are OpenShift Masters which are used to run the components used to manage the PaaS and OpenShift Nodes which are used to run the Pod workload.\n"
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tfs/team_types/",
-	"title": "Team Types",
-	"tags": ["TFS User Document"],
-	"description": "",
-	"content": "Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.\nWe will run through an example using the IIB Technical Team to guide you through the process.\nInitial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve. If teams require to view the results of queries from other teams \u0026amp; have the ability to show those on a common dashboard then this may be a reason to create a more complex structure. If the user just requires to be a member of many teams then this is not a valid reason to create a more complex structure.\nNote \u0026ndash; rights to view work/code/queries will be inherited with this model. So any team on a lower level must consent to this before creating any complex structure.\n"
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/",
-	"title": "First Page",
-	"tags": [],
-	"description": "",
-	"content": "Sample Front Matter Hugo Frontmatter is the sites Metadata\n--- title: \u0026#34;You Title goes here\u0026#34; date: 2020-04-13T17:36:16+01:00 draft: true pre: \u0026#34;\u0026lt;b\u0026gt;X. \u0026lt;/b\u0026gt;\u0026#34; authors: [\u0026#34;Your name \u0026#34;] catagories: [ \u0026#34;Your catagory here ] tags: [ \u0026#34;if required\u0026#34; ] --- landing page? {{ path.Dir \u0026ldquo;http://localhost:1313/28mm/catagories/\u0026quot;}}\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/git/",
 	"title": "GIT Info",
 	"tags": ["git"],
 	"description": "",
-	"content": "Test from GIT information Based on notes from old V: Drive\n Tags based on Git Git\n"
+	"content": "Test from GIT information Based on notes from old V: Drive from hVM\n Tags based on Git\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/markdown/",
-	"title": "Markdown",
-	"tags": ["markdown"],
+	"uri": "https://gwtharg.github.io/28mm/",
+	"title": "First Page",
+	"tags": ["git"],
 	"description": "",
-	"content": "Info on Markdown goes here  To do  "
+	"content": "Sample Front Matter Hugo Front Matter is the sites Metadata\n--- title: \u0026#34;You Title goes here\u0026#34; date: 2020-04-13T17:36:16+01:00 draft: true pre: \u0026#34;\u0026lt;b\u0026gt;X. \u0026lt;/b\u0026gt;\u0026#34; tags: [ \u0026#34;if required\u0026#34; ] categories: [ \u0026#34;Your category here\u0026#34; ] components: [\u0026#34;Jira aligned component\u0026#34;] authors: [\u0026#34;name of document owner\u0026#34;] --- landing page? "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/paas/",
 	"title": "Paas",
 	"tags": ["openshift"],
 	"description": "",
-	"content": "Pages from Platform Training Notes  Openshift  "
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/test/",
-	"title": "Test index",
-	"tags": [],
-	"description": "",
-	"content": "This is _index.html Is it a landing page?\nHugo TOML YAML Mix config.toml uses TOML format:\ntitle = \u0026ldquo;My New Hugo Site\u0026rdquo;\nbut archetypes/default.md uses YAML\ntitle: \u0026ldquo;Test index\u0026rdquo;\nhttps://github.com/gohugoio/hugo/issues/5241\nThe reason is GitHub\u0026rsquo;s support for YAML front matter. Currently they do not support TOML front matter (Metadata).\nSo we are going to use **TOML** for the **config.toml** file then **YAML** for the rest of the contents. "
+	"content": "Pages Training Notes  Openshift Platform Engineering Background  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/",
@@ -93,13 +72,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/authors/",
 	"title": "Authors",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/catagories/",
-	"title": "Catagories",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -119,21 +91,14 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/help/",
-	"title": "Content Info",
-	"tags": ["content", "help", "taxonomy"],
-	"description": "",
-	"content": "Basic help about site   Our basic taxonomy comes from the Metadata in our \u0026lsquo;Front Matter\u0026rsquo;\nThis page has the following \u0026lsquo;Front Matter\u0026rsquo; taxonomy.\ntags: [\u0026quot;content\u0026quot; , \u0026quot;help\u0026quot; , \u0026quot;taxonomy\u0026quot;] catagories: [\u0026quot;help\u0026quot;] components: [\u0026quot;hugo\u0026quot;] authors: [\u0026quot;walmo\u0026quot;] Our types of taxonomy we are using are based on our configuration file.\nThe contents [\u0026ldquo;content\u0026rdquo; , \u0026ldquo;help\u0026rdquo; , \u0026ldquo;taxonomy\u0026rdquo;] we add when we create our file.\nMore accurate content in our Metadata will help users navigate the documents contained within the site.\n Content based on Catagories\nComponents\nTags\nAuthors\n"
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/help/",
-	"title": "help",
+	"uri": "https://gwtharg.github.io/28mm/components/document/",
+	"title": "document",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/catagories/help/",
+	"uri": "https://gwtharg.github.io/28mm/tags/help/",
 	"title": "help",
 	"tags": [],
 	"description": "",
@@ -145,6 +110,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/site-documentation/",
+	"title": "Site Content Info",
+	"tags": ["content", "help", "taxonomy"],
+	"description": "",
+	"content": "Basic help about site   Our basic taxonomy comes from the Metadata in our \u0026lsquo;Front Matter\u0026rsquo;\nThis page has the following \u0026lsquo;Front Matter\u0026rsquo; taxonomy.\ntags: [\u0026quot;content\u0026quot; , \u0026quot;help\u0026quot; , \u0026quot;taxonomy\u0026quot;] catagories: [\u0026quot;help\u0026quot;] components: [\u0026quot;hugo\u0026quot;] authors: [\u0026quot;walmo\u0026quot;] Our types of taxonomy we are using are based on our configuration file.\nThe contents [\u0026ldquo;content\u0026rdquo; , \u0026ldquo;help\u0026rdquo; , \u0026ldquo;taxonomy\u0026rdquo;] we add when we create our file.\nMore accurate content in our Metadata will help users navigate the documents contained within the site.\n Hugo TOML YAML Mix config.toml uses TOML format:\ntitle = \u0026ldquo;My New Hugo Site\u0026rdquo;\nbut archetypes/default.md uses YAML\ntitle: \u0026ldquo;Test index\u0026rdquo;\nhttps://github.com/gohugoio/hugo/issues/5241\nThe reason is GitHub\u0026rsquo;s support for YAML front matter. Currently they do not support TOML front matter (Metadata).\nSo we are going to use **TOML** for the **config.toml** file then **YAML** for the rest of the contents.  Site Content based on :- Categories\nComponents\nTags\nAuthors\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/",
@@ -168,6 +140,13 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/authors/cybg/",
 	"title": "cybg",
 	"tags": [],
@@ -182,7 +161,7 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/catagories/paas/",
+	"uri": "https://gwtharg.github.io/28mm/categories/paas/",
 	"title": "paas",
 	"tags": [],
 	"description": "",
@@ -196,6 +175,20 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/git/semanticversionenforcement/",
+	"title": "Semantic Version Enforcement",
+	"tags": ["git"],
+	"description": "",
+	"content": "Going forward the commit comment format will be enforced in GitHub, to allow semantic versioning of the builds. This is a basic development discipline to allow control and automation of code delivery.\nThis enforcement will be rolled out sympathetically to all GitHub repositories, so as not to interfere with the in flight releases.\nThis change consists off the format of the commit comments, from which the semantic version is derived and set of scripts to enforce and help with commits.\nCommit Comment Format Development will be done on branches, created from the mainline streams. Currently only have the master mainline stream, but as process matures will have stream for each major semantic version.\nThere will be two types of branches, normal development and hotfix. Normal development will be branched from the head of the mainline stream (master), while hotfix will be branched from a tagged release. All work must be done from a JIRA ticket.\nFor a normal development release the commit comment should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : (MAJOR|MINOR|PATCH) : [[:alnum:]]+\nThe first part if the JIRA ticket id, the second part is the semantic change, the third part is a description of the change. For example\nDYB-12345 : MINOR : An example comment\nNote the spacing around field separator (:), this is to simplify reading, making it consistently formatted.\nThe semantic version part, should should take the value, MAJOR, MINOR or PATCH, all upper case; as explained below\n MAJOR : A change that is backward breaking, currently this isn\u0026rsquo;t supported MINOR : A change that adds new functionality PATCH : A fix for existing functionality  The decision on the semantic version value should be done by the developer, the ticket author and if required the appropriate technical consultant.\nFor a hotfix the commit message should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : HOTFIX : [[:alnum:]]+\nFor example\nDYB-54321 : HOTFIX : Need this fixed now\nThese formats should be applied to all commits, including when merging pull requests. Github isn\u0026rsquo;t helpful here, as it pre-fills the merge commit message, the title of the merge box; this should be edited manually when merging.\nDetermination of Semantic Version The reason for enforcement of the commit comment is to determine the semantic version of the generated artefact.\nFor a normal change, on a mainline stream, the version of the generated artefact will be major.minor.patch for example 3.4.12.\nA build which publishes an artefact will check the last published release, by looking for the the last tag. If none is found it will take a default value. It will then look at all the commit comments since that tag, and look for the highest semantic version value in all the commit comments (MAJOR \u0026gt; MINOR |\u0026gt; PATCH). It will increment the semantic version and tag the code with the new version.\nFor example if the last tag was 3.4.12 and the commit comments since then are\nPE-3567 : PATCH : A bugfix\nPE-3371 : PATCH : Fix logic\nPE-3371 : MINOR : Add new endpoint\nThe highest semantic version value is MINOR, so the semantic version will be incremented to 3.5.0\nSee the document about versioning strategy for a fuller description of this semantic version incrementing.\nFor a hotfix release the semantic version will take the format major.minor.patch-hotfix.buildnumberfor example 3.4.12-hotfix.22.\nWhen the release build is run against a hotfix branch, it will find the last tag, which will be the tag that the hotfix branch was created against. It will take this tag and add the term -hotfix and its build number to the tag and then tag the code with the new tag. The use of the original tag allows multiple hotfix developments, and the use of the build number allows multiple attempts at each of the hot fixes.\nSemantic Version Tools A new directory has been added to the ms-template, called setup, which contains the tools to control semantic versioning. This will also be added to all other template used by auto-mate.\nThe scripts in this directory includes the hooks to enforce the commit patterns and scripts to work out the semantic version from the commit comments. See the README in the directory for more details.\nThere are two script of interest for any development activities.\nThe first is development-setup.sh, this sets up the hooks on the developers local copy of the git project. This is called by default for every build but running\ngradle setupDevelopment\nWill do it without running a build.\nThe second is create-hotfix.sh , this creates the hotfix branch. It requires the release tag of the artefact to be hot fixed as its only argument.\nThe other scripts are described at the end of the README.\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/help/",
+	"title": "help",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/html/",
 	"title": "html",
 	"tags": [],
@@ -203,29 +196,36 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/help/html_info/",
-	"title": "HTML Based Pages",
-	"tags": ["html"],
-	"description": "",
-	"content": "\n Trying colours  You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n Below is the html for the colours    Some Markdown text with \u0026#x3C;span style=\u0026#x22;color:blue\u0026#x22;\u0026#x3E; Simple \u0026#x3C;b\u0026#x3E;blue\u0026#x3C;/b\u0026#x3E; coloured text.\u0026#x3C;br\u0026#x3E; \u0026#x3C;/span\u0026#x3E;Back to normal text. Now we can highlight in \u0026#x3C;span style=\u0026#x22;color:red\u0026#x22;\u0026#x3E; \u0026#x3C;b\u0026#x3E;red\u0026#x3C;/b\u0026#x3E; this is red.\u0026#x3C;/span\u0026#x3E;\u0026#x3C;br\u0026#x3E;    Remember to use HTML entities so the HTML is not interpreted as HTML"
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/git/new_default/",
-	"title": "New Default arch",
+	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
+	"title": "openshift",
 	"tags": [],
 	"description": "",
-	"content": "This should inherit from archetypes/default.md and have a new author value available.\nComplete\n"
+	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/paas/all_html/",
-	"title": "Platform Engineering Backgound",
-	"tags": ["html"],
+	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
+	"title": "openshift",
+	"tags": [],
 	"description": "",
-	"content": "\n \u0026nbsp;\nSome Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n  "
+	"content": ""
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/docker/",
 	"title": "docker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/document/",
+	"title": "document",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/git/",
+	"title": "git",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -252,36 +252,29 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
-	"title": "openshift",
-	"tags": [],
+	"uri": "https://gwtharg.github.io/28mm/tfs/team_types/",
+	"title": "Team Types",
+	"tags": ["TFS", "document"],
 	"description": "",
-	"content": ""
+	"content": "Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.\nWe will run through an example using the IIB Technical Team to guide you through the process.\nInitial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve. If teams require to view the results of queries from other teams \u0026amp; have the ability to show those on a common dashboard then this may be a reason to create a more complex structure. If the user just requires to be a member of many teams then this is not a valid reason to create a more complex structure.\nNote \u0026ndash; rights to view work/code/queries will be inherited with this model. So any team on a lower level must consent to this before creating any complex structure.\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
-	"title": "openshift",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/catagories/tfs/",
+	"uri": "https://gwtharg.github.io/28mm/tags/tfs/",
 	"title": "TFS",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/tfs-user-document/",
-	"title": "TFS User Document",
+	"uri": "https://gwtharg.github.io/28mm/components/tfs/",
+	"title": "TFS",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/catagories/markdown/",
-	"title": "markdown",
+	"uri": "https://gwtharg.github.io/28mm/categories/help/",
+	"title": "help",
 	"tags": [],
 	"description": "",
 	"content": ""

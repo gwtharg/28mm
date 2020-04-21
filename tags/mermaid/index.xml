@@ -13,10 +13,10 @@
     
     <item>
       <title>Flowcharts Notes</title>
-      <link>https://gwtharg.github.io/28mm/markdown/flowcharts/</link>
+      <link>https://gwtharg.github.io/28mm/site-documentation/flowcharts/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/markdown/flowcharts/</guid>
+      <guid>https://gwtharg.github.io/28mm/site-documentation/flowcharts/</guid>
       <description>Straight html &amp;lt;div class=&amp;#34;mermaid&amp;#34;&amp;gt; graph LR; A--&amp;gt;B; &amp;lt;/div&amp;gt; Mermaid not rendering yet!!! graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Used external website to create png Rendering from local png files /content/markdown/flowcharts/name.png as referenced from flowcharts.md file
 m1.png m2.png From online link</description>
     </item>

@@ -57,11 +57,29 @@
     </item>
     
     <item>
+      <title>openshift</title>
+      <link>https://gwtharg.github.io/28mm/tags/openshift/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/openshift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>docker</title>
       <link>https://gwtharg.github.io/28mm/tags/docker/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>document</title>
+      <link>https://gwtharg.github.io/28mm/tags/document/</link>
+      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/document/</guid>
       <description></description>
     </item>
     
@@ -93,20 +111,11 @@
     </item>
     
     <item>
-      <title>openshift</title>
-      <link>https://gwtharg.github.io/28mm/tags/openshift/</link>
+      <title>TFS</title>
+      <link>https://gwtharg.github.io/28mm/tags/tfs/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/tags/openshift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TFS User Document</title>
-      <link>https://gwtharg.github.io/28mm/tags/tfs-user-document/</link>
-      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/tags/tfs-user-document/</guid>
+      <guid>https://gwtharg.github.io/28mm/tags/tfs/</guid>
       <description></description>
     </item>
     
