@@ -22,13 +22,13 @@
     </item>
     
     <item>
-      <title>First Page</title>
+      <title>Auto-Doc</title>
       <link>https://gwtharg.github.io/28mm/</link>
       <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/</guid>
-      <description>Sample Front Matter Hugo Front Matter is the sites Metadata
---- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true pre: &amp;#34;&amp;lt;b&amp;gt;X. &amp;lt;/b&amp;gt;&amp;#34; tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- landing page? </description>
+      <description>Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata
+--- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- graph LR; A--B;  Then another diagram graph TB c1--a2 subgraph one a1--a2 end subgraph two b1--b2 end subgraph three c1--c2 end  graph LR id1(Start)--id2(Stop) style id1 fill:#f00,stroke:#333,stroke-width:4px style id2 fill:#0f0,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5, 5  graph LR id1((Drawing a circle))  graph TD B[&#34;</description>
     </item>
     
   </channel>

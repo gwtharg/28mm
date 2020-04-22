@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
 
-    <title>First Page :: Walmo SDLC Test</title>
+    <title>Auto-Doc :: Walmo SDLC Test</title>
 
     
-    <link href="/28mm/css/nucleus.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/fontawesome-all.min.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/hybrid.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/featherlight.min.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/perfect-scrollbar.min.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/auto-complete.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/atom-one-dark-reasonable.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/theme.css?1587477703" rel="stylesheet">
-    <link href="/28mm/css/hugo-theme.css?1587477703" rel="stylesheet">
+    <link href="/28mm/css/nucleus.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/fontawesome-all.min.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/hybrid.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/featherlight.min.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/perfect-scrollbar.min.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/auto-complete.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/atom-one-dark-reasonable.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/theme.css?1587569511" rel="stylesheet">
+    <link href="/28mm/css/hugo-theme.css?1587569511" rel="stylesheet">
     
-      <link href="/28mm/css/theme-red.css?1587477703" rel="stylesheet">
+      <link href="/28mm/css/theme-red.css?1587569511" rel="stylesheet">
     
 
-    <script src="/28mm/js/jquery-3.3.1.min.js?1587477703"></script>
+    <script src="/28mm/js/jquery-3.3.1.min.js?1587569511"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/28mm/js/lunr.min.js?1587477703"></script>
-<script type="text/javascript" src="/28mm/js/auto-complete.js?1587477703"></script>
+<script type="text/javascript" src="/28mm/js/lunr.min.js?1587569511"></script>
+<script type="text/javascript" src="/28mm/js/auto-complete.js?1587569511"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/gwtharg.github.io\/28mm\/";
     
 </script>
-<script type="text/javascript" src="/28mm/js/search.js?1587477703"></script>
+<script type="text/javascript" src="/28mm/js/search.js?1587569511"></script>
 
     
   </div>
@@ -419,7 +419,8 @@
 </span>
 
  
-<h1 id="sample-front-matter">Sample Front Matter</h1>
+<h1 id="auto-doc">Auto-Doc</h1>
+<h2 id="sample-front-matter">Sample Front Matter</h2>
 <p>Hugo <strong>Front Matter</strong> is the sites
 <strong>Metadata</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"> 
@@ -427,14 +428,56 @@
 <span style="color:#a6e22e">title</span>: <span style="color:#e6db74">&#34;You Title goes here&#34;</span>
 <span style="color:#a6e22e">date</span>: <span style="color:#ae81ff">2020</span><span style="color:#f92672">-</span><span style="color:#ae81ff">04</span><span style="color:#f92672">-</span><span style="color:#ae81ff">13</span><span style="color:#a6e22e">T17</span>:<span style="color:#ae81ff">36</span>:<span style="color:#ae81ff">16</span><span style="color:#f92672">+</span><span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">00</span>
 <span style="color:#a6e22e">draft</span>: <span style="color:#66d9ef">true</span>
-<span style="color:#a6e22e">pre</span>: <span style="color:#e6db74">&#34;&lt;b&gt;X. &lt;/b&gt;&#34;</span>
 <span style="color:#a6e22e">tags</span>: [ <span style="color:#e6db74">&#34;if required&#34;</span> ]
 <span style="color:#a6e22e">categories</span>: [ <span style="color:#e6db74">&#34;Your category here&#34;</span> ]
 <span style="color:#a6e22e">components</span>: [<span style="color:#e6db74">&#34;Jira aligned component&#34;</span>]
 <span style="color:#a6e22e">authors</span>: [<span style="color:#e6db74">&#34;name of document owner&#34;</span>]
 
-<span style="color:#f92672">---</span>
-<span style="color:#a6e22e">landing</span> <span style="color:#a6e22e">page</span><span style="color:#960050;background-color:#1e0010">?</span></code></pre></div>
+<span style="color:#f92672">---</span></code></pre></div>
+
+<div class="mermaid" align="center">
+  graph LR;
+        A-->B;
+</div>
+<h3 id="then-another-diagram">Then another diagram</h3>
+
+<div class="mermaid" align="center">
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+</div>
+
+<div class="mermaid" align="center">
+graph LR
+    id1(Start)-->id2(Stop)
+    style id1 fill:#f00,stroke:#333,stroke-width:4px
+    style id2 fill:#0f0,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5, 5
+</div>
+
+<div class="mermaid" align="center">
+graph LR
+      id1((Drawing a circle))
+</div>
+
+<div class="mermaid" align="center">
+graph TD
+    B["fa:fa-twitter for peace"]
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner);
+    B-->E(A fa:fa-camera-retro perhaps?);
+</div>
+
+<div class="mermaid" align="center">
+
+</div>
 	
   
         
@@ -678,19 +721,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/28mm/js/clipboard.min.js?1587477703"></script>
-    <script src="/28mm/js/perfect-scrollbar.min.js?1587477703"></script>
-    <script src="/28mm/js/perfect-scrollbar.jquery.min.js?1587477703"></script>
-    <script src="/28mm/js/jquery.sticky.js?1587477703"></script>
-    <script src="/28mm/js/featherlight.min.js?1587477703"></script>
-    <script src="/28mm/js/highlight.pack.js?1587477703"></script>
+    <script src="/28mm/js/clipboard.min.js?1587569511"></script>
+    <script src="/28mm/js/perfect-scrollbar.min.js?1587569511"></script>
+    <script src="/28mm/js/perfect-scrollbar.jquery.min.js?1587569511"></script>
+    <script src="/28mm/js/jquery.sticky.js?1587569511"></script>
+    <script src="/28mm/js/featherlight.min.js?1587569511"></script>
+    <script src="/28mm/js/highlight.pack.js?1587569511"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/28mm/js/modernizr.custom-3.6.0.js?1587477703"></script>
-    <script src="/28mm/js/learn.js?1587477703"></script>
-    <script src="/28mm/js/hugo-learn.js?1587477703"></script>
+    <script src="/28mm/js/modernizr.custom-3.6.0.js?1587569511"></script>
+    <script src="/28mm/js/learn.js?1587569511"></script>
+    <script src="/28mm/js/hugo-learn.js?1587569511"></script>
 
-    <link href="/28mm/mermaid/mermaid.css?1587477703" rel="stylesheet" />
-    <script src="/28mm/mermaid/mermaid.js?1587477703"></script>
+    <link href="/28mm/mermaid/mermaid.css?1587569511" rel="stylesheet" />
+    <script src="/28mm/mermaid/mermaid.js?1587569511"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

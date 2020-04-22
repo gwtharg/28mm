@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>First Page on Walmo SDLC Test</title>
+    <title>Auto-Doc on Walmo SDLC Test</title>
     <link>https://gwtharg.github.io/28mm/</link>
-    <description>Recent content in First Page on Walmo SDLC Test</description>
+    <description>Recent content in Auto-Doc on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Tue, 07 Apr 2020 13:04:31 +0100</lastBuildDate>
@@ -74,8 +74,7 @@ It is best to consider GitHub and BitBucket as simply copies of the same git rep
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/site-documentation/flowcharts/</guid>
-      <description>Straight html &amp;lt;div class=&amp;#34;mermaid&amp;#34;&amp;gt; graph LR; A--&amp;gt;B; &amp;lt;/div&amp;gt; Mermaid not rendering yet!!! graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Used external website to create png Rendering from local png files /content/markdown/flowcharts/name.png as referenced from flowcharts.md file
-m1.png m2.png From online link</description>
+      <description>Here is mermaid using shortcodes graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]   graph LR; A[Hard edge] --&amp;gt;|Link text| B(Round edge) B --&amp;gt; C{Decision} C --&amp;gt;|One| D[Result one] C --&amp;gt;|Two| E[Result two] Gantt Diagrams gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2020-01-06,2020-01-08 Active task :active, des2, 2020-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2020-01-06,24h Implement parser and json :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d  Class Diagrams classDiagram Class01 C2 : Where am i?</description>
     </item>
     
     <item>
