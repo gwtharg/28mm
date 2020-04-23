@@ -31,15 +31,5 @@ It is best to consider GitHub and BitBucket as simply copies of the same git rep
  Tags based on Git</description>
     </item>
     
-    <item>
-      <title>Auto-Doc</title>
-      <link>https://gwtharg.github.io/28mm/</link>
-      <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/</guid>
-      <description>Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata
---- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- </description>
-    </item>
-    
   </channel>
 </rss>

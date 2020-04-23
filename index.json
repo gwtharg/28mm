@@ -51,7 +51,7 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/",
 	"title": "Auto-Doc",
-	"tags": ["git"],
+	"tags": [""],
 	"description": "",
 	"content": "Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata\n--- title: \u0026#34;You Title goes here\u0026#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ \u0026#34;if required\u0026#34; ] categories: [ \u0026#34;Your category here\u0026#34; ] components: [\u0026#34;Jira aligned component\u0026#34;] authors: [\u0026#34;name of document owner\u0026#34;] --- "
 },
