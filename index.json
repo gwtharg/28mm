@@ -30,7 +30,7 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/site-documentation/flowcharts/",
 	"title": "Flowcharts Notes",
-	"tags": ["html", "mermaid"],
+	"tags": ["help", "mermaid", "shortcodes"],
 	"description": "",
 	"content": "Here are some mermaid diagrams using shortcodes {{ \u0026lt; mermaid \u0026gt;}} graph LR; A[Hard edge] --\u0026gt;|Link text| B(Round edge) B --\u0026gt; C{Decision} C --\u0026gt;|One| D[Result one] C --\u0026gt;|Two| E[Result two] {{ \u0026lt; /mermaid \u0026gt;}}  graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Gantt Diagrams {{ \u0026lt; mermaid \u0026gt;}} gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2020-01-06,2020-01-08 Active task :active, des2, 2020-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2020-01-06,24h Implement parser and json :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d {{ \u0026lt; /mermaid \u0026gt;}}  gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2020-01-06,2020-01-08 Active task :active, des2, 2020-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2020-01-06,24h Implement parser and json :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d  Class Diagrams {{ \u0026lt; mermaid \u0026gt;}} classDiagram Class01 \u0026lt;|-- AveryLongClass : Cool Class03 *-- Class04 Class05 o-- Class06 Class07 .. Class08 Class09 --\u0026gt; C2 : Where am i? Class09 --* C3 Class09 --|\u0026gt; Class07 Class07 : equals() Class07 : Object[] elementData Class01 : size() Class01 : int chimp Class01 : int gorilla Class08 \u0026lt;--\u0026gt; C2: Cool label {{ \u0026lt; /mermaid \u0026gt;}}  classDiagram Class01 C2 : Where am i? Class09 --* C3 Class09 --| Class07 Class07 : equals() Class07 : Object[] elementData Class01 : size() Class01 : int chimp Class01 : int gorilla Class08  C2: Cool label  Git Graphs {{ \u0026lt; mermaid \u0026gt;}} gitGraph: options { \u0026quot;nodeSpacing\u0026quot;: 60, \u0026quot;nodeRadius\u0026quot;: 8 } end commit branch walmo checkout walmo commit commit checkout master commit commit merge walmo {{ \u0026lt; /mermaid \u0026gt;}}  gitGraph: options { \"nodeSpacing\": 60, \"nodeRadius\": 8 } end commit branch walmo checkout walmo commit commit checkout master commit commit merge walmo  Single Line {{ \u0026lt; mermaid \u0026gt;}} graph LR; HTML--\u0026gt;Hugo; {{ \u0026lt; /mermaid \u0026gt;}}  graph LR; HTML--Hugo;  Adding Comments {{ \u0026lt; mermaid \u0026gt;}} graph TD A[Client] --\u0026gt;|tcp_443 \u0026amp; tcp_8080| B(F5 Load Balancer) B --\u0026gt;|tcp_443| C[Live Server] B --\u0026gt;|tcp_443| D[Live Server] {{ \u0026lt; /mermaid \u0026gt;}}  graph TD A[Client] --|tcp_443 \u0026 tcp_8080| B(F5 Load Balancer) B --|tcp_443| C[Live Server] B --|tcp_443| D[Live Server]  TB Diagram {{ \u0026lt; mermaid \u0026gt;}} graph TB c1--\u0026gt;a2 subgraph one a1--\u0026gt;a2 end subgraph two b1--\u0026gt;b2 end subgraph three c1--\u0026gt;c2 end {{ \u0026lt; /mermaid \u0026gt;}}  graph TB c1--a2 subgraph one a1--a2 end subgraph two b1--b2 end subgraph three c1--c2 end  Colours with style {{ \u0026lt; mermaid \u0026gt;}} id1(Start)--\u0026gt;id2(Stop) style id1 fill:#f00,stroke:#333,stroke-width:4px style id2 fill:#0f0,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5, 5 {{ \u0026lt; /mermaid \u0026gt;}}  graph LR id1(Start)--id2(Stop) style id1 fill:#f00,stroke:#333,stroke-width:4px style id2 fill:#0f0,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5, 5  Circles {{ \u0026lt; mermaid \u0026gt;}} graph LR id1((Drawing a circle)) {{ \u0026lt; /mermaid \u0026gt;}}  graph LR id1((Drawing a circle))  "
 },
@@ -247,6 +247,13 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/mermaid/",
 	"title": "mermaid",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/shortcodes/",
+	"title": "shortcodes",
 	"tags": [],
 	"description": "",
 	"content": ""
