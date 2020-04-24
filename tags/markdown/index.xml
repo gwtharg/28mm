@@ -12,15 +12,15 @@
     
     
     <item>
-      <title>Markdown Tables</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/md_table_notes/</link>
+      <title>Markdown Notes</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/markdown_notes/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/site_documentation/md_table_notes/</guid>
+      <guid>https://gwtharg.github.io/28mm/site_documentation/markdown_notes/</guid>
       <description>Tables You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
 so this
  First Header | Second Header ------------ | ------------- Content from cell 1 | Content from cell 2 Content in the first column | Content in the second column Renders as this
-   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    shopping list pt 1  allen wrenches gerbil feeders toilet seats electric heaters Trash compactors juice extractor shower rods and water meters   shopping list pt 2  Walkie-talkies   copper wires safety goggles radial tires   shopping list pt 3  BB pellets rubber mallets fans and dehumidifiers   shopping list pt 4  Picture hangers  paper cutters  waffle irons      Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6 Emphasis, aka italics, with asterisks or underscores.</description>
+   First Header Second Header     Content from cell 1 Content from cell 2   Content in the first column Content in the second column    Headers # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 H1 H2 H3 H4 H5 H6 Emphasis, aka italics, with asterisks or underscores.</description>
     </item>
     
   </channel>
