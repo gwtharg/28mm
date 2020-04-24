@@ -13,10 +13,10 @@
     
     <item>
       <title>Site Content Info</title>
-      <link>https://gwtharg.github.io/28mm/site-documentation/</link>
+      <link>https://gwtharg.github.io/28mm/site_documentation/</link>
       <pubDate>Mon, 20 Apr 2020 15:16:11 +0100</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/site-documentation/</guid>
+      <guid>https://gwtharg.github.io/28mm/site_documentation/</guid>
       <description>Basic help about the site   Our basic taxonomy comes from the Metadata in our &amp;lsquo;Front Matter&amp;rsquo;
 This page has the following &amp;lsquo;Front Matter&amp;rsquo; taxonomy.
 tags: [&amp;quot;content&amp;quot; , &amp;quot;help&amp;quot; , &amp;quot;taxonomy&amp;quot;] catagories: [&amp;quot;help&amp;quot;] components: [&amp;quot;hugo&amp;quot;] authors: [&amp;quot;walmo&amp;quot;] Our types of taxonomy we are using are based on our configuration file.
