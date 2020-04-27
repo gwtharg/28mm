@@ -84,6 +84,90 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/",
+	"title": "Components",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/categories/help/",
+	"title": "help",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/categories/help-document/",
+	"title": "help, document",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/hugo/",
+	"title": "hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/visio/",
+	"title": "visio",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/site_documentation/visio/visio_convert/",
+	"title": "Visio as Images",
+	"tags": ["visio, convert, help"],
+	"description": "",
+	"content": "This is a jpg export from Visio This is a png export from Visio "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/site_documentation/visio/visio_pdf/",
+	"title": "Visio as PDF",
+	"tags": ["visio, convert, help, pdf"],
+	"description": "",
+	"content": " This is a Visio Drawing exported as a PDF  There is more user control over this type of file   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n   "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/visio-convert-help/",
+	"title": "visio, convert, help",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/visio-convert-help-pdf/",
+	"title": "visio, convert, help, pdf",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
+	"title": "walmo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/embed/",
 	"title": "embed",
 	"tags": [],
@@ -102,28 +186,7 @@
 	"title": "PDF Image Test",
 	"tags": ["pdf", "embed"],
 	"description": "",
-	"content": "  Or we just embed the PDF and point to folder  The href is from localhost in this test   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/image/twd.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/image/twd.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/wall/wall/magic.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n  "
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/",
-	"title": "Tags",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
-	"title": "walmo",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/components/",
-	"title": "Components",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": "  Or we just embed the PDF and point to folder  The href is from localhost in this test   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/twd.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/twd.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/twd.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/content/",
@@ -147,13 +210,6 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/hugo/",
-	"title": "hugo",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/site_documentation/",
 	"title": "Site Content Info",
 	"tags": ["content", "help", "taxonomy"],
@@ -168,11 +224,11 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/categories/",
-	"title": "Categories",
-	"tags": [],
+	"uri": "https://gwtharg.github.io/28mm/site_documentation/visio/",
+	"title": "Visio Convert Test",
+	"tags": ["content", "help", "visio"],
 	"description": "",
-	"content": ""
+	"content": "Visio Documents Converted  Test of different converted documents from a Visio drawing.\n"
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/authors/cybg/",
@@ -303,13 +359,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/components/tfs/",
 	"title": "TFS",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/categories/help/",
-	"title": "help",
 	"tags": [],
 	"description": "",
 	"content": ""

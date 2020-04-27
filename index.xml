@@ -101,12 +101,31 @@ When fixing onto any surface the strength of the fixing is always dependent upon
     </item>
     
     <item>
+      <title>Visio as Images</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/visio/visio_convert/</link>
+      <pubDate>Mon, 27 Apr 2020 10:58:00 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/visio/visio_convert/</guid>
+      <description>This is a jpg export from Visio This is a png export from Visio </description>
+    </item>
+    
+    <item>
+      <title>Visio as PDF</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/visio/visio_pdf/</link>
+      <pubDate>Mon, 27 Apr 2020 10:58:00 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/visio/visio_pdf/</guid>
+      <description> This is a Visio Drawing exported as a PDF  There is more user control over this type of file   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/visio/rts_pdf.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/visio/rts_pdf.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/visio/rts_pdf.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+   </description>
+    </item>
+    
+    <item>
       <title>PDF Image Test</title>
       <link>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</link>
       <pubDate>Fri, 24 Apr 2020 12:04:57 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</guid>
-      <description>  Or we just embed the PDF and point to folder  The href is from localhost in this test   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/image/twd.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/image/twd.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/wall/wall/magic.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+      <description>  Or we just embed the PDF and point to folder  The href is from localhost in this test   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.
   </description>
     </item>
     
