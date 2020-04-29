@@ -59,17 +59,57 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/authors/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/categories/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/components/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/go/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/hugo/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/hugo/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/categories/hugo/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/install/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/authors/walmo/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
   </url>
   
   <url>
@@ -79,16 +119,6 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/categories/help-document/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/components/hugo/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/</loc>
     <lastmod>2020-04-27T10:58:00+01:00</lastmod>
   </url>
   
@@ -114,11 +144,6 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/tags/visio-convert-help-pdf/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/authors/walmo/</loc>
     <lastmod>2020-04-27T10:58:00+01:00</lastmod>
   </url>
   
