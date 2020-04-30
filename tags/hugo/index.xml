@@ -6,10 +6,22 @@
     <description>Recent content in hugo on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Wed, 29 Apr 2020 10:24:29 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 13:02:34 +0100</lastBuildDate>
     
 	<atom:link href="https://gwtharg.github.io/28mm/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Shortcodes</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</link>
+      <pubDate>Thu, 30 Apr 2020 13:02:34 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</guid>
+      <description>highlighting with shortcodes  {{&amp;lt; highlight go &amp;gt;}} Code to highlight here. {{&amp;lt; /highlight &amp;gt;}}
+ Code to highlight here. button shortcode creates a button Changing the href to an external link works too.
+ {{&amp;lt; button href=&amp;quot;/28mm/site_documentation/flowcharts/&amp;quot; &amp;gt;}}Site Content Info{{&amp;lt; /button &amp;gt;}}
+ Site Content Info  rawhtml shortcode This allows us to enter html within a shortcode and run within a markdown file. We now can leverage html to enhance our markdown.</description>
+    </item>
     
     <item>
       <title>Hugo Simple Install</title>

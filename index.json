@@ -98,8 +98,15 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/go/",
-	"title": "go",
+	"uri": "https://gwtharg.github.io/28mm/components/document/",
+	"title": "document",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/html/",
+	"title": "html",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -112,14 +119,49 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/hugo/",
+	"uri": "https://gwtharg.github.io/28mm/categories/hugo/",
 	"title": "hugo",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/categories/hugo/",
+	"uri": "https://gwtharg.github.io/28mm/tags/markdown/",
+	"title": "markdown",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/site_documentation/shortcode_test/",
+	"title": "Shortcodes",
+	"tags": ["hugo", "html", "markdown"],
+	"description": "",
+	"content": "highlighting with shortcodes  {{\u0026lt; highlight go \u0026gt;}} Code to highlight here. {{\u0026lt; /highlight \u0026gt;}}\n Code to highlight here. button shortcode creates a button Changing the href to an external link works too.\n {{\u0026lt; button href=\u0026quot;/28mm/site_documentation/flowcharts/\u0026quot; \u0026gt;}}Site Content Info{{\u0026lt; /button \u0026gt;}}\n Site Content Info  rawhtml shortcode This allows us to enter html within a shortcode and run within a markdown file. We now can leverage html to enhance our markdown.\nTo show the code here we had to used an Entity Encoder. Entity Encoder  This is the code and the rawhtml shortcode to allow html colours in our example.\n {{\u0026lt; rawhtml\u0026gt;}}\n \u0026lt;h2\u0026gt;HTML embedded in Markdown\u0026lt;/h2\u0026gt; Some text with \u0026lt;span style=\u0026quot;color:blue\u0026quot;\u0026gt; Simple \u0026lt;b\u0026gt;blue\u0026lt;/b\u0026gt; coloured text.\u0026lt;br\u0026gt; \u0026lt;/span\u0026gt;Back to normal text. Now we can highlight in \u0026lt;span style=\u0026quot;color:red\u0026quot;\u0026gt; \u0026lt;b\u0026gt;red\u0026lt;\u0026gt; /b\u0026gt; this is red.\u0026lt;/span\u0026gt;\u0026lt;br\u0026gt;  {{\u0026lt; /rawhtml \u0026gt;}}\n  HTML embedded in Markdown Some text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\nmermaid shortcode diagrams {{ \u0026lt; mermaid \u0026gt;}} graph LR; A[Hard edge] --\u0026gt;|Link text| B(Round edge) B --\u0026gt; C{Decision} C --\u0026gt;|One| D[Result one] C --\u0026gt;|Two| E[Result two] {{ \u0026lt; /mermaid \u0026gt;}}  graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  More examples of mermaid can be found here. mermaid examples  "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
+	"title": "walmo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/go/",
+	"title": "go",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/hugo/",
 	"title": "hugo",
 	"tags": [],
 	"description": "",
@@ -135,20 +177,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/install/",
 	"title": "install",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/",
-	"title": "Tags",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/authors/walmo/",
-	"title": "walmo",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -231,13 +259,6 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/document/",
-	"title": "document",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/tags/help/",
 	"title": "help",
 	"tags": [],
@@ -308,13 +329,6 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/html/",
-	"title": "html",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
 	"title": "openshift",
 	"tags": [],
@@ -352,13 +366,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/kubernetes/",
 	"title": "kubernetes",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/markdown/",
-	"title": "markdown",
 	"tags": [],
 	"description": "",
 	"content": ""

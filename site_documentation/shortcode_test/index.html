@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
 
-    <title>HTML Based Pages :: Walmo SDLC Test</title>
+    <title>Shortcodes :: Walmo SDLC Test</title>
 
     
     <link href="/28mm/css/nucleus.css?1588250445" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/28mm/site_documentation/html_based_pages/">
+  <body class="" data-url="/28mm/site_documentation/shortcode_test/">
     <nav id="sidebar" class="">
 
 
@@ -316,7 +316,7 @@
  
   
     
-      <li data-nav-id="/28mm/site_documentation/html_based_pages/" title="HTML Based Pages" class="dd-item active">
+      <li data-nav-id="/28mm/site_documentation/html_based_pages/" title="HTML Based Pages" class="dd-item ">
         <a href="/28mm/site_documentation/html_based_pages/">
         HTML Based Pages
         
@@ -400,7 +400,7 @@
  
   
     
-      <li data-nav-id="/28mm/site_documentation/shortcode_test/" title="Shortcodes" class="dd-item ">
+      <li data-nav-id="/28mm/site_documentation/shortcode_test/" title="Shortcodes" class="dd-item active">
         <a href="/28mm/site_documentation/shortcode_test/">
         Shortcodes
         
@@ -589,7 +589,7 @@
             
           
           
-            <a href='/28mm/'>Auto-Doc</a> > <a href='/28mm/site_documentation/'>Site Content Info</a> > HTML Based Pages
+            <a href='/28mm/'>Auto-Doc</a> > <a href='/28mm/site_documentation/'>Site Content Info</a> > Shortcodes
           
          
           
@@ -602,7 +602,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#highlighting-with-shortcodes">highlighting with shortcodes</a></li>
+        <li><a href="#button-shortcode-creates-a-button">button shortcode creates a button</a></li>
+        <li><a href="#rawhtml-shortcode">rawhtml shortcode</a></li>
+        <li><a href="#mermaid-shortcode-diagrams">mermaid shortcode diagrams</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -614,9 +625,11 @@
         
 <div class="tags">
 
+  <a class="tag-link" href="/28mm/tags/hugo">hugo</a>
+
   <a class="tag-link" href="/28mm/tags/html">html</a>
 
-  <a class="tag-link" href="/28mm/tags/help">help</a>
+  <a class="tag-link" href="/28mm/tags/markdown">markdown</a>
 
 </div>
 
@@ -626,7 +639,7 @@
           
             <h1>
               
-              HTML Based Pages
+              Shortcodes
             </h1>
           
 
@@ -634,24 +647,88 @@
 
 
 
+<h3 id="highlighting-with-shortcodes">highlighting with shortcodes</h3>
+<blockquote>
+<p>{{&lt; highlight go &gt;}} Code to highlight here. {{&lt; /highlight &gt;}}</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"> 
+<span style="color:#a6e22e">Code</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">highlight</span> <span style="color:#a6e22e">here</span>.</code></pre></div>
+<h3 id="button-shortcode-creates-a-button">button shortcode creates a button</h3>
+<p>Changing the href to an external link works too.</p>
+<blockquote>
+<p>{{&lt; button href=&quot;/28mm/site_documentation/flowcharts/&quot; &gt;}}Site Content Info{{&lt; /button &gt;}}</p>
+</blockquote>
+
+<a  href="/28mm/site_documentation/" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Site Content Info
+  
+</a>
+
+<h3 id="rawhtml-shortcode">rawhtml shortcode</h3>
+<p>This allows us to enter html within a shortcode and run within a markdown file.
+We now can leverage html to enhance our markdown.<br>
+To show the code here we had to used an Entity Encoder.
+
+<a  href="https://www.web2generators.com/html-based-tools/online-html-entities-encoder-and-decoder" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Entity Encoder
+  
+</a>
+</p>
+<p>This is the code and the rawhtml shortcode to allow html colours in our example.</p>
+<blockquote>
+<p>{{&lt; rawhtml&gt;}}</p>
+</blockquote>
+<pre><code class="language-<body" data-lang="<body">       &lt;h2&gt;HTML embedded in Markdown&lt;/h2&gt;  
+      Some  text with &lt;span style=&quot;color:blue&quot;&gt; Simple &lt;b&gt;blue&lt;/b&gt; coloured text.&lt;br&gt;
+      &lt;/span&gt;Back to normal text. Now we can highlight in &lt;span style=&quot;color:red&quot;&gt; &lt;b&gt;red&lt;&gt; /b&gt; this is red.&lt;/span&gt;&lt;br&gt;
+</code></pre><blockquote>
+<p>{{&lt; /rawhtml &gt;}}</p>
+</blockquote>
+
+
 <br></br>
 
     <body class="mceContentBody aui-theme-default wiki-content fullsize">
        
-        <h2>Trying colours</h2>  You need to do this in html as markdown does not use colours by default.<br></br>
-        Some Markdown text with <span style="color:blue"> Simple <b>blue</b> coloured text.<br>
+        <h2>HTML embedded in Markdown</h2>  
+        Some  text with <span style="color:blue"> Simple <b>blue</b> coloured text.<br>
         </span>Back to normal text. Now we can highlight in <span style="color:red"> <b>red</b> this is red.</span><br>
 
-<h3> Below is the html for the colours</h3></body>
 
-</html>
-<pre>
-<code>
-Some Markdown text with &#x3C;span style=&#x22;color:blue&#x22;&#x3E; Simple &#x3C;b&#x3E;blue&#x3C;/b&#x3E; coloured text.&#x3C;br&#x3E;
-&#x3C;/span&#x3E;Back to normal text. Now we can highlight in &#x3C;span style=&#x22;color:red&#x22;&#x3E; &#x3C;b&#x3E;red&#x3C;/b&#x3E; this is red.&#x3C;/span&#x3E;&#x3C;br&#x3E;
-</code>
-</pre>
-<b> Remember to use HTML entities so the HTML is not interpreted as HTML</b>
+
+<h3 id="mermaid-shortcode-diagrams">mermaid shortcode diagrams</h3>
+<pre><code>{{ &lt; mermaid &gt;}}
+          graph LR;
+          A[Hard edge] --&gt;|Link text| B(Round edge)
+          B --&gt; C{Decision}
+          C --&gt;|One| D[Result one]
+          C --&gt;|Two| E[Result two]
+{{ &lt; /mermaid &gt;}}
+</code></pre>
+<div class="mermaid" align="center">
+          graph LR;
+          A[Hard edge] -->|Link text| B(Round edge)
+          B --> C{Decision}
+          C -->|One| D[Result one]
+          C -->|Two| E[Result two]
+</div>
+<p>More examples of mermaid can be found here.
+
+<a  href="/28mm/site_documentation/flowcharts/" target="_blank"  class="btn btn-default">
+  
+  
+  
+  mermaid examples
+  
+</a>
+</p>
+
 
   
 <footer class="footline">
@@ -836,23 +913,6 @@ Some Markdown text with &#x3C;span style=&#x22;color:blue&#x22;&#x3E; Simple &#x
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -919,6 +979,26 @@ Some Markdown text with &#x3C;span style=&#x22;color:blue&#x22;&#x3E; Simple &#x
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1007,10 +1087,10 @@ Some Markdown text with &#x3C;span style=&#x22;color:blue&#x22;&#x3E; Simple &#x
 	 
 	 
 		
-			<a class="nav nav-prev" href="/28mm/site_documentation/" title="Site Content Info"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/28mm/site_documentation/wall/wall/" title="PDF Convert Test"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/28mm/site_documentation/flowcharts/" title="Flowcharts Notes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/28mm/site_documentation/hugo_install/" title="Hugo Simple Install" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

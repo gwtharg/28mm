@@ -6,17 +6,35 @@
     <description>Recent content in Tags on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Wed, 29 Apr 2020 10:24:29 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 13:02:34 +0100</lastBuildDate>
     
 	<atom:link href="https://gwtharg.github.io/28mm/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>html</title>
+      <link>https://gwtharg.github.io/28mm/tags/html/</link>
+      <pubDate>Thu, 30 Apr 2020 13:02:34 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>hugo</title>
       <link>https://gwtharg.github.io/28mm/tags/hugo/</link>
-      <pubDate>Wed, 29 Apr 2020 10:24:29 +0100</pubDate>
+      <pubDate>Thu, 30 Apr 2020 13:02:34 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://gwtharg.github.io/28mm/tags/markdown/</link>
+      <pubDate>Thu, 30 Apr 2020 13:02:34 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/markdown/</guid>
       <description></description>
     </item>
     
@@ -111,15 +129,6 @@
     </item>
     
     <item>
-      <title>html</title>
-      <link>https://gwtharg.github.io/28mm/tags/html/</link>
-      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>openshift</title>
       <link>https://gwtharg.github.io/28mm/tags/openshift/</link>
       <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
@@ -152,15 +161,6 @@
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>markdown</title>
-      <link>https://gwtharg.github.io/28mm/tags/markdown/</link>
-      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/tags/markdown/</guid>
       <description></description>
     </item>
     
