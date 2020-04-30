@@ -29,7 +29,7 @@ Architecture Openshift is made up of multiple components that together orchestra
       <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/paas/pe_background/</guid>
-      <description>&amp;nbsp;
+      <description>This is an embedded html page   &amp;nbsp;
 Some Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
 Process/MethodType of requestREAP Process / EPM
 Planned project requests - Low detail and uncertain timingsEmailsUnplanned requests
@@ -40,10 +40,7 @@ Incident Records
 Problem Records
 JiraPlanned Requests
 Unplanned Requests
-Incidents
-RTCIncidents
-Unplanned Requests
-SharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:</description>
+Incidents</description>
     </item>
     
     <item>
@@ -52,7 +49,7 @@ SharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalatio
       <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/paas/</guid>
-      <description>Pages Training Notes  Openshift Platform Engineering Background  </description>
+      <description>Pages Training Notes  OpenShift Container Platform   Platform Engineering Background   </description>
     </item>
     
   </channel>

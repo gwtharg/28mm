@@ -168,17 +168,22 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/tags/embed/</loc>
-    <lastmod>2020-04-24T12:04:57+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/tags/pdf/</loc>
     <lastmod>2020-04-24T12:04:57+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</loc>
+    <lastmod>2020-04-24T12:04:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/shortcode/</loc>
+    <lastmod>2020-04-24T12:04:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/shortcode/</loc>
     <lastmod>2020-04-24T12:04:57+01:00</lastmod>
   </url>
   
@@ -233,11 +238,6 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/components/help/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/tags/openshift/</loc>
     <lastmod>2020-04-13T17:36:16+01:00</lastmod>
   </url>
@@ -259,6 +259,11 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/components/git/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/help/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   

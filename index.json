@@ -8,17 +8,17 @@
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/site_documentation/html_based_pages/",
-	"title": "HTML Based Pages",
-	"tags": ["html", "help"],
+	"title": "HTML Embedded  Pages",
+	"tags": ["pdf", "html", "shortcode"],
 	"description": "",
-	"content": "\n Trying colours You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n Below is the html for the colours    Some Markdown text with \u0026#x3C;span style=\u0026#x22;color:blue\u0026#x22;\u0026#x3E; Simple \u0026#x3C;b\u0026#x3E;blue\u0026#x3C;/b\u0026#x3E; coloured text.\u0026#x3C;br\u0026#x3E; \u0026#x3C;/span\u0026#x3E;Back to normal text. Now we can highlight in \u0026#x3C;span style=\u0026#x22;color:red\u0026#x22;\u0026#x3E; \u0026#x3C;b\u0026#x3E;red\u0026#x3C;/b\u0026#x3E; this is red.\u0026#x3C;/span\u0026#x3E;\u0026#x3C;br\u0026#x3E;    Remember to use HTML entities so the HTML is not interpreted as HTML"
+	"content": "  Trying colours You need to do this in html as markdown does not use colours by default.\n Some Markdown text with Simple blue coloured text.\nBack to normal text. Now we can highlight in red this is red.\n Below is the html for the colours    Some Markdown text with \u0026#x3C;span style=\u0026#x22;color:blue\u0026#x22;\u0026#x3E; Simple \u0026#x3C;b\u0026#x3E;blue\u0026#x3C;/b\u0026#x3E; coloured text.\u0026#x3C;br\u0026#x3E; \u0026#x3C;/span\u0026#x3E;Back to normal text. Now we can highlight in \u0026#x3C;span style=\u0026#x22;color:red\u0026#x22;\u0026#x3E; \u0026#x3C;b\u0026#x3E;red\u0026#x3C;/b\u0026#x3E; this is red.\u0026#x3C;/span\u0026#x3E;\u0026#x3C;br\u0026#x3E;   To show the code here we had to used an Entity Encoder. Entity Encoder  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/paas/pe_background/",
 	"title": "Platform Engineering Background",
 	"tags": ["openshift", "html"],
 	"description": "",
-	"content": "\n \u0026nbsp;\nSome Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n  "
+	"content": " This is an embedded html page   \u0026nbsp;\nSome Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:\nProcess/MethodType of requestREAP Process / EPM\nPlanned project requests - Low detail and uncertain timingsEmailsUnplanned requests\nService Requests\nIncidents\nOCSMS Teams / HipchatWalkupService NowService Requests\nIncident Records\nProblem Records\nJiraPlanned Requests\nUnplanned Requests\nIncidents\nRTCIncidents\nUnplanned Requests\nSharepointUnplanned RequestsMeeting RequestsActions - should be plannedEscalationsUnplanned RequestsFollowing a review of the above the following requirements were captured:\nWhat is the team doing?How do we create headroom for the team?Minimise time spent managing work requestsClear prioritisation of tasks processHave good data about the work the team does to help decision makingPrimary tasks is to:\nRationalise work requests systems with defined SLAs\u0026nbsp;\n  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/git/branchingstrategy/",
@@ -53,28 +53,28 @@
 	"title": "GIT Info",
 	"tags": ["git"],
 	"description": "",
-	"content": "Test from GIT information Based on notes from old V: Drive from hVM\n Tags based on Git\n"
+	"content": "Test from GIT information Based on notes from old V: Drive from hVM\n Tags based on Git  Branching and Merging Strategy   Semantic Version Enforcement   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/",
 	"title": "Auto-Doc",
 	"tags": [""],
 	"description": "",
-	"content": "Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata\n--- title: \u0026#34;You Title goes here\u0026#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ \u0026#34;if required\u0026#34; ] categories: [ \u0026#34;Your category here\u0026#34; ] components: [\u0026#34;Jira aligned component\u0026#34;] authors: [\u0026#34;name of document owner\u0026#34;] --- "
+	"content": "Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata\n--- title: \u0026#34;You Title goes here\u0026#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ \u0026#34;if required\u0026#34; ] categories: [ \u0026#34;Your category here\u0026#34; ] components: [\u0026#34;Jira aligned component\u0026#34;] authors: [\u0026#34;name of document owner\u0026#34;] --- Taxonomy Links  Categories in Hugo  Components in Hugo  Tags in Hugo  Authors in Hugo  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/paas/",
 	"title": "Paas",
 	"tags": ["openshift"],
 	"description": "",
-	"content": "Pages Training Notes  Openshift Platform Engineering Background  "
+	"content": "Pages Training Notes  OpenShift Container Platform   Platform Engineering Background   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/",
 	"title": "TFS Info",
 	"tags": [""],
 	"description": "",
-	"content": "Chapter Basic info Introduction to TFS Based on test notes\n"
+	"content": "Chapter Basic info Introduction to TFS Based on test notes  Team Types   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/authors/",
@@ -214,7 +214,7 @@
 	"title": "Visio as PDF",
 	"tags": ["visio, convert, help, pdf"],
 	"description": "",
-	"content": " This is a Visio Drawing exported as a PDF  There is more user control over this type of file   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n   "
+	"content": " This is an embedded html page   This is a Visio Drawing exported as a PDF  There is more user control over this type of file   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/visio/rts_pdf.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/visio-convert-help/",
@@ -231,13 +231,6 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/embed/",
-	"title": "embed",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/tags/pdf/",
 	"title": "pdf",
 	"tags": [],
@@ -247,9 +240,23 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/site_documentation/pdf_image/",
 	"title": "PDF Image Test",
-	"tags": ["pdf", "embed"],
+	"tags": ["pdf", "html", "shortcode"],
 	"description": "",
-	"content": "  Or we just embed the PDF and point to folder  The href is from localhost in this test   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/twd.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/twd.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/twd.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n  "
+	"content": "   Or we just embed the PDF and point to folder  The href is from localhost in this test   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/twd.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/twd.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/twd.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n   "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/shortcode/",
+	"title": "shortcode",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/shortcode/",
+	"title": "shortcode",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/content/",
@@ -270,7 +277,7 @@
 	"title": "Site Content Info",
 	"tags": ["content", "help", "taxonomy"],
 	"description": "",
-	"content": "Basic help about the site   Our basic taxonomy comes from the Metadata in our \u0026lsquo;Front Matter\u0026rsquo;\nThis page has the following \u0026lsquo;Front Matter\u0026rsquo; taxonomy.\ntags: [\u0026quot;content\u0026quot; , \u0026quot;help\u0026quot; , \u0026quot;taxonomy\u0026quot;] catagories: [\u0026quot;help\u0026quot;] components: [\u0026quot;hugo\u0026quot;] authors: [\u0026quot;walmo\u0026quot;] Our types of taxonomy we are using are based on our configuration file.\nThe contents [\u0026ldquo;content\u0026rdquo; , \u0026ldquo;help\u0026rdquo; , \u0026ldquo;taxonomy\u0026rdquo;] we add when we create our file.\nMore accurate content in our Metadata will help users navigate the documents contained within the site.\n Hugo TOML YAML Mix config.toml uses TOML format:\ntitle = \u0026ldquo;My New Hugo Site\u0026rdquo;\nbut archetypes/default.md uses YAML\ntitle: \u0026ldquo;Test index\u0026rdquo;\nhttps://github.com/gohugoio/hugo/issues/5241\nThe reason is GitHub\u0026rsquo;s support for YAML front matter. Currently they do not support TOML front matter (Metadata).\nSo we are going to use **TOML** for the **config.toml** file then **YAML** for the rest of the contents.  Site Content based on :- Categories\nComponents\nTags\nAuthors\n"
+	"content": "Basic help about the site   Our basic taxonomy comes from the Metadata in our \u0026lsquo;Front Matter\u0026rsquo;\nThis page has the following \u0026lsquo;Front Matter\u0026rsquo; taxonomy.\ntags: [\u0026quot;content\u0026quot; , \u0026quot;help\u0026quot; , \u0026quot;taxonomy\u0026quot;] catagories: [\u0026quot;help\u0026quot;] components: [\u0026quot;hugo\u0026quot;] authors: [\u0026quot;walmo\u0026quot;] Our types of taxonomy we are using are based on our configuration file.\nThe contents [\u0026ldquo;content\u0026rdquo; , \u0026ldquo;help\u0026rdquo; , \u0026ldquo;taxonomy\u0026rdquo;] we add when we create our file.\nMore accurate content in our Metadata will help users navigate the documents contained within the site.\n Hugo TOML YAML Mix config.toml uses TOML format:\ntitle = \u0026ldquo;My New Hugo Site\u0026rdquo;\nbut archetypes/default.md uses YAML\ntitle: \u0026ldquo;Test index\u0026rdquo;\nhttps://github.com/gohugoio/hugo/issues/5241\nThe reason is GitHub\u0026rsquo;s support for YAML front matter. Currently they do not support TOML front matter (Metadata).\nSo we are going to use **TOML** for the **config.toml** file then **YAML** for the rest of the contents.  Taxonomy Links  Categories in Hugo  Components in Hugo  Tags in Hugo  Authors in Hugo   HTML Embedded Pages   Flowcharts Notes   Markdown Notes   PDF Convert Test   Shortcodes   Hugo Simple Install   PDF Image Test   Visio Convert Test   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/taxonomy/",
@@ -322,13 +329,6 @@
 	"content": "Going forward the commit comment format will be enforced in GitHub, to allow semantic versioning of the builds. This is a basic development discipline to allow control and automation of code delivery.\nThis enforcement will be rolled out sympathetically to all GitHub repositories, so as not to interfere with the in flight releases.\nThis change consists off the format of the commit comments, from which the semantic version is derived and set of scripts to enforce and help with commits.\nCommit Comment Format Development will be done on branches, created from the mainline streams. Currently only have the master mainline stream, but as process matures will have stream for each major semantic version.\nThere will be two types of branches, normal development and hotfix. Normal development will be branched from the head of the mainline stream (master), while hotfix will be branched from a tagged release. All work must be done from a JIRA ticket.\nFor a normal development release the commit comment should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : (MAJOR|MINOR|PATCH) : [[:alnum:]]+\nThe first part if the JIRA ticket id, the second part is the semantic change, the third part is a description of the change. For example\nDYB-12345 : MINOR : An example comment\nNote the spacing around field separator (:), this is to simplify reading, making it consistently formatted.\nThe semantic version part, should should take the value, MAJOR, MINOR or PATCH, all upper case; as explained below\n MAJOR : A change that is backward breaking, currently this isn\u0026rsquo;t supported MINOR : A change that adds new functionality PATCH : A fix for existing functionality  The decision on the semantic version value should be done by the developer, the ticket author and if required the appropriate technical consultant.\nFor a hotfix the commit message should be of the format given by the following regex\n^[A-Z]+-[[:digit:]]+ : HOTFIX : [[:alnum:]]+\nFor example\nDYB-54321 : HOTFIX : Need this fixed now\nThese formats should be applied to all commits, including when merging pull requests. Github isn\u0026rsquo;t helpful here, as it pre-fills the merge commit message, the title of the merge box; this should be edited manually when merging.\nDetermination of Semantic Version The reason for enforcement of the commit comment is to determine the semantic version of the generated artefact.\nFor a normal change, on a mainline stream, the version of the generated artefact will be major.minor.patch for example 3.4.12.\nA build which publishes an artefact will check the last published release, by looking for the the last tag. If none is found it will take a default value. It will then look at all the commit comments since that tag, and look for the highest semantic version value in all the commit comments (MAJOR \u0026gt; MINOR |\u0026gt; PATCH). It will increment the semantic version and tag the code with the new version.\nFor example if the last tag was 3.4.12 and the commit comments since then are\nPE-3567 : PATCH : A bugfix\nPE-3371 : PATCH : Fix logic\nPE-3371 : MINOR : Add new endpoint\nThe highest semantic version value is MINOR, so the semantic version will be incremented to 3.5.0\nSee the document about versioning strategy for a fuller description of this semantic version incrementing.\nFor a hotfix release the semantic version will take the format major.minor.patch-hotfix.buildnumberfor example 3.4.12-hotfix.22.\nWhen the release build is run against a hotfix branch, it will find the last tag, which will be the tag that the hotfix branch was created against. It will take this tag and add the term -hotfix and its build number to the tag and then tag the code with the new tag. The use of the original tag allows multiple hotfix developments, and the use of the build number allows multiple attempts at each of the hot fixes.\nSemantic Version Tools A new directory has been added to the ms-template, called setup, which contains the tools to control semantic versioning. This will also be added to all other template used by auto-mate.\nThe scripts in this directory includes the hooks to enforce the commit patterns and scripts to work out the semantic version from the commit comments. See the README in the directory for more details.\nThere are two script of interest for any development activities.\nThe first is development-setup.sh, this sets up the hooks on the developers local copy of the git project. This is called by default for every build but running\ngradle setupDevelopment\nWill do it without running a build.\nThe second is create-hotfix.sh , this creates the hotfix branch. It requires the release tag of the artefact to be hot fixed as its only argument.\nThe other scripts are described at the end of the README.\n"
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/help/",
-	"title": "help",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
 	"title": "openshift",
 	"tags": [],
@@ -359,6 +359,13 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/components/git/",
 	"title": "git",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/help/",
+	"title": "help",
 	"tags": [],
 	"description": "",
 	"content": ""

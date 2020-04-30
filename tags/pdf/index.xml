@@ -12,13 +12,25 @@
     
     
     <item>
+      <title>HTML Embedded  Pages</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</link>
+      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</guid>
+      <description>Trying colours You need to do this in html as markdown does not use colours by default.
+ Some Markdown text with Simple blue coloured text.
+Back to normal text. Now we can highlight in red this is red.
+ Below is the html for the colours    Some Markdown text with &amp;#x3C;span style=&amp;#x22;color:blue&amp;#x22;&amp;#x3E; Simple &amp;#x3C;b&amp;#x3E;blue&amp;#x3C;/b&amp;#x3E; coloured text.&amp;#x3C;br&amp;#x3E; &amp;#x3C;/span&amp;#x3E;Back to normal text. Now we can highlight in &amp;#x3C;span style=&amp;#x22;color:red&amp;#x22;&amp;#x3E; &amp;#x3C;b&amp;#x3E;red&amp;#x3C;/b&amp;#x3E; this is red.</description>
+    </item>
+    
+    <item>
       <title>PDF Image Test</title>
       <link>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</link>
       <pubDate>Fri, 24 Apr 2020 12:04:57 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</guid>
-      <description>  Or we just embed the PDF and point to folder  The href is from localhost in this test   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-  </description>
+      <description>   Or we just embed the PDF and point to folder  The href is from localhost in this test   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.
+   </description>
     </item>
     
   </channel>

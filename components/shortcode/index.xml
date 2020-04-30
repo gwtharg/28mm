@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>html on Walmo SDLC Test</title>
-    <link>https://gwtharg.github.io/28mm/tags/html/</link>
-    <description>Recent content in html on Walmo SDLC Test</description>
+    <title>shortcode on Walmo SDLC Test</title>
+    <link>https://gwtharg.github.io/28mm/components/shortcode/</link>
+    <description>Recent content in shortcode on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Thu, 30 Apr 2020 13:02:34 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 12:04:57 +0100</lastBuildDate>
     
-	<atom:link href="https://gwtharg.github.io/28mm/tags/html/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gwtharg.github.io/28mm/components/shortcode/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,38 +21,6 @@
  Some Markdown text with Simple blue coloured text.
 Back to normal text. Now we can highlight in red this is red.
  Below is the html for the colours    Some Markdown text with &amp;#x3C;span style=&amp;#x22;color:blue&amp;#x22;&amp;#x3E; Simple &amp;#x3C;b&amp;#x3E;blue&amp;#x3C;/b&amp;#x3E; coloured text.&amp;#x3C;br&amp;#x3E; &amp;#x3C;/span&amp;#x3E;Back to normal text. Now we can highlight in &amp;#x3C;span style=&amp;#x22;color:red&amp;#x22;&amp;#x3E; &amp;#x3C;b&amp;#x3E;red&amp;#x3C;/b&amp;#x3E; this is red.</description>
-    </item>
-    
-    <item>
-      <title>Platform Engineering Background</title>
-      <link>https://gwtharg.github.io/28mm/paas/pe_background/</link>
-      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/paas/pe_background/</guid>
-      <description>This is an embedded html page   &amp;nbsp;
-Some Background When the Platform Engineering team was formed there were a number of different processes in place for requesting work from the team. These included:
-Process/MethodType of requestREAP Process / EPM
-Planned project requests - Low detail and uncertain timingsEmailsUnplanned requests
-Service Requests
-Incidents
-OCSMS Teams / HipchatWalkupService NowService Requests
-Incident Records
-Problem Records
-JiraPlanned Requests
-Unplanned Requests
-Incidents</description>
-    </item>
-    
-    <item>
-      <title>Shortcodes</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</link>
-      <pubDate>Thu, 30 Apr 2020 13:02:34 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</guid>
-      <description>highlighting with shortcodes  {{&amp;lt; highlight go &amp;gt;}} Code to highlight here. {{&amp;lt; /highlight &amp;gt;}}
- Code to highlight here. button shortcode creates a button Changing the href to an external link works too.
- {{&amp;lt; button href=&amp;quot;/28mm/site_documentation/flowcharts/&amp;quot; &amp;gt;}}Site Content Info{{&amp;lt; /button &amp;gt;}}
- Site Content Info  rawhtml shortcode This allows us to enter html within a shortcode and run within a markdown file. We now can leverage html to enhance our markdown.</description>
     </item>
     
     <item>

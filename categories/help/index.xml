@@ -18,7 +18,7 @@
       
       <guid>https://gwtharg.github.io/28mm/git/</guid>
       <description>Test from GIT information Based on notes from old V: Drive from hVM
- Tags based on Git</description>
+ Tags based on Git  Branching and Merging Strategy   Semantic Version Enforcement   </description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       
       <guid>https://gwtharg.github.io/28mm/</guid>
       <description>Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata
---- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- </description>
+--- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- Taxonomy Links  Categories in Hugo  Components in Hugo  Tags in Hugo  Authors in Hugo  </description>
     </item>
     
   </channel>
