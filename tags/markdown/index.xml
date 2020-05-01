@@ -29,10 +29,9 @@ so this
       <pubDate>Thu, 30 Apr 2020 13:02:34 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</guid>
-      <description>highlighting with shortcodes  {{&amp;lt; highlight go &amp;gt;}} Code to highlight here. {{&amp;lt; /highlight &amp;gt;}}
- Code to highlight here. button shortcode creates a button Changing the href to an external link works too.
- {{&amp;lt; button href=&amp;quot;/28mm/site_documentation/flowcharts/&amp;quot; &amp;gt;}}Site Content Info{{&amp;lt; /button &amp;gt;}}
- Site Content Info  rawhtml shortcode This allows us to enter html within a shortcode and run within a markdown file. We now can leverage html to enhance our markdown.</description>
+      <description>Due to some restrictions in displaying the rendered code please note that in the code snippets we show there is no leading or training spaces between the {{ and the &amp;lt; or % as shown in some of the descriptions.
+ highlighting with shortcodes  {{&amp;lt; highlight go &amp;gt;}} Code to highlight here. {{&amp;lt; /highlight &amp;gt;}}
+ Code to highlight here. button shortcode creates a button Changing the href to an external link works too.</description>
     </item>
     
   </channel>

@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/paas/openshift/openshift/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
+    <loc>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</loc>
+    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
+    <loc>https://gwtharg.github.io/28mm/paas/openshift/openshift/</loc>
+    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   
   <url>
@@ -23,23 +23,18 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/flowcharts/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/site_documentation/markdown_notes/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/wall/wall/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/git/</loc>
     <lastmod>2020-04-07T13:04:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</loc>
+    <lastmod>2020-04-30T13:02:34+01:00</lastmod>
   </url>
   
   <url>
@@ -98,7 +93,12 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</loc>
+    <loc>https://gwtharg.github.io/28mm/tags/shortcode/</loc>
+    <lastmod>2020-04-30T13:02:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/shortcodes/</loc>
     <lastmod>2020-04-30T13:02:34+01:00</lastmod>
   </url>
   
@@ -123,77 +123,27 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</loc>
-    <lastmod>2020-04-29T10:24:29+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/tags/install/</loc>
     <lastmod>2020-04-29T10:24:29+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/categories/help/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/categories/help-document/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/visio/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/visio/visio_convert/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/visio/visio_pdf/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/visio-convert-help/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/visio-convert-help-pdf/</loc>
-    <lastmod>2020-04-27T10:58:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/pdf/</loc>
-    <lastmod>2020-04-24T12:04:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</loc>
-    <lastmod>2020-04-24T12:04:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/shortcode/</loc>
-    <lastmod>2020-04-24T12:04:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/components/shortcode/</loc>
-    <lastmod>2020-04-24T12:04:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/content/</loc>
-    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
+    <loc>https://gwtharg.github.io/28mm/site_documentation/flowcharts/</loc>
+    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://gwtharg.github.io/28mm/tags/help/</loc>
+    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/mermaid/</loc>
+    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/content/</loc>
     <lastmod>2020-04-20T15:16:11+01:00</lastmod>
   </url>
   
@@ -204,11 +154,6 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/tags/taxonomy/</loc>
-    <lastmod>2020-04-20T15:16:11+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/site_documentation/visio/</loc>
     <lastmod>2020-04-20T15:16:11+01:00</lastmod>
   </url>
   
@@ -238,6 +183,26 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</loc>
+    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/pdf/</loc>
+    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/shortcode/</loc>
+    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/site_documentation/pdf_in_html/</loc>
+    <lastmod>2020-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tags/openshift/</loc>
     <lastmod>2020-04-13T17:36:16+01:00</lastmod>
   </url>
@@ -245,6 +210,26 @@
   <url>
     <loc>https://gwtharg.github.io/28mm/components/openshift/</loc>
     <lastmod>2020-04-13T17:36:16+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/categories/help/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/categories/help-document/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/site_documentation/visio_from_export/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/visio-convert-help-pdf/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -269,16 +254,6 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/tags/kubernetes/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/mermaid/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/tags/shortcodes/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   

@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Hugo Simple Install</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</link>
+      <pubDate>Wed, 29 Apr 2020 10:24:29 +0100</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</guid>
+      <description>Install Hugo If you wish to try Hugo on your desktop then the simple instructions below will point you to a single install file.
+The following note is from gohugo.io which has more information on Hugo.
+ Install Hugo on macOS, Windows, Linux, OpenBSD, FreeBSD, and on any machine where the Go compiler tool chain can run.
+ There is lots of talk about “Hugo being written in Go”, but you don’t need to install Go to enjoy Hugo.</description>
+    </item>
+    
+    <item>
       <title>OpenShift Container Platform</title>
       <link>https://gwtharg.github.io/28mm/paas/openshift/openshift/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
@@ -21,18 +33,6 @@
 Openshift provides the ability to orchistrate docker containers, providing request routing, health checks and automated scaling amongst other things.
 Architecture Openshift is made up of multiple components that together orchestrate containers and allow them to talk to one another. There are multiple PaaS&amp;rsquo; deployed within the bank each with it&amp;rsquo;s own purpose.
    PaaS Name Purpose     Non Production This PaaS is used for running the non production workloads, this will be where development and test purposes are deployed.</description>
-    </item>
-    
-    <item>
-      <title>HTML Embedded  Pages</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</link>
-      <pubDate>Mon, 13 Apr 2020 17:36:16 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</guid>
-      <description>Trying colours You need to do this in html as markdown does not use colours by default.
- Some Markdown text with Simple blue coloured text.
-Back to normal text. Now we can highlight in red this is red.
- Below is the html for the colours    Some Markdown text with &amp;#x3C;span style=&amp;#x22;color:blue&amp;#x22;&amp;#x3E; Simple &amp;#x3C;b&amp;#x3E;blue&amp;#x3C;/b&amp;#x3E; coloured text.&amp;#x3C;br&amp;#x3E; &amp;#x3C;/span&amp;#x3E;Back to normal text. Now we can highlight in &amp;#x3C;span style=&amp;#x22;color:red&amp;#x22;&amp;#x3E; &amp;#x3C;b&amp;#x3E;red&amp;#x3C;/b&amp;#x3E; this is red.</description>
     </item>
     
     <item>
@@ -66,15 +66,6 @@ It is best to consider GitHub and BitBucket as simply copies of the same git rep
     </item>
     
     <item>
-      <title>Flowcharts Notes</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/flowcharts/</link>
-      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/site_documentation/flowcharts/</guid>
-      <description>Here are some mermaid diagrams using shortcodes {{ &amp;lt; mermaid &amp;gt;}} graph LR; A[Hard edge] --&amp;gt;|Link text| B(Round edge) B --&amp;gt; C{Decision} C --&amp;gt;|One| D[Result one] C --&amp;gt;|Two| E[Result two] {{ &amp;lt; /mermaid &amp;gt;}}  graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Gantt Diagrams {{ &amp;lt; mermaid &amp;gt;}} gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2020-01-06,2020-01-08 Active task :active, des2, 2020-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2020-01-06,24h Implement parser and json :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d {{ &amp;lt; /mermaid &amp;gt;}}  gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2020-01-06,2020-01-08 Active task :active, des2, 2020-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2020-01-06,24h Implement parser and json :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d  Class Diagrams {{ &amp;lt; mermaid &amp;gt;}} classDiagram Class01 &amp;lt;|-- AveryLongClass : Cool Class03 *-- Class04 Class05 o-- Class06 Class07 .</description>
-    </item>
-    
-    <item>
       <title>Markdown Notes</title>
       <link>https://gwtharg.github.io/28mm/site_documentation/markdown_notes/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
@@ -87,66 +78,23 @@ so this
     </item>
     
     <item>
-      <title>PDF Convert Test</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/wall/wall/</link>
-      <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/site_documentation/wall/wall/</guid>
-      <description>Awful way of doing this - do not recommend PDF converted to docx [calibre] then pandoc to md file. All images needed html options removed and repointing. So this is an image jpeg Then we have png files Wall fixings for hollow surfaces
-Fixings for hollow structures (walls,ceilings and doors etc.) and how to use them
-When fixing onto any surface the strength of the fixing is always dependent upon the strength of the actual surface, with hollow surfaces this is generally less than for a solid structure.</description>
-    </item>
-    
-    <item>
       <title>Shortcodes</title>
       <link>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</link>
       <pubDate>Thu, 30 Apr 2020 13:02:34 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/site_documentation/shortcode_test/</guid>
-      <description>highlighting with shortcodes  {{&amp;lt; highlight go &amp;gt;}} Code to highlight here. {{&amp;lt; /highlight &amp;gt;}}
- Code to highlight here. button shortcode creates a button Changing the href to an external link works too.
- {{&amp;lt; button href=&amp;quot;/28mm/site_documentation/flowcharts/&amp;quot; &amp;gt;}}Site Content Info{{&amp;lt; /button &amp;gt;}}
- Site Content Info  rawhtml shortcode This allows us to enter html within a shortcode and run within a markdown file. We now can leverage html to enhance our markdown.</description>
+      <description>Due to some restrictions in displaying the rendered code please note that in the code snippets we show there is no leading or training spaces between the {{ and the &amp;lt; or % as shown in some of the descriptions.
+ highlighting with shortcodes  {{&amp;lt; highlight go &amp;gt;}} Code to highlight here. {{&amp;lt; /highlight &amp;gt;}}
+ Code to highlight here. button shortcode creates a button Changing the href to an external link works too.</description>
     </item>
     
     <item>
-      <title>Hugo Simple Install</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</link>
-      <pubDate>Wed, 29 Apr 2020 10:24:29 +0100</pubDate>
+      <title>Flowcharts Notes</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/flowcharts/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</guid>
-      <description>Install Hugo If you wish to try Hugo on your desktop then the simple instructions below will point you to a single install file.
-The following note is from gohugo.io which has more information on Hugo.
- Install Hugo on macOS, Windows, Linux, OpenBSD, FreeBSD, and on any machine where the Go compiler tool chain can run.
- There is lots of talk about “Hugo being written in Go”, but you don’t need to install Go to enjoy Hugo.</description>
-    </item>
-    
-    <item>
-      <title>Visio as Images</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/visio/visio_convert/</link>
-      <pubDate>Mon, 27 Apr 2020 10:58:00 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/site_documentation/visio/visio_convert/</guid>
-      <description>This is a jpg export from Visio This is a png export from Visio </description>
-    </item>
-    
-    <item>
-      <title>Visio as PDF</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/visio/visio_pdf/</link>
-      <pubDate>Mon, 27 Apr 2020 10:58:00 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/site_documentation/visio/visio_pdf/</guid>
-      <description>This is an embedded html page   This is a Visio Drawing exported as a PDF  There is more user control over this type of file   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/visio/rts_pdf.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/visio/rts_pdf.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/visio/rts_pdf.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.</description>
-    </item>
-    
-    <item>
-      <title>PDF Image Test</title>
-      <link>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</link>
-      <pubDate>Fri, 24 Apr 2020 12:04:57 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/site_documentation/pdf_image/</guid>
-      <description>   Or we just embed the PDF and point to folder  The href is from localhost in this test   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/twd.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-   </description>
+      <guid>https://gwtharg.github.io/28mm/site_documentation/flowcharts/</guid>
+      <description>Here are some mermaid diagrams using shortcodes {{ &amp;lt; mermaid &amp;gt;}} graph LR; A[Hard edge] --&amp;gt;|Link text| B(Round edge) B --&amp;gt; C{Decision} C --&amp;gt;|One| D[Result one] C --&amp;gt;|Two| E[Result two] {{ &amp;lt; /mermaid &amp;gt;}}  graph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two]  Gantt Diagrams {{ &amp;lt; mermaid &amp;gt;}} gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2020-01-06,2020-01-08 Active task :active, des2, 2020-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2020-01-06,24h Implement parser and json :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d {{ &amp;lt; /mermaid &amp;gt;}}  gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2020-01-06,2020-01-08 Active task :active, des2, 2020-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2020-01-06,24h Implement parser and json :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d  Class Diagrams {{ &amp;lt; mermaid &amp;gt;}} classDiagram Class01 &amp;lt;|-- AveryLongClass : Cool Class03 *-- Class04 Class05 o-- Class06 Class07 .</description>
     </item>
     
     <item>
@@ -161,12 +109,44 @@ This change consists off the format of the commit comments, from which the seman
     </item>
     
     <item>
+      <title>HTML Embedded  Pages</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/html_based_pages/</guid>
+      <description>Trying colours You need to do this in html as markdown does not use colours by default.
+ Some Markdown text with Simple blue coloured text.
+Back to normal text. Now we can highlight in red this is red.
+ Below is the html for the colours    Some Markdown text with &amp;#x3C;span style=&amp;#x22;color:blue&amp;#x22;&amp;#x3E; Simple &amp;#x3C;b&amp;#x3E;blue&amp;#x3C;/b&amp;#x3E; coloured text.&amp;#x3C;br&amp;#x3E; &amp;#x3C;/span&amp;#x3E;Back to normal text. Now we can highlight in &amp;#x3C;span style=&amp;#x22;color:red&amp;#x22;&amp;#x3E; &amp;#x3C;b&amp;#x3E;red&amp;#x3C;/b&amp;#x3E; this is red.</description>
+    </item>
+    
+    <item>
+      <title>PDF in HTML</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/pdf_in_html/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/pdf_in_html/</guid>
+      <description>date: 2020-04-28T12:04:57+01:00 The html snippet is between our rawhtml shortcode.
+ {{ &amp;lt; rawhtml &amp;gt; }} html here {{ &amp;lt; /rawhtml &amp;gt; }}
+   This is embedded html in a markdown file  The href is from localhost in this test   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/image/twd.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/image/twd.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/image/twd.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs.</description>
+    </item>
+    
+    <item>
+      <title>Visio from Export</title>
+      <link>https://gwtharg.github.io/28mm/site_documentation/visio_from_export/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/site_documentation/visio_from_export/</guid>
+      <description>This is a jpg export from Visio This is a png export from Visio  Using the rawhtml shortcode to embedded html   This is a Visio Drawing exported as a PDF  There is more user control over this type of file   &amp;#x3C;object data=&amp;#x22;/28mm/site_documentation/image/rts_pdf.pdf&amp;#x22; type=&amp;#x22;application/pdf&amp;#x22; width=&amp;#x22;800px&amp;#x22; height=&amp;#x22;834px&amp;#x22;&amp;#x3E; &amp;#x3C;embed src=&amp;#x22;/28mm/site_documentation/image/rts_pdf.pdf&amp;#x22;&amp;#x3E; &amp;#x3C;p&amp;#x3E;This browser does not support PDFs. Please download the PDF to view it: &amp;#x3C;a href=&amp;#x22;http://localhost/28mm/site_documentation/image/rts_pdf.pdf&amp;#x22;&amp;#x3E;Download PDF&amp;#x3C;/a&amp;#x3E;.&amp;#x3C;/p&amp;#x3E; &amp;#x3C;/embed&amp;#x3E; &amp;#x3C;/object&amp;#x3E;   This browser does not support PDFs.</description>
+    </item>
+    
+    <item>
       <title>Team Types</title>
       <link>https://gwtharg.github.io/28mm/tfs/team_types/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/tfs/team_types/</guid>
-      <description>Test clip from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.
+      <description>Test snippet from document Aim of the Document This document is an attempt to guide TFS administrators through the process required to create a more complex hierarchical structure under the VM project folder.
 We will run through an example using the IIB Technical Team to guide you through the process.
 Initial Considerations Most importantly is that we have had a discussion with the users to understand what it they wish to achieve.</description>
     </item>

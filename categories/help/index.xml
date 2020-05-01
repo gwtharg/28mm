@@ -6,7 +6,7 @@
     <description>Recent content in help on Walmo SDLC Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Mon, 27 Apr 2020 10:58:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://gwtharg.github.io/28mm/categories/help/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,8 +17,8 @@
       <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/git/</guid>
-      <description>Test from GIT information Based on notes from old V: Drive from hVM
- Tags based on Git  Branching and Merging Strategy   Semantic Version Enforcement   </description>
+      <description>Test from GIT MD files Based on notes from old V: Drive from hVM
+  GIT Tagged files   Branching and Merging Strategy   Semantic Version Enforcement   </description>
     </item>
     
     <item>
@@ -27,8 +27,7 @@
       <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/</guid>
-      <description>Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata
---- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- Taxonomy Links  Categories in Hugo  Components in Hugo  Tags in Hugo  Authors in Hugo  </description>
+      <description>Auto-Doc Sample Front Matter Hugo Front Matter is the sites Metadata --- title: &amp;#34;You Title goes here&amp;#34; date: 2020-04-13T17:36:16+01:00 draft: true tags: [ &amp;#34;if required&amp;#34; ] categories: [ &amp;#34;Your category here&amp;#34; ] components: [&amp;#34;Jira aligned component&amp;#34;] authors: [&amp;#34;name of document owner&amp;#34;] --- A weight can be added to a page within a chapter. Similar to pinning a post. Also fields like tags: can be blank [&amp;quot;&amp;quot;] initially if you are unsure of content.</description>
     </item>
     
   </channel>
