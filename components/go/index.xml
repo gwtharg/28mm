@@ -18,7 +18,7 @@
       
       <guid>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</guid>
       <description>Install Hugo If you wish to try Hugo on your desktop then the simple instructions below will point you to a single install file.
-The following note is from gohugo.io which has more information on Hugo.
+The following note is from gohugo.io  which has more information on Hugo.
  Install Hugo on macOS, Windows, Linux, OpenBSD, FreeBSD, and on any machine where the Go compiler tool chain can run.
  There is lots of talk about “Hugo being written in Go”, but you don’t need to install Go to enjoy Hugo.</description>
     </item>
