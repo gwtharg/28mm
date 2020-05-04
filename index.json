@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://gwtharg.github.io/28mm/paas/components_for_op/",
+	"title": "Components  OP",
+	"tags": ["openshift", "git", "nexus"],
+	"description": "",
+	"content": "Components for Operational Platform We are assuming that training delegates have prior knowledge of the following:\n Continuous Delivery  Jenkins  Nexus Repostory Manager  Postman  GitHub  GOCD  Continuous Integration  Gradle  Devops Mindset       Component Name Functionality Description Key Points Comments     Componet GitHub Repo Scource Code Management Source code of the component needs to be kept in GitHub with all its contents. Click here empty link? to understand how does the folder structure look like for the Microservices GitHub Repo Each Micro Service should have a GitHub Repo. You will have to setup GitHub Webhook  before Creating Jenkins Jobs   Jenkins Build Management You need to have BUILD Jobs for your component in Jenkins. Build job will compile your code and run UNIT and Component tests aginst it  See Jenkins Jobs  how to create Jenkins Build Jobs   Jenkins Release Management You need to have RELEASE Jobs for your component in Jenkins, Release jobs will do the following  See Jenkins Release  how to create Jenkins Release Jobs    gradle clean publishTestComponent \u0026ndash;refresh-dependencies Here we publish the \u0026ldquo;Integ\u0026rdquo; tests written by the owner of the components to Caboodle. This works for the caboodleTest folder      gradle clean build testAndBurn \u0026ndash;refresh-dependencies The following tasks takes place during this stages: 1. build docker 2. composeDevTestEnv (This is making call to the composer to deploy your component) 3. deployToDevTestEnv (check the deployment status) 4. Run Integration Tests 5. Delete the openshift project once the tests have passed.      gradle pushDockerImage caboodle:publish \u0026ndash;refresh-dependencies Publish the artefacts in the artefact repository     Chieftain Service Component  You need to make sure all the configuration details are stored in Chieftain.Click here empty link? to see how we create a new component in Chieftain using POSTMAN     Caboodle Artefacts 1. POM file 2. template.json 3. Docker Image Caboodle is our artefact repository which stores the following: 1. POM file for your component which contains all it\u0026rsquo;s dependencies in obps-maven repository. 2. zip file which contains \u0026ldquo;template.json file\u0026rdquo; - This file is used by composer to deploy the component on open shift. 3. Docker Image in obps-docker repository  Gradle publish command deploys all these artefacts in caboodle.Refer Gradle  file as a reference with all tasks   Route to Live Pipelines  All Components will should have a RTL JSON file which needs to be set-up in a release pipelines  trepo     Component_Test GitHub Repo  The purpose for which the component needs to be deployed should also be available in GitHub     Component_Test Jenkins Release Jobs build.gradle file with dependencies Gradle publish jobs to update caboodle with the POM file        Things you need to understand about the operational platform components\n Chieftain Caboodle Route to Live Pipelines Migration Strategy of Microservices  "
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/site_documentation/hugo_install/",
 	"title": "Hugo Simple Install",
 	"tags": ["hugo", "install"],
@@ -7,11 +14,60 @@
 	"content": "Install Hugo If you wish to try Hugo on your desktop then the simple instructions below will point you to a single install file.\nThe following note is from gohugo.io which has more information on Hugo.\n Install Hugo on macOS, Windows, Linux, OpenBSD, FreeBSD, and on any machine where the Go compiler tool chain can run.\n There is lots of talk about “Hugo being written in Go”, but you don’t need to install Go to enjoy Hugo. Just grab a precompiled binary!\n Hugo is written in Go with support for multiple platforms. The latest release can be found at Hugo Releases.\nHugo currently provides pre-built binaries for the following:\nmacOS (Darwin) for x64, i386, and ARM architectures Windows Linux OpenBSD FreeBSD Hugo may also be compiled from source wherever the Go toolchain can run; e.g., on other operating systems such as DragonFly BSD, OpenBSD, Plan 9, Solaris, and others. See https://golang.org/doc/install/source for the full set of supported combinations of target operating systems and compilation architectures.\n"
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/paas/caboodle_intro/",
+	"title": "Caboodle",
+	"tags": ["openshift", "git", "nexus"],
+	"description": "",
+	"content": "Using a Repository Manager A repository manager is a dedicated server application designed to manage repositories of binary components. The usage of a repository manager is considered an essential best practice for any significant usage.\nPurpose A repository manager serves these essential purposes:\n act as dedicated proxy server for public repositories provide repositories as a deployment destination for your project outputs  Benefits and Features Using a repository manager provides the following benefits and features:\n significantly reduced number of downloads off remote repositories, saving time and bandwidth resulting in increased build performance improved build stability due to reduced reliance on external repositories increased performance for interaction with remote SNAPSHOT repositories potential for control of consumed and provided artifacts creates a central storage and access to artifacts and meta data about them exposing build outputs to consumer such as other projects and developers, but also QA or operations teams or even customers provides an effective platform for exchanging binary artifacts within your organization and beyond without the need for building artifact from source  Available Repository Managers The following list (alphabetical order) of open source and commercial repository managers are known to support the repository format used. Please refer to the respective linked web sites for further information about repository management in general and the features provided by these products.\n  Apache Archiva  (open source)  JFrog Artifactory Open Source]  (open source)  JFrog Artifactory Pro  (commercial) Sonatype Nexus OSS (open source) Sonatype Nexus Pro (commercial)  Nexus 3.0  Taken from Sonatype Docs   Check out the blue bits for a brief understanding. So what are components? A component is a resource like a library or a framework that is used as part of your software application at run-time, integration or unit test execution time or required as part of your build process. It could be an entire application or a static resource like an image.\nTypically these components are archives of a large variety of files including\n Java byte code in class files C object files text files e.g. properties files, XML files, JavaScript code, HTML, CSS binary files such as images, PDF files, sound and music files and many others  The archives are using numerous formats such as\n Java JAR, WAR, EAR formats plain ZIP or .tar.gz files Other package formats such as NuGet packages, Ruby gems, NPM packages Executable formats such as .exe or .sh files, Android APK files, various installer formats, …  Components can be composed of multiple, nested components themselves. E.g., consider a Java web application packaged as a WAR component. It contains a number of JAR components and a number of JavaScript libraries. All of these are standalone components in other contexts and happen to be included as part of the WAR component.\nComponents provide all the building blocks and features that allow a development team to create powerful applications by assembling them and adding their own business related components to create a full-fledged, powerful application.\nIn different tool-chains components are called artifact, package, bundle, archive and other terms. The concept and idea remains the same and component is used as the independent, generic term.\nComponents are identified by a set of specific values - the coordinates. A generic set of these coordinates is the usage of group, name and version. The names and the usage of these coordinates changes with the tool-chains used. Components can also be the anchor for further metadata.\nAssets Assets are the material addition to all this metadata. The actual archive file is an asset associated with the component. Many formats have a one-to-one mapping for component to asset.\nMore complex formats however have numerous assets associated with a component. For example a typical JAR component in a Maven repository is defined at least by the POM and the JAR files - both of which constitute separate assets belonging to the same components. Additional files such as JavaDoc or Sources JAR files are assets that belong to the same component.\nThe Docker format, on the other hand, gives assets unique identifiers and calls them Docker layers. These assets can be reused for different components - the Docker images. A Docker layer, for example, could be a specific operating system referenced by multiple Docker images.\nComponents in Repositories. A wide variety of components exists and more are continuously created by the open source community as well as proprietary vendors. There are libraries and frameworks written in various languages on different platforms that are used for application development every day. It has become a default pattern to build applications by combining the features of multiple components with your own custom components containing your application code to create an application for a specific domain.\nIn order to ease the consumption and usage of components, they are aggregated into collections of components. These are called a repository and are typically available on the internet as a service. On different platforms terms such as registryand others are used for the same concept.\nExample for such repositories are\n the Central Repository, also known as Central the NuGet Gallery  RubyGems.org    npmjs.org    and a number of others. Components in these repositories are accessed by numerous tools including\n package managers like npm, nuget or gem, build tools such as Maven, Gradle, rake, grunt… IDE’s such as Eclipse, IntelliJ,…  and many, many others.\nRepositories have Formats. The different repositories use different technologies to store and expose the components in them to client tools. This defines a repository format and as such is closely related to the tools interacting with the repository.\nE.g. the Maven repository format relies on a specific directory structure defined by the identifiers of the components and a number of XML formatted files for metadata. Component interaction is performed via plain HTTP commands and some additional custom interaction with the XML files.\nOther repository formats use databases for storage and REST API interactions, or different directory structures with format specific files for the metadata.\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/composer_info/",
+	"title": "Composer Info",
+	"tags": ["composer"],
+	"description": "",
+	"content": "REST enabled python based platform component which is used to deploy any component on to the operational platform. It follows the standard process of Getting the component name from the JSON file sent as a trigger\n Getting all dependencies of the component from the POM file present in caboodle Tagging all the components Getting configurations of all Compile dependencies from Chieftain Building a dynamic pipeline for GOCD to run Git push the dynamic pipeline to a GitHub repo which would run the pipelines in GOCD with three stages  build test Done    Build Stage Depending on the “Pipeline_Type” Composer does the following:Under the Elements Folder, looks for the folder with the same names as “Pipeline_Type” Executes the build.sh script for that element\nTest Stage At test stage, it is expceted to run test stage of the actual deployments. ex: if a component is deployed on the pod, we check the status of the pod to be active\nDone Stage This stage just monitors for the test stage to pass and passes with no actual execution in it.\nArchitectute Diagram: "
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/paas/docker_automation/",
 	"title": "Docker Automation",
 	"tags": ["docker", "openshift", "gradle", "logstash"],
 	"description": "",
 	"content": "Logstash Example This document describes an example of the configuration and deployment of a Docker image in a RHEL environment, from a registry URL to the PaaS. It also goes over the CI/CD/Platform tools used in the process. Logstash is part of Centralised Logging on the platform, and is used to collect and manipulate system and application logs sent by fluentd log collectors  It resides on the PaaS and ships its logs to an external set of Elasticsearch VMs, currently in non-prod. This gives us a central way to manage and view large amounts of information in a quick fashion, using the Kibana front end. If you are interested have a read about the ELK stack  .\nThe files will match the layout of this working project  . There will be a note of what to change, should you want to build your own template.\nRequirements:  Access to the non-prod OpenShift environment \u0026amp; relevant platform components (if you wish to replicate) Some understanding of: Elasticsearch (ELK stack), Red Hat Linux, Gradle, Jenkins, Docker, Python, OpenShift  Github layout: We will use a standard for folder structure and Gradle commands to publish a copy of the image, assuming our project is called \u0026lsquo;myproject\u0026rsquo;\nmyproject/caboodle/ myproject/src/ myproject/src/docker/ myproject/src/templates/openshift/ Gradle files: To save some space \u0026amp; time here, I\u0026rsquo;ll refer to a working example for these files and mention what to change:\n This file is our \u0026lsquo;root\u0026rsquo; build, it refers to build and publish tasks contained in other build.gradle files, base repos, and any GoCD version information, which we\u0026rsquo;ll ignore for now.  myproject/build.gradle\n This file describes our dependencies, registry information and publishing to Caboodle/Nexus. Under dependencies we will just set a dependency on openshift-project to demonstrate. Our Logstash instance will only build once an instance of openshift-project becomes available.  /Caboodle/build.gradle\n This file describes the docker build itself  /src/docker/Dockerfile\nOther config files:  /openshift/template.json - How the OpenShift project should be configured, there are a few extra services configured here that can be ignored, but if building your own, replace references of \u0026lsquo;logstash\u0026rsquo; with your project name. It also contains Chieftain env variables which are explained later. myproject/settings.gradle - Defines our included submodules myproject/gradle.properties - Options to configure process used for the build. For a Docker image, change it to something unique (so the Caboodle Logstash isn\u0026rsquo;t overwritten), such as:  ... artifactName=myproject_logstash description=a test config of logstash ...  More info on the use of these two files  .\nDocker config:  Dockerfile the config for building the image logstash.conf for the base Logstash config required for startup, containing fields replaced by the Python script logstash_entrypoint.py is the script to pull Logstash Chieftain config \u0026amp; replace config values pip.conf has the Caboodle URL for installing Python libraries requirements.txt for the actual Python modules  A Docker image is what Logstash will be built and run as our container, to be eventually deployed on OpenShift. The Gradle components are needed to actually build and publish artifacts (including our image), and now we need to configure the image:\nA rhel7 image is used to give us the ability to install Logstash and configure Python libraries required for configuration management. /src/docker/Dockerfile/ also refers to requirements.txt in the parent directory, pointing torequests and pyyaml for REST calls to Chieftain and creation of a .yml file for our Logstash instance respectively.\nLogstash is installed, followed by Python \u0026amp; the module installer pip, Java (Logstash needs 1.8) and the libraries defined in requirements.txt.\nInstall details: Installation of Logstash and the necessary Python components\nRUN yum install -y logstash python2 python2-pip.noarch java \\ \u0026amp;\u0026amp; pip install -r /tmp/requirements.txt\nThe entrypoint is the default command to run when the Docker image starts, here we use the Python script itself. It is run to instrument the configuration of Logstash using our configuration data before the Logstash binary file is run, to ensure we have the most recent snapshot.\nENTRYPOINT [\u0026quot;python\u0026quot;,\u0026quot;/logstash_entrypoint.py\u0026quot;]\nLogstash requires a configuration file logstash.conf to start up, and it needs to point to a bunch of external Elastic non-prod VMs with some authentication, filtering and index config. The script will replace tagged fields in the local file with its Chieftain config, prior to copying it into the default Logstash config directory, and finally starting the Logstash executable that points to this config file.\nChieftain configuration: If we want to build and test the image locally (who doesn\u0026rsquo;t), we need the Chieftain instance and token id, which is automatically generated as environment variables when we build using Composer for an openshift-project. CHIEFTAIN_INSTANCEID, CHIEFTAIN_TOKENID have been provided in the script in debug mode so can be replaced for testing, otherwise they\u0026rsquo;re fetched as environment variables.\nRefer to this working project  to create a unique service component in Chieftain; create an instance and then grab the id. Refer \u0026lsquo;Logstash\u0026rsquo; in Chieftain  as an example.\nBuilding: To test locally, build the logstash image:\n docker build -t myproject .\nTo run (interactively):\ndocker run -it myproject \nTesting: If part of the build fails, it\u0026rsquo;s useful to run the container and investigate at that point, since we might back out too early (with a failed container) in later steps, e.g.\nStep 9 : COPY logstash_entrypoint.py / ---\u0026gt; Using cache ---\u0026gt; 3e14adcc988f docker run -it 3e14adcc988f\nOtherwise, executing a shell on the built image is good to see if everything\u0026rsquo;s in place, grabbing the container ID with the first command\ndocker ps\ndocker exec -it \u0026lt;container id\u0026gt; /bin/bash\nJenkins config: Again the document here  is great for describing the CI build job that will upload the Logstash artifacts (including the Docker image) to Nexus. I recommend using it to create the job. This  is the Jenkins build used for the project as an example.\nComposer: Next we need to Compose! This assumes we have:\n A complete \u0026amp; configured git layout A successful Jenkins build A Chieftain Logstash service component  Go to Composer  and type in the name of your service component, and search the group \u0026lsquo;docker\u0026rsquo; which was defined already in the build config. We can ignore tags for now (without a specific tag it will default to non-prod)\n Add a scale value of 1 Add an OpenShift project name \u0026lsquo;logstash-test\u0026rsquo;  The example json when \u0026lsquo;Compose\u0026rsquo; is selected should look like the below (versions may change). We are creating a new instance of openshift-project; if we want to deploy again in the same environment, we can reference an \u0026lsquo;existing\u0026rsquo; openshift_project - with tags \u0026lsquo;non-prod\u0026rsquo; in Chieftain.\nAfter a while Composer will give us a correlation ID, in the top right of the box, pasting it into Chieftain will provide us with details of the openshift-project and logstash instances now tied to it.\n{ \u0026quot;maven_name\u0026quot;: \u0026quot;com.bank.docker:logstash:0.0.45\u0026quot;, \u0026quot;scale\u0026quot;: [ { \u0026quot;name\u0026quot;: \u0026quot;logstash\u0026quot;, \u0026quot;value\u0026quot;: 1 } ], \u0026quot;new_openshift_project_name\u0026quot;: \u0026quot;logstash-test\u0026quot; } GoCD: In GoCD  we\u0026rsquo;ll hopefully see a full set of green, where the trigger is the call by composer, the OpenShift project is created, and finally Logstash is deployed.\nAnd in non-prod  OpenShift, the project which has successfully deployed!\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/elements/",
+	"title": "Elements",
+	"tags": ["openshift"],
+	"description": "",
+	"content": "Elements is where we store the difference parts of a request, an example of this is that a Redhat Virtual machine is an element of a build; by that we mean it is generally just a piece of a whole build and not the whole build itself and has creation and decommisioning scripts within its folder.\nThe layout of any element should follow this basic structure:\n src └── element_name ├── scripts │ ├── build.sh │ ├── decomm.sh │ ├── donedecomm.sh │ ├── done.sh │ ├── testdecomm.sh │ └── test.sh └── test └── unittest.sh  Generally we have all of our elements scripts as bash scripts but that isn\u0026rsquo;t always the case as we use python and powershell scripts in the same capacity so if you need to add a new element but want to use something other than shell then feel free! Just aslong as you have the same layout as above for building, testing and decommisioning. The reason for this is so that we can enforce that every element can be built safely and can be torn down safely.\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/jenkins_ci/",
+	"title": "Jenkins CI",
+	"tags": ["jenkins"],
+	"description": "",
+	"content": "Jenkins- Continuous Integration Server Jenkins is our open source Continuous Integration tool used for BUILD and Release Jobs.\nIt is an open source product with customisabel plugins which enables it to integrate it with multiple SCMs and run various types of build jobs. Each check in is verified with an automated build allowing early detection of problems. It has the ability to send the status of build and release jobs over an email or in HipChat rooms.\n ex: connectivity with git.mercurial,Subversion etc\n  ex: Jobs like; ant,Shell,Windows batch commands, gradle etc.\n Design Principle of Jenkins Jenkins is integrated with GitHUb and has been configured to run two ways:\n Build jobs for a specific branch Release jobs when there is a commit in the master branch  Build jobs for a specific branch This allows multiple developers to run build jobs for their specific branches.\nBranch Selector is a jenkins plugin installed for the same.\nAs part of the Build for microservices, we are running \u0026ldquo;gradle clean build command\u0026rdquo; which builds the docker image for the microservice and also runs UNIT and Components Tests for it.\nThis is followed by static analysis of the code and publishing unit tests results.\nRelease Jobs As part of the release jobs, apart from the build, Jenkins also runs the following jobs\n  gradle clean publishTestComponent \u0026ndash;refresh-dependencies - this is to publish the integration tests as artifacts in the Nexus repo\n  gradle clean build testAndBurn \u0026ndash;refresh-dependencies- as part of this job, after building the docker image, Call Composer- builds a dev environment and deploy all the components and then run integration test against the component.\n  gradle clean pushDockerImage caboodle:publish \u0026ndash;refresh-dependencies- As part of this job, the Image is published to caboodle(Artifact Repository)\n  \u0026ldquo;component_version=grep 'version' gradle.properties |awk -F= '{ print $2 }' | awk -F.0- '{ print $1 }'\n   component_version=2.0 tag_id=$component_version.$BUILD_NUMBER echo $tag_id git tag -a $tag_id -m \u0026quot;Jenkins Build\u0026quot; git push origin $tag_id\u0026quot; - This task is tagging GitHub back with the build number Other Tasks in Jenkins  Static Code Analysis using Sonarqube Dependency Check using oWASP JaCoCo Coverage Reports UNIT Tests Results  "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/platform_bom/",
+	"title": "Platform BOM",
+	"tags": ["BOM", "gradle"],
+	"description": "",
+	"content": "This documents describes how to use the Platform BOM, it assumes the reader understands Semantic Version the Platform BOM and the services has been built using the Operational Platform Template.\nNormal The Platform BOM version is set by the variable \u0026ldquo;platformBomVersion\u0026rdquo; in the \u0026ldquo;gradle.properties\u0026rdquo; file. This should have a major version of greater than 3, for full Semantic Version. The default value is from auto-mate is currently \u0026ldquo;3+\u0026rdquo;, so it will pull the latest Platform BOM with major version 3.\nIt can be set to different levels:\n Specific version, for example 3.1.7, this will pull in a specific version of the Platform BOM. Minor version, for example 3.1+, this will pull in the latest Platform BOM with minor version 3.1, for example 3.1.5 or 3.1.3354 Major version, for example 3+, this will pull in the latest Platform BOM with major version 3, for example 3.2.5. This is the default. Latest, set to just +, this will pull in the latest including any major breaking changes  Even when not specifying a specific version, the specific version the services was build with will be recorded. For example if the \u0026ldquo;platformBomVersion\u0026rdquo; is 3+, and the latest published major version of the Platform BOM with major version 3 is 3.3.4; the service is built with the dependencies specified in this BOM. The built version can them be found from the information end point, as shown below. This version number can be used to either lock down the version, or for the HOTFIX process.\n{ \u0026quot;app\u0026quot;: { \u0026quot;platformBomVersion\u0026quot;: \u0026quot;3.1.7\u0026quot;, \u0026quot;description\u0026quot;: \u0026quot;Canary Service\u0026quot;, \u0026quot;version\u0026quot;: \u0026quot;2.0.0-s528408-SNAPSHOT\u0026quot;, \u0026quot;name\u0026quot;: \u0026quot;canary-services\u0026quot; }, \u0026quot;framework\u0026quot;: { \u0026quot;type\u0026quot;: \u0026quot;new-ms-template\u0026quot;, \u0026quot;version\u0026quot;: \u0026quot;1.0.1\u0026quot; }, \u0026quot;git\u0026quot;: { \u0026quot;commit\u0026quot;: { \u0026quot;time\u0026quot;: 1542830003000, \u0026quot;id\u0026quot;: \u0026quot;71742e7\u0026quot; }, \u0026quot;branch\u0026quot;: \u0026quot;master\u0026quot; }, \u0026quot;swaggerInfo\u0026quot;: { \u0026quot;swagger.uri\u0026quot;: \u0026quot;/about/swagger\u0026quot; } } Historial BOM Local SNAPSHOT While developing, may need to update or create and new version of a library, which needs to be tested in a service before it can be published for consumption.\nIf modify an existing library and require to test it in a services:\n Modify the library in question and publish the library to the local maven repository by running \u0026ldquo;gradle clean build install\u0026rdquo;. This will be a SNAPSHOT Version In the services either hard code the library in the build.gradle to be the SNAPSHOT version, or use the SNAPSHOT Platform BOM version. This is done by setting the \u0026ldquo;platformBomVersion\u0026rdquo; variable to 3.0.0-SNAPSHOT in the service.  If adding a new library it will be required to be added to the BOM, this is discussed in its instructions, as part of the the library release. So to test locally just add the dependency, hardcoded to SNAPSHOT.\nNOTE, do not check any code in with the dependency set to SNAPSHOT.\nHOTFIX When a service requires to be HOTFIX\u0026rsquo;d it may need to be built with the specific versions of the libraries it was originally built with. If the service has library semantic version (platformBomVersion \u0026gt;= 3), then this it is easy. If the service doesn\u0026rsquo;t it is possible but it easier to see if it can be converted to use Library Semantic Version.\nThe following sub-sections describe both scenarios.\nSEMANTIC VERSION If the issue is just with the service code then, given the version of the the service in question along with the Platform BOM version (obtained as described above)\n  Create a HOTFIX branch, by running the follow, which will create a branch called \u0026ldquo;x.y.z-HOTFIX\u0026rdquo; and check it out. Where \u0026ldquo;x.y.z\u0026rdquo; is the version of the service.\n./setup/create-hotfix.sh \u0026lt;service version\u0026gt;   Update the \u0026ldquo;platformBomVersion\u0026rdquo; in the \u0026ldquo;gradle.properties\u0026rdquo; file to the appropriate version.\n  Run the HOTFIX Jenkins job, which should be found under the \u0026ldquo;Application-CI-HOTFIX-Release\u0026rdquo; tab, against the HOTFIX branch.\n  Release the newly published HOTFIX artefact to the appropriate environment using the HOTFIX release process.\n  When the HOTFIX has been successfully released, the changes should be merged back into the appropriate main line branch (usually master).\n  If the issue is in the library then require to do a HOTFIX build of the library in question. Get the release tag of the library from the version of the Platform BOM identified above. Then similar to the above do the following.\n  Create a HOTFIX branch, by running the follow, which will create a branch called \u0026ldquo;x.y.z-HOTFIX\u0026rdquo; and check it out. Where \u0026ldquo;x.y.z\u0026rdquo; is the version of the platform BOM.\n./setup/create-hotfix.sh \u0026lt;service version\u0026gt;   Update the \u0026ldquo;platformBomVersion\u0026rdquo; in the \u0026ldquo;gradle.properties\u0026rdquo; file to the appropriate version.\n  Run the library HOTFIX Jenkins job, which can be found under the \u0026ldquo;Java-Common-Libraries-CI-Build\u0026rdquo; tab, against the HOTFIX branch.\n  Create a HOTFIX branch on the platform-bom GitHub repository, by running the script in the first set\n  In the platform-bom update the version for the library in question\n  Run the platform-bom HOTFIX Jenkins job, which can be found under the \u0026ldquo;Java-Common-Libraries-CI-Build\u0026rdquo; tab, against the HOTFIX branch. Taking a note of the HOTFIX platform BOM release tag.\n  Then apply the above steps to the services in question but use the HOTFIX BOM release tag for the plaformBOM version\n  As above, when the HOTFIX has been successfully released, the changes should be merged back into the appropriate main line branch (usually master).\n  LEGACY There are three options here all have associated risk and time costs. Each approach will need individual analysis not possible to document here.\n Use the latest SNAPSHOT BOM, if the old versions of the libraries aren\u0026rsquo;t required. If the versions required have a semantic version, move the code to use Library Semantic Version as described in the migration documents. This migration will have an additional time cost. Find the specific \u0026ldquo;sha\u0026rdquo; of the library at the time the service was built and do HOTFIX libraries from this point. This job is very manual and open to user mistakes.  "
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/git/version_strategy/",
+	"title": "Versioning Strategy",
+	"tags": ["git", "version"],
+	"description": "",
+	"content": "The document describes the versioning strategy for deliverable componenets.\nWhile we will be using semantic versioning and each release will be tagged with its semantic version, only major versions of each component will be supported in production.\nSo for each major version in production we will have a named branch. What we mean by \u0026lsquo;named branch\u0026rsquo; is a branch this is long lived, has forked of master and it will trigger a pipeline release on checkin. Apart from that they are normal branches.\nThe latest version of a component will be released from master branch as normal, but older major versions will be released from there own named branches.\nFor example, we have a component called example-service. In production we have two major version of example-service, major version 2 and major version 3. We will have two named branches, master for major version 3 and V2 for major version 2. All development for major version 3 will done on master, and all development for major version 2 will be done on the V2 branch. This can be extended to multiple major version. The latest major version will always be on master, while the older version will be on the Vn branches, where n is the major version number. The safest way is to think of each major version of a component as a totally separate component.\nNote, When a version is retired from production, after a suitable time, the associated Vn branch should be removed.\nThe only other specially named branch will be the hotfix branch, for fast release of productions defects, which will be described later.\nThe lifecycle of a code change is as follows\n A new branch is created from the approprite named branch at the appropriate point on the named branch. This will invariably be from the master branch at the head. Code is developed Code is checked into the development branch with an appropriate message. The message will be the JIRA number, one of the key words MAJOR, MINOR, PATCH, HOTFIX and a brief description. Note, if multiple commits are squished, be careful to include the highest key word in the commit message. Once development is complete then a pull request request is raised to merge into the parent named branch. The pull request will be reviewed and merged, if it passes review. If the code is merged, a job will be run against the branch, which will determine what version release tag should be applied. See section below for more detailed explication of the behaviour of this job.  NOTE: If a change requires to be done on more than one major version, the workflow for the changes should be treated as two seperate jobs, even if the changes are the same.\nIf a fast bug fix is required in production the workflow will be slightly different, as described below\n Determine version tag on component in production with the bug. Create a branch called hotfix, from the production tag. Develop fix on hotfix branch. Check in branch with message as above with HOTFIX keyword and create pull request The rest of the job is the same as above.  The major difference is the post fix managment. Once a bug is found the appropriate test scripts will need to modified to detect this bug and pass when bug is fixed. This means no version of component can pass through the pipeline until the bug is fixed. Once the hotfix is released, the fix should be merged in to each of the named branches affected by the bug.\nNote, while bug is used to describe the required change for the hotfix branch, is doesn\u0026rsquo;t necesarily need to be a code defect that needs to be released. It can be any change that is required to be released quickly, outside the normal development stream.\nChecking In Job When a change is checked/merged into a named branch a job will be run to tag the branch. The tag is a symanctic version number and is the release version. Note, even though this is a release number, this version of the code may not even get released as it won\u0026rsquo;t get through the pipeline.\nThis job will need to be developed.\nIt is possible for this job to fail and for the check in not to progress through the pipeline, but if it succeds the component will move to the next stage in the pipeline, which currently is the release Jenkins job.\nThis job will first look for the last tag. If no previous tag exisits the jobs will fail. If no tag exists a manual tag will need to added, this tag should be appropriate for the branch. Do we need to have a task to create a tag on repo creation?\nThe job can be re-run after any failure.\nOnce the last tag is found, the jobs looks at all the check in messages and finds the highest keyword. If no check in messages has a keyword the jobs will fail, and a checkin with an appropriate message will be required. On a Vn branch if the highest keyword in MAJOR the job will fail. On the hotfix branch if the highest keyword is not PATCH then the job will fail.\nOnce the highest keyword is determined, the job will incrment the previously found tag. If the keyword is MAJOR the major version in the tag is incremented. MINOR for minor and PATCH for patch version. The only exception to this pattern is on the hot fix branch where hotfix is added to the tag along with a build number, as the fix may not work first time. The branch is then tagged with this new tag, and the next pipeline jobs is started.\nThis table illustrates the incrementation of the tag\n   Start Tag Keyword New Tag     2.2.1 MAJOR 3.0.0   2.2.1 MINOR 2.3.0   2.2.1 PATCH 2.2.2   2.2.1 HOTFIX (on hotfix) 2.2.1-HOTFIX.n    Note: we have a hotfix number as it may take multiple attempts to fix the bug.\nCheck In To allow the above job to run the check in message will need to have a particular format, as described below\nJIRA-NO KEYWORD Check in description\nJIRA-NO The JIRA number for the change, all one word\nKEYWORD One of the values MAJOR, MINOR, PATCH or HOTFIX\nThen a breif description.\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/api-gateway/",
+	"title": "What is an API-Gateway",
+	"tags": ["composer"],
+	"description": "",
+	"content": "API gateway (replacement for DataPower) which front ends all the micro services, so any request coming in first hits API gateway \u0026amp; then API gateway works out to which microservice the request has to be sent. The following are the main responsibilities of API gateway.\n Look up the URI in the service cache to figuer out which service supports the requested endpoint Validate the request coming in against the swagger document of the service Authenticate/Authorize Forward the request to the relevant service  API gateway uses zuul for request routing \u0026amp; kubernates APIs for service discovery.\nHighlevel design Following diagram shows the highlevel design of API gateway (API Gateway) along with the micro service where the request is routed by API gateway (API Gateway)\nAPI gateway filters API gateway comprises of various filters which intercepts the request coming into API gateway (Pre filter) \u0026amp; response going out of API gatewayi (Post filter). Following diagram shows the API gateway pre/post filetrs\nService Discovery/Caching During API gateway service start up it discovers all the services available with the help of kubernates discovery client \u0026amp; then it queries every service for its swagger URI by calling endpoint /about/info. Once it gets the swagger URI, it then calls that endpoint to rerieve the swagger document of the service. The swagger document is then stored in the service cache against the service it belongs to. Once the API gateway is ready to serve requests, it looks up every request url in the service cache to find the service that supports the endpoint being requested \u0026amp; then routes the request to that service.\nFollowing diagram shows the service discovery flow\nDeploying a service behind API gateway To deploy a service that API gateway will route to there are specific endpoints that the service has to expose. Details of these can be found in the my copy is blank so awaiting document for this link Microservice Framework section. The service can be implemented in any language as long as the required endpoints are exposed. The important ones are:\n   Endpoint Description     /metadata/swagger Returns a swagger document describing the endpoints available within the service. Any request and response schema\u0026rsquo;s provided will be used for validation.   /metadata/mapping Returns a list of attributes and where to find them that can be used for creating an xacml request.   /about/health Returns whether or not the service is ready to service traffic    References  Solution Design - Gateway  spring-cloud-kubernetes  Netflix OSS, Spring and Kubernetes  "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/paas/what_is_docker/",
@@ -53,7 +109,7 @@
 	"title": "GIT Info",
 	"tags": ["git"],
 	"description": "",
-	"content": "Test from GIT MD files Based on notes from old V: Drive from hVM\n  GIT Tagged files   Branching and Merging Strategy   Semantic Version Enforcement   "
+	"content": "Git Information Based on notes from old V: Drive from hVM\n  GIT Tagged files   Versioning Strategy   Branching and Merging Strategy   Semantic Version Enforcement   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/site_documentation/shortcode_test/",
@@ -74,7 +130,7 @@
 	"title": "Paas",
 	"tags": ["openshift"],
 	"description": "",
-	"content": "Training Notes  Docker Automation   What is Docker?   OpenShift Container Platform   Platform Engineering Background   "
+	"content": "Training Notes  Components OP   Caboodle   Composer Info   Docker Automation   Elements   Jenkins CI   Platform BOM   What is an API-Gateway   What is Docker?   OpenShift Container Platform   Platform Engineering Background   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/",
@@ -91,8 +147,43 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/tags/bom/",
+	"title": "BOM",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/bom/",
+	"title": "BOM",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/caboodle/",
+	"title": "caboodle",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/components/",
 	"title": "Components",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/composer/",
+	"title": "composer",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/composer/",
+	"title": "composer",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -119,8 +210,36 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/tags/git/",
+	"title": "git",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/git/",
+	"title": "git",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/gradle/",
 	"title": "gradle",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/jenkins/",
+	"title": "jenkins",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/jenkins/",
+	"title": "jenkins",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -133,7 +252,21 @@
 	"content": ""
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/tags/nexus/",
+	"title": "nexus",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
+	"title": "openshift",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
 	"title": "openshift",
 	"tags": [],
 	"description": "",
@@ -142,6 +275,13 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/version/",
+	"title": "version",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -273,13 +413,6 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/git/",
-	"title": "git",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/categories/paas/",
 	"title": "paas",
 	"tags": [],
@@ -329,13 +462,6 @@
 	"content": "date: 2020-04-28T12:04:57+01:00 The html snippet is between our rawhtml shortcode.\n {{ \u0026lt; rawhtml \u0026gt; }} html here {{ \u0026lt; /rawhtml \u0026gt; }}\n   This is embedded html in a markdown file  The href is from localhost in this test   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/image/twd.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/image/twd.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/image/twd.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n   "
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
-	"title": "openshift",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/categories/help/",
 	"title": "help",
 	"tags": [],
@@ -366,13 +492,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/document/",
 	"title": "document",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/components/git/",
-	"title": "git",
 	"tags": [],
 	"description": "",
 	"content": ""

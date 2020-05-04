@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
+
+    <title>Versioning Strategy :: Walmo SDLC Test</title>
+
+    
+    <link href="/28mm/css/nucleus.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/fontawesome-all.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hybrid.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/featherlight.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/perfect-scrollbar.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/auto-complete.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/atom-one-dark-reasonable.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/theme.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hugo-theme.css?1588602564" rel="stylesheet">
+    
+      <link href="/28mm/css/theme-red.css?1588602564" rel="stylesheet">
+    
+
+    <script src="/28mm/js/jquery-3.3.1.min.js?1588602564"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/28mm/git/version_strategy/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a>
+<a id="logo" href="https://gwtharg.github.io/28mm/"> 
+ <img src="/28mm/images/logo.png" width="160" height="120" alt="fab">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/28mm/js/lunr.min.js?1588602564"></script>
+<script type="text/javascript" src="/28mm/js/auto-complete.js?1588602564"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/gwtharg.github.io\/28mm\/";
+    
+</script>
+<script type="text/javascript" src="/28mm/js/search.js?1588602564"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/git/" title="GIT Info" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/28mm/git/">
+          <b>X. </b>GIT Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/version_strategy/" title="Versioning Strategy" class="dd-item active">
+        <a href="/28mm/git/version_strategy/">
+        Versioning Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/branchingstrategy/" title="Branching and Merging Strategy" class="dd-item ">
+        <a href="/28mm/git/branchingstrategy/">
+        Branching and Merging Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/semanticversionenforcement/" title="Semantic Version Enforcement" class="dd-item ">
+        <a href="/28mm/git/semanticversionenforcement/">
+        Semantic Version Enforcement
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/paas/" title="Paas" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/paas/">
+          <b>X. </b>Paas
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/components_for_op/" title="Components  OP" class="dd-item ">
+        <a href="/28mm/paas/components_for_op/">
+        Components  OP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/caboodle_intro/" title="Caboodle" class="dd-item ">
+        <a href="/28mm/paas/caboodle_intro/">
+        Caboodle
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/composer_info/" title="Composer Info" class="dd-item ">
+        <a href="/28mm/paas/composer_info/">
+        Composer Info
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/docker_automation/" title="Docker Automation" class="dd-item ">
+        <a href="/28mm/paas/docker_automation/">
+        Docker Automation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/elements/" title="Elements" class="dd-item ">
+        <a href="/28mm/paas/elements/">
+        Elements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/jenkins_ci/" title="Jenkins CI" class="dd-item ">
+        <a href="/28mm/paas/jenkins_ci/">
+        Jenkins CI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/platform_bom/" title="Platform BOM" class="dd-item ">
+        <a href="/28mm/paas/platform_bom/">
+        Platform BOM
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/api-gateway/" title="What is an API-Gateway" class="dd-item ">
+        <a href="/28mm/paas/api-gateway/">
+        What is an API-Gateway
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/what_is_docker/" title="What is Docker?" class="dd-item ">
+        <a href="/28mm/paas/what_is_docker/">
+        What is Docker?
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/openshift/" title="OpenShift Container Platform" class="dd-item ">
+        <a href="/28mm/paas/openshift/">
+        OpenShift Container Platform
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/pe_background/" title="Platform Engineering Background" class="dd-item ">
+        <a href="/28mm/paas/pe_background/">
+        Platform Engineering Background
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/tfs/" title="TFS Internal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/tfs/">
+          <b>X. </b>TFS Internal
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/tfs/team_types/" title="Team Types" class="dd-item ">
+        <a href="/28mm/tfs/team_types/">
+        Team Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/site_documentation/" title="Site Content Info" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/site_documentation/">
+          <b>X. </b>Site Content Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/hugo_install/" title="Hugo Simple Install" class="dd-item ">
+        <a href="/28mm/site_documentation/hugo_install/">
+        Hugo Simple Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/markdown_notes/" title="Markdown Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/markdown_notes/">
+        Markdown Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/shortcode_test/" title="Shortcodes" class="dd-item ">
+        <a href="/28mm/site_documentation/shortcode_test/">
+        Shortcodes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/flowcharts/" title="Flowcharts Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/flowcharts/">
+        Flowcharts Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/html_based_pages/" title="HTML Embedded  Pages" class="dd-item ">
+        <a href="/28mm/site_documentation/html_based_pages/">
+        HTML Embedded  Pages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/pdf_in_html/" title="PDF in HTML" class="dd-item ">
+        <a href="/28mm/site_documentation/pdf_in_html/">
+        PDF in HTML
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/visio_from_export/" title="Visio from Export" class="dd-item ">
+        <a href="/28mm/site_documentation/visio_from_export/">
+        Visio from Export
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><a>Built with Hugo</a></p>
+<p></p> &copy; Walmo 2020</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/28mm/'>Auto-Doc</a> > <a href='/28mm/git/'>GIT Info</a> > Versioning Strategy
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#checking-in-job">Checking In Job</a></li>
+    <li><a href="#check-in">Check In</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/28mm/tags/git">git</a>
+
+  <a class="tag-link" href="/28mm/tags/version">version</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Versioning Strategy
+            </h1>
+          
+
+        
+
+
+
+<p>The document describes the versioning strategy for deliverable componenets.</p>
+<p>While we will be using semantic versioning and each release will be tagged with its semantic version, only major versions of each component will be supported in production.</p>
+<p>So for each major version in production we will have a named branch. What we mean by &lsquo;named branch&rsquo; is a branch this is long lived, has forked of master and it will trigger a pipeline release on checkin. Apart from that they are normal branches.</p>
+<p>The latest version of a component will be released from master branch as normal, but older major versions will be released from there own named branches.</p>
+<p>For example, we have a component called example-service. In production we have two major version of example-service, major version 2 and major version 3. We will have two named branches, master for major version 3 and V2 for major version 2. All development for major version 3 will done on master, and all development for major version 2 will be done on the V2 branch. This can be extended to multiple major version. The latest major version will always be on master, while the older version will be on the Vn branches, where n is the major version number.  The safest way is to think of each major version of a component as a totally separate component.</p>
+<p>Note, When a version is retired from production, after a suitable time, the associated Vn branch should be removed.</p>
+<p>The only other specially named branch will be the hotfix branch, for fast release of productions defects, which will be described later.</p>
+<p>The lifecycle of a code change is as follows</p>
+<ul>
+<li>A new branch is created from the approprite named branch at the appropriate point on the named branch. This will invariably be from the master branch at the head.</li>
+<li>Code is developed</li>
+<li>Code is checked into the development branch with an appropriate message. The message will be the JIRA number, one of the key words MAJOR, MINOR, PATCH, HOTFIX and a brief description. Note, if multiple commits are squished, be careful to include the highest key word in the commit message.</li>
+<li>Once development is complete then a pull request request is raised to merge into the parent named branch.</li>
+<li>The pull request will be reviewed and merged, if it passes review.</li>
+<li>If the code is merged, a job will be run against the branch, which will determine what version release tag should be applied. See section below for more detailed explication of the behaviour of this job.</li>
+</ul>
+<p>NOTE: If a change requires to be done on more than one major version, the workflow for the changes should be treated as two seperate jobs, even if the changes are the same.</p>
+<p>If a fast bug fix is required in production the workflow will be slightly different, as described below</p>
+<ul>
+<li>Determine version tag on component in production with the bug. Create a branch called hotfix, from the production tag.</li>
+<li>Develop fix on hotfix branch. Check in branch with message as above with HOTFIX keyword and create pull request</li>
+<li>The rest of the job is the same as above.</li>
+</ul>
+<p>The major difference is the post fix managment. Once a bug is found the appropriate test scripts will need to modified to detect this bug and pass when bug is fixed. This means no version of component can pass through the pipeline until the bug is fixed. Once the hotfix is released, the fix should be merged in to each of the named branches affected by the bug.</p>
+<p>Note, while bug is used to describe the required change for the hotfix branch, is doesn&rsquo;t necesarily need to be a code defect that needs to be released. It can be any change that is required to be released quickly, outside the normal development stream.</p>
+<h2 id="checking-in-job">Checking In Job</h2>
+<p>When a change is checked/merged into a named branch a job will be run to tag  the branch. The tag is a symanctic version number and is the release version. Note, even though this is a release number, this version of the code may not even get released as it won&rsquo;t get through the pipeline.</p>
+<p>This job will need to be developed.</p>
+<p>It is possible for this job to fail and for the check in not to progress through the pipeline, but if it succeds the component will move to the next stage in the pipeline, which currently is the release Jenkins job.</p>
+<p>This job will first look for the last tag. If no previous tag exisits the jobs will fail. If no tag exists a manual tag will need to added, this tag should be appropriate for the branch. Do we need to have a task to create a tag on repo creation?</p>
+<p>The job can be re-run after any failure.</p>
+<p>Once the last tag is found, the jobs looks at all the check in messages and finds the highest keyword. If no check in messages has a keyword the jobs will fail, and a checkin with an appropriate message will be required. On a Vn branch if the highest keyword in MAJOR the job will fail. On the hotfix branch if the highest keyword is not PATCH then the job will fail.</p>
+<p>Once the highest keyword is determined, the job will incrment the previously found tag. If the keyword is MAJOR the major version in the tag is incremented. MINOR for minor and PATCH for patch version. The only exception to this pattern is on the hot fix branch where hotfix is added to the tag along with a build number, as the fix may not work first time. The branch is then tagged with this new tag, and the next pipeline jobs is started.</p>
+<p>This table illustrates the incrementation of the tag</p>
+<table>
+<thead>
+<tr>
+<th>Start Tag</th>
+<th>Keyword</th>
+<th>New Tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.2.1</td>
+<td>MAJOR</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>2.2.1</td>
+<td>MINOR</td>
+<td>2.3.0</td>
+</tr>
+<tr>
+<td>2.2.1</td>
+<td>PATCH</td>
+<td>2.2.2</td>
+</tr>
+<tr>
+<td>2.2.1</td>
+<td>HOTFIX (on hotfix)</td>
+<td>2.2.1-HOTFIX.n</td>
+</tr>
+</tbody>
+</table>
+<p>Note: we have a hotfix number as it may take multiple attempts to fix the bug.</p>
+<h2 id="check-in">Check In</h2>
+<p>To allow the above job to run the check in message will need to have a particular format, as described below</p>
+<p>JIRA-NO KEYWORD Check in description</p>
+<p>JIRA-NO The JIRA number for the change, all one word</p>
+<p>KEYWORD One of the values MAJOR, MINOR, PATCH or HOTFIX</p>
+<p>Then a breif description.</p>
+
+
+  
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/28mm/git/" title="GIT Info"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/28mm/git/branchingstrategy/" title="Branching and Merging Strategy" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/28mm/js/clipboard.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.jquery.min.js?1588602564"></script>
+    <script src="/28mm/js/jquery.sticky.js?1588602564"></script>
+    <script src="/28mm/js/featherlight.min.js?1588602564"></script>
+    <script src="/28mm/js/highlight.pack.js?1588602564"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/28mm/js/modernizr.custom-3.6.0.js?1588602564"></script>
+    <script src="/28mm/js/learn.js?1588602564"></script>
+    <script src="/28mm/js/hugo-learn.js?1588602564"></script>
+
+    <link href="/28mm/mermaid/mermaid.css?1588602564" rel="stylesheet" />
+    <script src="/28mm/mermaid/mermaid.js?1588602564"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

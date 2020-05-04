@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
+
+    <title>What is an API-Gateway :: Walmo SDLC Test</title>
+
+    
+    <link href="/28mm/css/nucleus.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/fontawesome-all.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hybrid.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/featherlight.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/perfect-scrollbar.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/auto-complete.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/atom-one-dark-reasonable.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/theme.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hugo-theme.css?1588602564" rel="stylesheet">
+    
+      <link href="/28mm/css/theme-red.css?1588602564" rel="stylesheet">
+    
+
+    <script src="/28mm/js/jquery-3.3.1.min.js?1588602564"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/28mm/paas/api-gateway/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a>
+<a id="logo" href="https://gwtharg.github.io/28mm/"> 
+ <img src="/28mm/images/logo.png" width="160" height="120" alt="fab">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/28mm/js/lunr.min.js?1588602564"></script>
+<script type="text/javascript" src="/28mm/js/auto-complete.js?1588602564"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/gwtharg.github.io\/28mm\/";
+    
+</script>
+<script type="text/javascript" src="/28mm/js/search.js?1588602564"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/git/" title="GIT Info" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/git/">
+          <b>X. </b>GIT Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/version_strategy/" title="Versioning Strategy" class="dd-item ">
+        <a href="/28mm/git/version_strategy/">
+        Versioning Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/branchingstrategy/" title="Branching and Merging Strategy" class="dd-item ">
+        <a href="/28mm/git/branchingstrategy/">
+        Branching and Merging Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/semanticversionenforcement/" title="Semantic Version Enforcement" class="dd-item ">
+        <a href="/28mm/git/semanticversionenforcement/">
+        Semantic Version Enforcement
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/paas/" title="Paas" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/28mm/paas/">
+          <b>X. </b>Paas
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/components_for_op/" title="Components  OP" class="dd-item ">
+        <a href="/28mm/paas/components_for_op/">
+        Components  OP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/caboodle_intro/" title="Caboodle" class="dd-item ">
+        <a href="/28mm/paas/caboodle_intro/">
+        Caboodle
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/composer_info/" title="Composer Info" class="dd-item ">
+        <a href="/28mm/paas/composer_info/">
+        Composer Info
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/docker_automation/" title="Docker Automation" class="dd-item ">
+        <a href="/28mm/paas/docker_automation/">
+        Docker Automation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/elements/" title="Elements" class="dd-item ">
+        <a href="/28mm/paas/elements/">
+        Elements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/jenkins_ci/" title="Jenkins CI" class="dd-item ">
+        <a href="/28mm/paas/jenkins_ci/">
+        Jenkins CI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/platform_bom/" title="Platform BOM" class="dd-item ">
+        <a href="/28mm/paas/platform_bom/">
+        Platform BOM
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/api-gateway/" title="What is an API-Gateway" class="dd-item active">
+        <a href="/28mm/paas/api-gateway/">
+        What is an API-Gateway
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/what_is_docker/" title="What is Docker?" class="dd-item ">
+        <a href="/28mm/paas/what_is_docker/">
+        What is Docker?
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/openshift/" title="OpenShift Container Platform" class="dd-item ">
+        <a href="/28mm/paas/openshift/">
+        OpenShift Container Platform
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/pe_background/" title="Platform Engineering Background" class="dd-item ">
+        <a href="/28mm/paas/pe_background/">
+        Platform Engineering Background
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/tfs/" title="TFS Internal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/tfs/">
+          <b>X. </b>TFS Internal
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/tfs/team_types/" title="Team Types" class="dd-item ">
+        <a href="/28mm/tfs/team_types/">
+        Team Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/site_documentation/" title="Site Content Info" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/site_documentation/">
+          <b>X. </b>Site Content Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/hugo_install/" title="Hugo Simple Install" class="dd-item ">
+        <a href="/28mm/site_documentation/hugo_install/">
+        Hugo Simple Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/markdown_notes/" title="Markdown Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/markdown_notes/">
+        Markdown Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/shortcode_test/" title="Shortcodes" class="dd-item ">
+        <a href="/28mm/site_documentation/shortcode_test/">
+        Shortcodes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/flowcharts/" title="Flowcharts Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/flowcharts/">
+        Flowcharts Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/html_based_pages/" title="HTML Embedded  Pages" class="dd-item ">
+        <a href="/28mm/site_documentation/html_based_pages/">
+        HTML Embedded  Pages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/pdf_in_html/" title="PDF in HTML" class="dd-item ">
+        <a href="/28mm/site_documentation/pdf_in_html/">
+        PDF in HTML
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/visio_from_export/" title="Visio from Export" class="dd-item ">
+        <a href="/28mm/site_documentation/visio_from_export/">
+        Visio from Export
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><a>Built with Hugo</a></p>
+<p></p> &copy; Walmo 2020</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/28mm/'>Auto-Doc</a> > <a href='/28mm/paas/'>Paas</a> > What is an API-Gateway
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#highlevel-design">Highlevel design</a></li>
+    <li><a href="#api-gateway-filters">API gateway filters</a></li>
+    <li><a href="#service-discoverycaching">Service Discovery/Caching</a></li>
+    <li><a href="#deploying-a-service-behind-api-gateway">Deploying a service behind API gateway</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/28mm/tags/composer">composer</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              What is an API-Gateway
+            </h1>
+          
+
+        
+
+
+
+<p>API gateway (replacement for DataPower) which front ends all the micro services, so any request coming in first hits API gateway &amp; then API gateway works out to which microservice the request has to be sent. The following are the main responsibilities of API gateway.</p>
+<ul>
+<li>Look up the URI in the service cache to figuer out which service supports the requested endpoint</li>
+<li>Validate the request coming in against the swagger document of the service</li>
+<li>Authenticate/Authorize</li>
+<li>Forward the request to the relevant service</li>
+</ul>
+<p>API gateway uses zuul for request routing &amp; kubernates APIs for service discovery.</p>
+<h2 id="highlevel-design">Highlevel design</h2>
+<p>Following diagram shows the highlevel design of API gateway (API Gateway) along with the micro service where the request is routed by API gateway (API Gateway)</p>
+<p><img src="/28mm/paas/image/Gateway_and_Microservice_Container.png" alt="Highlevel design"></p>
+<h2 id="api-gateway-filters">API gateway filters</h2>
+<p>API gateway comprises of various filters which intercepts the request coming into API gateway (Pre filter) &amp; response going out of API gatewayi (Post filter). Following diagram shows the API gateway pre/post filetrs</p>
+<p><img src="/28mm/paas/image/API_Gateway_Filters.png" alt="API gateway pre/post filters"></p>
+<h2 id="service-discoverycaching">Service Discovery/Caching</h2>
+<p>During API gateway service start up it discovers all the services available with the help of kubernates discovery client &amp; then it queries every service for its swagger URI by calling endpoint /about/info. Once it gets the swagger URI, it then calls that endpoint to rerieve the swagger document of the service. The swagger document is then stored in the service cache against the service it belongs to. Once the API gateway is ready to serve requests, it looks up every request url in the service cache to find the service that supports the endpoint being requested &amp; then routes the request to that service.</p>
+<p>Following diagram shows the service discovery flow</p>
+<p><img src="/28mm/paas/image/ServiceDiscovery.png" alt="Service discovery flow"></p>
+<h2 id="deploying-a-service-behind-api-gateway">Deploying a service behind API gateway</h2>
+<p>To deploy a service that API gateway will route to there are specific endpoints that the service has to expose. Details of these can be found in the <strong>my copy is blank so awaiting document for this link</strong> <a href="microserviceframework.md">Microservice Framework</a> section. The service can be implemented in any language as long as the required endpoints are exposed. The important ones are:</p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/metadata/swagger</td>
+<td>Returns a swagger document describing the endpoints available within the service. Any request and response schema&rsquo;s provided will be used for validation.</td>
+</tr>
+<tr>
+<td>/metadata/mapping</td>
+<td>Returns a list of attributes and where to find them that can be used for creating an xacml request.</td>
+</tr>
+<tr>
+<td>/about/health</td>
+<td>Returns whether or not the service is ready to service traffic</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<p>
+<a  href="https://abouthere.atlassian.net/wiki/pages/viewpage.action?pageId=224656758" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Solution Design - Gateway
+  
+</a>
+<br>
+
+<a  href="https://github.com/fabric8io/spring-cloud-kubernetes" target="_blank"  class="btn btn-default">
+  
+  
+  
+  spring-cloud-kubernetes
+  
+</a>
+ <br>
+
+<a  href="http://blog.christianposta.com/microservices/netflix-oss-or-kubernetes-how-about-both/" target="_blank"  class="btn btn-default">
+  
+  
+  
+  Netflix OSS, Spring and Kubernetes
+  
+</a>
+</p>
+
+
+  
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/28mm/paas/platform_bom/" title="Platform BOM"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/28mm/paas/what_is_docker/" title="What is Docker?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/28mm/js/clipboard.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.jquery.min.js?1588602564"></script>
+    <script src="/28mm/js/jquery.sticky.js?1588602564"></script>
+    <script src="/28mm/js/featherlight.min.js?1588602564"></script>
+    <script src="/28mm/js/highlight.pack.js?1588602564"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/28mm/js/modernizr.custom-3.6.0.js?1588602564"></script>
+    <script src="/28mm/js/learn.js?1588602564"></script>
+    <script src="/28mm/js/hugo-learn.js?1588602564"></script>
+
+    <link href="/28mm/mermaid/mermaid.css?1588602564" rel="stylesheet" />
+    <script src="/28mm/mermaid/mermaid.js?1588602564"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

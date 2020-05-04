@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
+
+    <title>Platform BOM :: Walmo SDLC Test</title>
+
+    
+    <link href="/28mm/css/nucleus.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/fontawesome-all.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hybrid.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/featherlight.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/perfect-scrollbar.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/auto-complete.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/atom-one-dark-reasonable.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/theme.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hugo-theme.css?1588602564" rel="stylesheet">
+    
+      <link href="/28mm/css/theme-red.css?1588602564" rel="stylesheet">
+    
+
+    <script src="/28mm/js/jquery-3.3.1.min.js?1588602564"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/28mm/paas/platform_bom/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a>
+<a id="logo" href="https://gwtharg.github.io/28mm/"> 
+ <img src="/28mm/images/logo.png" width="160" height="120" alt="fab">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/28mm/js/lunr.min.js?1588602564"></script>
+<script type="text/javascript" src="/28mm/js/auto-complete.js?1588602564"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/gwtharg.github.io\/28mm\/";
+    
+</script>
+<script type="text/javascript" src="/28mm/js/search.js?1588602564"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/git/" title="GIT Info" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/git/">
+          <b>X. </b>GIT Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/version_strategy/" title="Versioning Strategy" class="dd-item ">
+        <a href="/28mm/git/version_strategy/">
+        Versioning Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/branchingstrategy/" title="Branching and Merging Strategy" class="dd-item ">
+        <a href="/28mm/git/branchingstrategy/">
+        Branching and Merging Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/semanticversionenforcement/" title="Semantic Version Enforcement" class="dd-item ">
+        <a href="/28mm/git/semanticversionenforcement/">
+        Semantic Version Enforcement
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/paas/" title="Paas" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/28mm/paas/">
+          <b>X. </b>Paas
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/components_for_op/" title="Components  OP" class="dd-item ">
+        <a href="/28mm/paas/components_for_op/">
+        Components  OP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/caboodle_intro/" title="Caboodle" class="dd-item ">
+        <a href="/28mm/paas/caboodle_intro/">
+        Caboodle
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/composer_info/" title="Composer Info" class="dd-item ">
+        <a href="/28mm/paas/composer_info/">
+        Composer Info
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/docker_automation/" title="Docker Automation" class="dd-item ">
+        <a href="/28mm/paas/docker_automation/">
+        Docker Automation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/elements/" title="Elements" class="dd-item ">
+        <a href="/28mm/paas/elements/">
+        Elements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/jenkins_ci/" title="Jenkins CI" class="dd-item ">
+        <a href="/28mm/paas/jenkins_ci/">
+        Jenkins CI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/platform_bom/" title="Platform BOM" class="dd-item active">
+        <a href="/28mm/paas/platform_bom/">
+        Platform BOM
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/api-gateway/" title="What is an API-Gateway" class="dd-item ">
+        <a href="/28mm/paas/api-gateway/">
+        What is an API-Gateway
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/what_is_docker/" title="What is Docker?" class="dd-item ">
+        <a href="/28mm/paas/what_is_docker/">
+        What is Docker?
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/openshift/" title="OpenShift Container Platform" class="dd-item ">
+        <a href="/28mm/paas/openshift/">
+        OpenShift Container Platform
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/pe_background/" title="Platform Engineering Background" class="dd-item ">
+        <a href="/28mm/paas/pe_background/">
+        Platform Engineering Background
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/tfs/" title="TFS Internal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/tfs/">
+          <b>X. </b>TFS Internal
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/tfs/team_types/" title="Team Types" class="dd-item ">
+        <a href="/28mm/tfs/team_types/">
+        Team Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/site_documentation/" title="Site Content Info" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/site_documentation/">
+          <b>X. </b>Site Content Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/hugo_install/" title="Hugo Simple Install" class="dd-item ">
+        <a href="/28mm/site_documentation/hugo_install/">
+        Hugo Simple Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/markdown_notes/" title="Markdown Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/markdown_notes/">
+        Markdown Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/shortcode_test/" title="Shortcodes" class="dd-item ">
+        <a href="/28mm/site_documentation/shortcode_test/">
+        Shortcodes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/flowcharts/" title="Flowcharts Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/flowcharts/">
+        Flowcharts Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/html_based_pages/" title="HTML Embedded  Pages" class="dd-item ">
+        <a href="/28mm/site_documentation/html_based_pages/">
+        HTML Embedded  Pages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/pdf_in_html/" title="PDF in HTML" class="dd-item ">
+        <a href="/28mm/site_documentation/pdf_in_html/">
+        PDF in HTML
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/visio_from_export/" title="Visio from Export" class="dd-item ">
+        <a href="/28mm/site_documentation/visio_from_export/">
+        Visio from Export
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><a>Built with Hugo</a></p>
+<p></p> &copy; Walmo 2020</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/28mm/'>Auto-Doc</a> > <a href='/28mm/paas/'>Paas</a> > Platform BOM
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#normal">Normal</a></li>
+    <li><a href="#historial-bom">Historial BOM</a>
+      <ul>
+        <li><a href="#local-snapshot">Local SNAPSHOT</a></li>
+        <li><a href="#hotfix">HOTFIX</a></li>
+        <li><a href="#semantic-version">SEMANTIC VERSION</a></li>
+        <li><a href="#legacy">LEGACY</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/28mm/tags/bom">BOM</a>
+
+  <a class="tag-link" href="/28mm/tags/gradle">gradle</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Platform BOM
+            </h1>
+          
+
+        
+
+
+
+<p>This documents describes how to use the Platform BOM, it assumes the reader understands Semantic Version the Platform BOM and the services has been built using the Operational Platform Template.</p>
+<h2 id="normal">Normal</h2>
+<p>The Platform BOM version is set by the variable &ldquo;platformBomVersion&rdquo; in the &ldquo;gradle.properties&rdquo; file. This should have a major version of greater than 3, for full Semantic Version. The default value is from auto-mate is currently &ldquo;3+&rdquo;, so it will pull the latest Platform BOM with major version 3.</p>
+<p>It can be set to different levels:</p>
+<ul>
+<li>Specific version, for example 3.1.7, this will pull in a specific version of the Platform BOM.</li>
+<li>Minor version, for example 3.1+, this will pull in the latest Platform BOM with minor version 3.1, for example 3.1.5 or 3.1.3354</li>
+<li>Major version, for example 3+, this will pull in the latest Platform BOM with major version 3, for example 3.2.5. This is the default.</li>
+<li>Latest, set to just +, this will pull in the latest including any major breaking changes</li>
+</ul>
+<p>Even when not specifying a specific version, the specific version the services was build with will be recorded. For example if the &ldquo;platformBomVersion&rdquo; is 3+,  and the latest published major version of the Platform BOM with major version 3 is 3.3.4; the service is built with the dependencies specified in this BOM.  The built version can them be found from the information end point, as shown below. This version number can be used to either lock down the version, or for the HOTFIX process.</p>
+<pre><code>{
+  &quot;app&quot;: {
+    &quot;platformBomVersion&quot;: &quot;3.1.7&quot;,
+    &quot;description&quot;: &quot;Canary Service&quot;,
+    &quot;version&quot;: &quot;2.0.0-s528408-SNAPSHOT&quot;,
+    &quot;name&quot;: &quot;canary-services&quot;
+  },
+  &quot;framework&quot;: {
+    &quot;type&quot;: &quot;new-ms-template&quot;,
+    &quot;version&quot;: &quot;1.0.1&quot;
+  },
+  &quot;git&quot;: {
+    &quot;commit&quot;: {
+      &quot;time&quot;: 1542830003000,
+      &quot;id&quot;: &quot;71742e7&quot;
+    },
+    &quot;branch&quot;: &quot;master&quot;
+  },
+  &quot;swaggerInfo&quot;: {
+    &quot;swagger.uri&quot;: &quot;/about/swagger&quot;
+  }
+}
+</code></pre><h2 id="historial-bom">Historial BOM</h2>
+<h3 id="local-snapshot">Local SNAPSHOT</h3>
+<p>While developing, may need to update or create and new version of a library, which needs to be tested in a service before it can be published for consumption.</p>
+<p>If modify an existing library and require to test it in a services:</p>
+<ul>
+<li>Modify the library in question and publish the library to the local maven repository by running &ldquo;gradle clean build install&rdquo;. This will be a SNAPSHOT Version</li>
+<li>In the services either hard code the library in the build.gradle to be the SNAPSHOT version, or use the SNAPSHOT Platform BOM version. This is done by setting the &ldquo;platformBomVersion&rdquo; variable to 3.0.0-SNAPSHOT in the service.</li>
+</ul>
+<p>If adding a new library it will be required to be added to the BOM, this is discussed in its instructions, as part of the the library release. So to test locally just add the dependency, hardcoded to SNAPSHOT.</p>
+<p>NOTE, do not check any code in with the dependency set to SNAPSHOT.</p>
+<h3 id="hotfix">HOTFIX</h3>
+<p>When a service requires to be HOTFIX&rsquo;d it may need to be built with the specific versions of the libraries it was originally built with. If the service has library semantic version (platformBomVersion &gt;= 3), then this it is easy. If the service doesn&rsquo;t it is possible but it easier to see if it can be converted to use Library Semantic Version.</p>
+<p>The following sub-sections describe both scenarios.</p>
+<h3 id="semantic-version">SEMANTIC VERSION</h3>
+<p>If the issue is just with the service code then, given the version of the the service in question along with the Platform BOM version (obtained as described above)</p>
+<ul>
+<li>
+<p>Create a HOTFIX branch, by running the follow, which will create a branch called &ldquo;x.y.z-HOTFIX&rdquo; and check it out. Where &ldquo;x.y.z&rdquo; is the version of the service.</p>
+<pre><code>./setup/create-hotfix.sh &lt;service version&gt;
+</code></pre></li>
+<li>
+<p>Update the &ldquo;platformBomVersion&rdquo; in the &ldquo;gradle.properties&rdquo; file to the appropriate version.</p>
+</li>
+<li>
+<p>Run the HOTFIX Jenkins job, which should be found under the &ldquo;Application-CI-HOTFIX-Release&rdquo; tab, against the HOTFIX branch.</p>
+</li>
+<li>
+<p>Release the newly published HOTFIX artefact to the appropriate environment using the HOTFIX release process.</p>
+</li>
+<li>
+<p>When the HOTFIX has been successfully released, the changes should be merged back into the appropriate main line branch (usually master).</p>
+</li>
+</ul>
+<p>If the issue is in the library then require to do a HOTFIX build of the library in question. Get the release tag of the library from the version of the Platform BOM identified above. Then similar to the above do the following.</p>
+<ul>
+<li>
+<p>Create a HOTFIX branch, by running the follow, which will create a branch called &ldquo;x.y.z-HOTFIX&rdquo; and check it out. Where &ldquo;x.y.z&rdquo; is the version of the platform BOM.</p>
+<pre><code>./setup/create-hotfix.sh &lt;service version&gt;
+</code></pre></li>
+<li>
+<p>Update the &ldquo;platformBomVersion&rdquo; in the &ldquo;gradle.properties&rdquo; file to the appropriate version.</p>
+</li>
+<li>
+<p>Run the library HOTFIX Jenkins job, which can be found under the &ldquo;Java-Common-Libraries-CI-Build&rdquo; tab, against the HOTFIX branch.</p>
+</li>
+<li>
+<p>Create a HOTFIX branch on the platform-bom GitHub repository, by running the script in the first set</p>
+</li>
+<li>
+<p>In the platform-bom update the version for the library in question</p>
+</li>
+<li>
+<p>Run the platform-bom HOTFIX Jenkins job, which can be found under the &ldquo;Java-Common-Libraries-CI-Build&rdquo; tab, against the HOTFIX branch. Taking a note of the HOTFIX platform BOM release tag.</p>
+</li>
+<li>
+<p>Then apply the above steps to the services in question but use the HOTFIX BOM release tag for the plaformBOM version</p>
+</li>
+<li>
+<p>As above, when the HOTFIX has been successfully released, the changes should be merged back into the appropriate main line branch (usually master).</p>
+</li>
+</ul>
+<h3 id="legacy">LEGACY</h3>
+<p>There are three options here all have associated risk and time costs. Each approach will need individual analysis not possible to document here.</p>
+<ul>
+<li>Use the latest SNAPSHOT BOM, if the old versions of the libraries aren&rsquo;t required.</li>
+<li>If the versions required have a semantic version, move the code to use Library Semantic Version as described in the migration documents. This migration will have an additional time cost.</li>
+<li>Find the specific &ldquo;sha&rdquo; of the library at the time the service was built and do HOTFIX libraries from this point. This job is very manual and open to user mistakes.</li>
+</ul>
+
+
+  
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/28mm/paas/jenkins_ci/" title="Jenkins CI"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/28mm/paas/api-gateway/" title="What is an API-Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/28mm/js/clipboard.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.jquery.min.js?1588602564"></script>
+    <script src="/28mm/js/jquery.sticky.js?1588602564"></script>
+    <script src="/28mm/js/featherlight.min.js?1588602564"></script>
+    <script src="/28mm/js/highlight.pack.js?1588602564"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/28mm/js/modernizr.custom-3.6.0.js?1588602564"></script>
+    <script src="/28mm/js/learn.js?1588602564"></script>
+    <script src="/28mm/js/hugo-learn.js?1588602564"></script>
+
+    <link href="/28mm/mermaid/mermaid.css?1588602564" rel="stylesheet" />
+    <script src="/28mm/mermaid/mermaid.js?1588602564"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

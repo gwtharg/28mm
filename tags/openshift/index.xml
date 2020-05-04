@@ -12,12 +12,44 @@
     
     
     <item>
+      <title>Components  OP</title>
+      <link>https://gwtharg.github.io/28mm/paas/components_for_op/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/components_for_op/</guid>
+      <description>Components for Operational Platform We are assuming that training delegates have prior knowledge of the following:
+ Continuous Delivery  Jenkins  Nexus Repostory Manager  Postman  GitHub  GOCD  Continuous Integration  Gradle  Devops Mindset       Component Name Functionality Description Key Points Comments     Componet GitHub Repo Scource Code Management Source code of the component needs to be kept in GitHub with all its contents.</description>
+    </item>
+    
+    <item>
+      <title>Caboodle</title>
+      <link>https://gwtharg.github.io/28mm/paas/caboodle_intro/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/caboodle_intro/</guid>
+      <description>Using a Repository Manager A repository manager is a dedicated server application designed to manage repositories of binary components. The usage of a repository manager is considered an essential best practice for any significant usage.
+Purpose A repository manager serves these essential purposes:
+ act as dedicated proxy server for public repositories provide repositories as a deployment destination for your project outputs  Benefits and Features Using a repository manager provides the following benefits and features:</description>
+    </item>
+    
+    <item>
       <title>Docker Automation</title>
       <link>https://gwtharg.github.io/28mm/paas/docker_automation/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/paas/docker_automation/</guid>
       <description>Logstash Example This document describes an example of the configuration and deployment of a Docker image in a RHEL environment, from a registry URL to the PaaS. It also goes over the CI/CD/Platform tools used in the process. Logstash is part of Centralised Logging on the platform, and is used to collect and manipulate system and application logs sent by fluentd log collectors  It resides on the PaaS and ships its logs to an external set of Elasticsearch VMs, currently in non-prod.</description>
+    </item>
+    
+    <item>
+      <title>Elements</title>
+      <link>https://gwtharg.github.io/28mm/paas/elements/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/elements/</guid>
+      <description>Elements is where we store the difference parts of a request, an example of this is that a Redhat Virtual machine is an element of a build; by that we mean it is generally just a piece of a whole build and not the whole build itself and has creation and decommisioning scripts within its folder.
+The layout of any element should follow this basic structure:
+ src └── element_name ├── scripts │ ├── build.</description>
     </item>
     
     <item>
@@ -68,7 +100,7 @@ Incidents</description>
       <pubDate>Tue, 07 Apr 2020 13:04:31 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/paas/</guid>
-      <description>Training Notes  Docker Automation   What is Docker?   OpenShift Container Platform   Platform Engineering Background   </description>
+      <description>Training Notes  Components OP   Caboodle   Composer Info   Docker Automation   Elements   Jenkins CI   Platform BOM   What is an API-Gateway   What is Docker?   OpenShift Container Platform   Platform Engineering Background   </description>
     </item>
     
   </channel>

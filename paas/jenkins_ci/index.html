@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/28mm/images/favicon.png" type="image/png">
+
+    <title>Jenkins CI :: Walmo SDLC Test</title>
+
+    
+    <link href="/28mm/css/nucleus.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/fontawesome-all.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hybrid.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/featherlight.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/perfect-scrollbar.min.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/auto-complete.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/atom-one-dark-reasonable.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/theme.css?1588602564" rel="stylesheet">
+    <link href="/28mm/css/hugo-theme.css?1588602564" rel="stylesheet">
+    
+      <link href="/28mm/css/theme-red.css?1588602564" rel="stylesheet">
+    
+
+    <script src="/28mm/js/jquery-3.3.1.min.js?1588602564"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/28mm/paas/jenkins_ci/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a>
+<a id="logo" href="https://gwtharg.github.io/28mm/"> 
+ <img src="/28mm/images/logo.png" width="160" height="120" alt="fab">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/28mm/js/lunr.min.js?1588602564"></script>
+<script type="text/javascript" src="/28mm/js/auto-complete.js?1588602564"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/gwtharg.github.io\/28mm\/";
+    
+</script>
+<script type="text/javascript" src="/28mm/js/search.js?1588602564"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/git/" title="GIT Info" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/git/">
+          <b>X. </b>GIT Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/version_strategy/" title="Versioning Strategy" class="dd-item ">
+        <a href="/28mm/git/version_strategy/">
+        Versioning Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/branchingstrategy/" title="Branching and Merging Strategy" class="dd-item ">
+        <a href="/28mm/git/branchingstrategy/">
+        Branching and Merging Strategy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/git/semanticversionenforcement/" title="Semantic Version Enforcement" class="dd-item ">
+        <a href="/28mm/git/semanticversionenforcement/">
+        Semantic Version Enforcement
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/paas/" title="Paas" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/28mm/paas/">
+          <b>X. </b>Paas
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/components_for_op/" title="Components  OP" class="dd-item ">
+        <a href="/28mm/paas/components_for_op/">
+        Components  OP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/caboodle_intro/" title="Caboodle" class="dd-item ">
+        <a href="/28mm/paas/caboodle_intro/">
+        Caboodle
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/composer_info/" title="Composer Info" class="dd-item ">
+        <a href="/28mm/paas/composer_info/">
+        Composer Info
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/docker_automation/" title="Docker Automation" class="dd-item ">
+        <a href="/28mm/paas/docker_automation/">
+        Docker Automation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/elements/" title="Elements" class="dd-item ">
+        <a href="/28mm/paas/elements/">
+        Elements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/jenkins_ci/" title="Jenkins CI" class="dd-item active">
+        <a href="/28mm/paas/jenkins_ci/">
+        Jenkins CI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/platform_bom/" title="Platform BOM" class="dd-item ">
+        <a href="/28mm/paas/platform_bom/">
+        Platform BOM
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/api-gateway/" title="What is an API-Gateway" class="dd-item ">
+        <a href="/28mm/paas/api-gateway/">
+        What is an API-Gateway
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/what_is_docker/" title="What is Docker?" class="dd-item ">
+        <a href="/28mm/paas/what_is_docker/">
+        What is Docker?
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/openshift/" title="OpenShift Container Platform" class="dd-item ">
+        <a href="/28mm/paas/openshift/">
+        OpenShift Container Platform
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/paas/pe_background/" title="Platform Engineering Background" class="dd-item ">
+        <a href="/28mm/paas/pe_background/">
+        Platform Engineering Background
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/tfs/" title="TFS Internal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/tfs/">
+          <b>X. </b>TFS Internal
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/tfs/team_types/" title="Team Types" class="dd-item ">
+        <a href="/28mm/tfs/team_types/">
+        Team Types
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/28mm/site_documentation/" title="Site Content Info" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/28mm/site_documentation/">
+          <b>X. </b>Site Content Info
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/hugo_install/" title="Hugo Simple Install" class="dd-item ">
+        <a href="/28mm/site_documentation/hugo_install/">
+        Hugo Simple Install
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/markdown_notes/" title="Markdown Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/markdown_notes/">
+        Markdown Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/shortcode_test/" title="Shortcodes" class="dd-item ">
+        <a href="/28mm/site_documentation/shortcode_test/">
+        Shortcodes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/flowcharts/" title="Flowcharts Notes" class="dd-item ">
+        <a href="/28mm/site_documentation/flowcharts/">
+        Flowcharts Notes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/html_based_pages/" title="HTML Embedded  Pages" class="dd-item ">
+        <a href="/28mm/site_documentation/html_based_pages/">
+        HTML Embedded  Pages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/pdf_in_html/" title="PDF in HTML" class="dd-item ">
+        <a href="/28mm/site_documentation/pdf_in_html/">
+        PDF in HTML
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/28mm/site_documentation/visio_from_export/" title="Visio from Export" class="dd-item ">
+        <a href="/28mm/site_documentation/visio_from_export/">
+        Visio from Export
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><a>Built with Hugo</a></p>
+<p></p> &copy; Walmo 2020</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/28mm/'>Auto-Doc</a> > <a href='/28mm/paas/'>Paas</a> > Jenkins CI
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#jenkins--continuous-integration-server">Jenkins- Continuous Integration Server</a>
+      <ul>
+        <li><a href="#design-principle-of-jenkins">Design Principle of Jenkins</a></li>
+        <li><a href="#build-jobs-for-a-specific-branch">Build jobs for a specific branch</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/28mm/tags/jenkins">jenkins</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Jenkins CI
+            </h1>
+          
+
+        
+
+
+
+<h2 id="jenkins--continuous-integration-server">Jenkins- Continuous Integration Server</h2>
+<p>Jenkins is our open source Continuous Integration tool used for BUILD and Release Jobs.</p>
+<p>It is an open source product with customisabel plugins which enables it to integrate it with multiple SCMs and run various types of build jobs. Each check in is verified with an automated build allowing early detection of problems. It has the ability to send the status of build and release jobs over an email or in HipChat rooms.</p>
+<blockquote>
+<p>ex: connectivity with git.mercurial,Subversion etc</p>
+</blockquote>
+<blockquote>
+<p>ex: Jobs like; ant,Shell,Windows batch commands, gradle etc.</p>
+</blockquote>
+<h3 id="design-principle-of-jenkins">Design Principle of Jenkins</h3>
+<p>Jenkins is integrated with GitHUb and has been configured to run two ways:</p>
+<ol>
+<li>Build jobs for a specific branch</li>
+<li>Release jobs when there is a commit in the master branch</li>
+</ol>
+<h3 id="build-jobs-for-a-specific-branch">Build jobs for a specific branch</h3>
+<p>This allows multiple developers to run build jobs for their specific branches.</p>
+<p>Branch Selector is a jenkins plugin installed for the same.</p>
+<p>As part of the Build for microservices, we are running &ldquo;gradle clean build command&rdquo; which builds the docker image for the microservice and also runs UNIT and Components Tests for it.</p>
+<p>This is followed by static analysis of the code and publishing unit tests results.</p>
+<h4 id="release-jobs">Release Jobs</h4>
+<p>As part of the release jobs, apart from the build, Jenkins also runs the following jobs</p>
+<ol>
+<li>
+<p>gradle clean publishTestComponent &ndash;refresh-dependencies - this is to publish the integration tests as artifacts in the Nexus repo</p>
+</li>
+<li>
+<p>gradle clean build testAndBurn  &ndash;refresh-dependencies- as part of this job, after building the docker image, Call Composer- builds a dev environment and deploy all the components and then run integration test against the component.</p>
+</li>
+<li>
+<p>gradle clean pushDockerImage caboodle:publish &ndash;refresh-dependencies- As part of this job, the Image is published to caboodle(Artifact Repository)</p>
+</li>
+<li>
+<p>&ldquo;component_version=<code>grep 'version' gradle.properties |awk -F= '{ print $2 }' | awk -F.0- '{ print $1 }'</code></p>
+</li>
+</ol>
+<pre><code>   component_version=2.0
+   tag_id=$component_version.$BUILD_NUMBER
+   echo $tag_id
+   git tag -a $tag_id -m &quot;Jenkins Build&quot;
+   git push origin $tag_id&quot; - This task is tagging GitHub back with the build number
+</code></pre><h4 id="other-tasks-in-jenkins">Other Tasks in Jenkins</h4>
+<ol>
+<li>Static Code Analysis using Sonarqube</li>
+<li>Dependency Check using oWASP</li>
+<li>JaCoCo Coverage Reports</li>
+<li>UNIT Tests Results</li>
+</ol>
+
+
+  
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/28mm/paas/elements/" title="Elements"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/28mm/paas/platform_bom/" title="Platform BOM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/28mm/js/clipboard.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.min.js?1588602564"></script>
+    <script src="/28mm/js/perfect-scrollbar.jquery.min.js?1588602564"></script>
+    <script src="/28mm/js/jquery.sticky.js?1588602564"></script>
+    <script src="/28mm/js/featherlight.min.js?1588602564"></script>
+    <script src="/28mm/js/highlight.pack.js?1588602564"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/28mm/js/modernizr.custom-3.6.0.js?1588602564"></script>
+    <script src="/28mm/js/learn.js?1588602564"></script>
+    <script src="/28mm/js/hugo-learn.js?1588602564"></script>
+
+    <link href="/28mm/mermaid/mermaid.css?1588602564" rel="stylesheet" />
+    <script src="/28mm/mermaid/mermaid.js?1588602564"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

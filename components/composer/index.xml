@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>composer on Walmo SDLC Test</title>
+    <link>https://gwtharg.github.io/28mm/components/composer/</link>
+    <description>Recent content in composer on Walmo SDLC Test</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gwtharg.github.io/28mm/components/composer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Composer Info</title>
+      <link>https://gwtharg.github.io/28mm/paas/composer_info/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/composer_info/</guid>
+      <description>REST enabled python based platform component which is used to deploy any component on to the operational platform. It follows the standard process of Getting the component name from the JSON file sent as a trigger
+ Getting all dependencies of the component from the POM file present in caboodle Tagging all the components Getting configurations of all Compile dependencies from Chieftain Building a dynamic pipeline for GOCD to run Git push the dynamic pipeline to a GitHub repo which would run the pipelines in GOCD with three stages  build test Done    Build Stage Depending on the “Pipeline_Type” Composer does the following:Under the Elements Folder, looks for the folder with the same names as “Pipeline_Type” Executes the build.</description>
+    </item>
+    
+    <item>
+      <title>What is an API-Gateway</title>
+      <link>https://gwtharg.github.io/28mm/paas/api-gateway/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/api-gateway/</guid>
+      <description>API gateway (replacement for DataPower) which front ends all the micro services, so any request coming in first hits API gateway &amp;amp; then API gateway works out to which microservice the request has to be sent. The following are the main responsibilities of API gateway.
+ Look up the URI in the service cache to figuer out which service supports the requested endpoint Validate the request coming in against the swagger document of the service Authenticate/Authorize Forward the request to the relevant service  API gateway uses zuul for request routing &amp;amp; kubernates APIs for service discovery.</description>
+    </item>
+    
+  </channel>
+</rss>

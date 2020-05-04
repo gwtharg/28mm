@@ -3,12 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/paas/components_for_op/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/site_documentation/hugo_install/</loc>
     <lastmod>2020-04-29T10:24:29+01:00</lastmod>
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/paas/caboodle_intro/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/paas/composer_info/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/paas/docker_automation/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/paas/elements/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/paas/jenkins_ci/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/paas/platform_bom/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/git/version_strategy/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/paas/api-gateway/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,7 +108,32 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/tags/bom/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/bom/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/caboodle/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/components/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/composer/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/composer/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -88,7 +153,27 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/tags/git/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/git/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tags/gradle/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/jenkins/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/components/jenkins/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -98,12 +183,27 @@
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/tags/nexus/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tags/openshift/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://gwtharg.github.io/28mm/components/openshift/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gwtharg.github.io/28mm/tags/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gwtharg.github.io/28mm/tags/version/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -198,11 +298,6 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/tags/git/</loc>
-    <lastmod>2020-04-20T10:50:16+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/categories/paas/</loc>
     <lastmod>2020-04-20T10:50:16+01:00</lastmod>
   </url>
@@ -238,11 +333,6 @@
   </url>
   
   <url>
-    <loc>https://gwtharg.github.io/28mm/components/openshift/</loc>
-    <lastmod>2020-04-13T17:36:16+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gwtharg.github.io/28mm/categories/help/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
@@ -264,11 +354,6 @@
   
   <url>
     <loc>https://gwtharg.github.io/28mm/tags/document/</loc>
-    <lastmod>2020-04-07T13:07:35+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gwtharg.github.io/28mm/components/git/</loc>
     <lastmod>2020-04-07T13:07:35+01:00</lastmod>
   </url>
   

@@ -12,11 +12,38 @@
     
     
     <item>
+      <title>BOM</title>
+      <link>https://gwtharg.github.io/28mm/tags/bom/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/bom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>composer</title>
+      <link>https://gwtharg.github.io/28mm/tags/composer/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/composer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>docker</title>
       <link>https://gwtharg.github.io/28mm/tags/docker/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://gwtharg.github.io/28mm/tags/git/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/git/</guid>
       <description></description>
     </item>
     
@@ -30,6 +57,15 @@
     </item>
     
     <item>
+      <title>jenkins</title>
+      <link>https://gwtharg.github.io/28mm/tags/jenkins/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>logstash</title>
       <link>https://gwtharg.github.io/28mm/tags/logstash/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
@@ -39,11 +75,29 @@
     </item>
     
     <item>
+      <title>nexus</title>
+      <link>https://gwtharg.github.io/28mm/tags/nexus/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/nexus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>openshift</title>
       <link>https://gwtharg.github.io/28mm/tags/openshift/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/tags/openshift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>version</title>
+      <link>https://gwtharg.github.io/28mm/tags/version/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/tags/version/</guid>
       <description></description>
     </item>
     
@@ -134,15 +188,6 @@
       <pubDate>Mon, 20 Apr 2020 15:16:11 +0100</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/tags/taxonomy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://gwtharg.github.io/28mm/tags/git/</link>
-      <pubDate>Mon, 20 Apr 2020 10:50:16 +0100</pubDate>
-      
-      <guid>https://gwtharg.github.io/28mm/tags/git/</guid>
       <description></description>
     </item>
     

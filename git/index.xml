@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Versioning Strategy</title>
+      <link>https://gwtharg.github.io/28mm/git/version_strategy/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/git/version_strategy/</guid>
+      <description>The document describes the versioning strategy for deliverable componenets.
+While we will be using semantic versioning and each release will be tagged with its semantic version, only major versions of each component will be supported in production.
+So for each major version in production we will have a named branch. What we mean by &amp;lsquo;named branch&amp;rsquo; is a branch this is long lived, has forked of master and it will trigger a pipeline release on checkin.</description>
+    </item>
+    
+    <item>
       <title>Branching and Merging Strategy</title>
       <link>https://gwtharg.github.io/28mm/git/branchingstrategy/</link>
       <pubDate>Tue, 07 Apr 2020 13:07:35 +0100</pubDate>

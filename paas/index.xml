@@ -12,12 +12,84 @@
     
     
     <item>
+      <title>Components  OP</title>
+      <link>https://gwtharg.github.io/28mm/paas/components_for_op/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/components_for_op/</guid>
+      <description>Components for Operational Platform We are assuming that training delegates have prior knowledge of the following:
+ Continuous Delivery  Jenkins  Nexus Repostory Manager  Postman  GitHub  GOCD  Continuous Integration  Gradle  Devops Mindset       Component Name Functionality Description Key Points Comments     Componet GitHub Repo Scource Code Management Source code of the component needs to be kept in GitHub with all its contents.</description>
+    </item>
+    
+    <item>
+      <title>Caboodle</title>
+      <link>https://gwtharg.github.io/28mm/paas/caboodle_intro/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/caboodle_intro/</guid>
+      <description>Using a Repository Manager A repository manager is a dedicated server application designed to manage repositories of binary components. The usage of a repository manager is considered an essential best practice for any significant usage.
+Purpose A repository manager serves these essential purposes:
+ act as dedicated proxy server for public repositories provide repositories as a deployment destination for your project outputs  Benefits and Features Using a repository manager provides the following benefits and features:</description>
+    </item>
+    
+    <item>
+      <title>Composer Info</title>
+      <link>https://gwtharg.github.io/28mm/paas/composer_info/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/composer_info/</guid>
+      <description>REST enabled python based platform component which is used to deploy any component on to the operational platform. It follows the standard process of Getting the component name from the JSON file sent as a trigger
+ Getting all dependencies of the component from the POM file present in caboodle Tagging all the components Getting configurations of all Compile dependencies from Chieftain Building a dynamic pipeline for GOCD to run Git push the dynamic pipeline to a GitHub repo which would run the pipelines in GOCD with three stages  build test Done    Build Stage Depending on the “Pipeline_Type” Composer does the following:Under the Elements Folder, looks for the folder with the same names as “Pipeline_Type” Executes the build.</description>
+    </item>
+    
+    <item>
       <title>Docker Automation</title>
       <link>https://gwtharg.github.io/28mm/paas/docker_automation/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gwtharg.github.io/28mm/paas/docker_automation/</guid>
       <description>Logstash Example This document describes an example of the configuration and deployment of a Docker image in a RHEL environment, from a registry URL to the PaaS. It also goes over the CI/CD/Platform tools used in the process. Logstash is part of Centralised Logging on the platform, and is used to collect and manipulate system and application logs sent by fluentd log collectors  It resides on the PaaS and ships its logs to an external set of Elasticsearch VMs, currently in non-prod.</description>
+    </item>
+    
+    <item>
+      <title>Elements</title>
+      <link>https://gwtharg.github.io/28mm/paas/elements/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/elements/</guid>
+      <description>Elements is where we store the difference parts of a request, an example of this is that a Redhat Virtual machine is an element of a build; by that we mean it is generally just a piece of a whole build and not the whole build itself and has creation and decommisioning scripts within its folder.
+The layout of any element should follow this basic structure:
+ src └── element_name ├── scripts │ ├── build.</description>
+    </item>
+    
+    <item>
+      <title>Jenkins CI</title>
+      <link>https://gwtharg.github.io/28mm/paas/jenkins_ci/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/jenkins_ci/</guid>
+      <description>Jenkins- Continuous Integration Server Jenkins is our open source Continuous Integration tool used for BUILD and Release Jobs.
+It is an open source product with customisabel plugins which enables it to integrate it with multiple SCMs and run various types of build jobs. Each check in is verified with an automated build allowing early detection of problems. It has the ability to send the status of build and release jobs over an email or in HipChat rooms.</description>
+    </item>
+    
+    <item>
+      <title>Platform BOM</title>
+      <link>https://gwtharg.github.io/28mm/paas/platform_bom/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/platform_bom/</guid>
+      <description>This documents describes how to use the Platform BOM, it assumes the reader understands Semantic Version the Platform BOM and the services has been built using the Operational Platform Template.
+Normal The Platform BOM version is set by the variable &amp;ldquo;platformBomVersion&amp;rdquo; in the &amp;ldquo;gradle.properties&amp;rdquo; file. This should have a major version of greater than 3, for full Semantic Version. The default value is from auto-mate is currently &amp;ldquo;3+&amp;rdquo;, so it will pull the latest Platform BOM with major version 3.</description>
+    </item>
+    
+    <item>
+      <title>What is an API-Gateway</title>
+      <link>https://gwtharg.github.io/28mm/paas/api-gateway/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/api-gateway/</guid>
+      <description>API gateway (replacement for DataPower) which front ends all the micro services, so any request coming in first hits API gateway &amp;amp; then API gateway works out to which microservice the request has to be sent. The following are the main responsibilities of API gateway.
+ Look up the URI in the service cache to figuer out which service supports the requested endpoint Validate the request coming in against the swagger document of the service Authenticate/Authorize Forward the request to the relevant service  API gateway uses zuul for request routing &amp;amp; kubernates APIs for service discovery.</description>
     </item>
     
     <item>
