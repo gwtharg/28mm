@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Walmo SDLC Test</title>
+    <link>https://gwtharg.github.io/28mm/components/docker/</link>
+    <description>Recent content in docker on Walmo SDLC Test</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gwtharg.github.io/28mm/components/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker Automation</title>
+      <link>https://gwtharg.github.io/28mm/paas/docker_automation/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/docker_automation/</guid>
+      <description>Logstash Example This document describes an example of the configuration and deployment of a Docker image in a RHEL environment, from a registry URL to the PaaS. It also goes over the CI/CD/Platform tools used in the process. Logstash is part of Centralised Logging on the platform, and is used to collect and manipulate system and application logs sent by fluentd log collectors  It resides on the PaaS and ships its logs to an external set of Elasticsearch VMs, currently in non-prod.</description>
+    </item>
+    
+    <item>
+      <title>What is Docker?</title>
+      <link>https://gwtharg.github.io/28mm/paas/what_is_docker/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gwtharg.github.io/28mm/paas/what_is_docker/</guid>
+      <description>Docker is an Open Source software development platform. It&amp;rsquo;s main benefit is to package applications into &amp;ldquo;containers&amp;rdquo;, allowing them to be portable and lightweight among any system running the Linux OS. Container technology has been around for a few years, with Solaris Zones, IBM Wpars etc, but the hype around Dockers approach to containers has pushed this technology to the forefront in the last couple of years.
+Benefits of Docker Containers Scalability Container technology allows for a much larger scale of applications in virtualised environment.</description>
+    </item>
+    
+  </channel>
+</rss>

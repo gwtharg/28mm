@@ -7,6 +7,20 @@
 	"content": "Install Hugo If you wish to try Hugo on your desktop then the simple instructions below will point you to a single install file.\nThe following note is from gohugo.io which has more information on Hugo.\n Install Hugo on macOS, Windows, Linux, OpenBSD, FreeBSD, and on any machine where the Go compiler tool chain can run.\n There is lots of talk about “Hugo being written in Go”, but you don’t need to install Go to enjoy Hugo. Just grab a precompiled binary!\n Hugo is written in Go with support for multiple platforms. The latest release can be found at Hugo Releases.\nHugo currently provides pre-built binaries for the following:\nmacOS (Darwin) for x64, i386, and ARM architectures Windows Linux OpenBSD FreeBSD Hugo may also be compiled from source wherever the Go toolchain can run; e.g., on other operating systems such as DragonFly BSD, OpenBSD, Plan 9, Solaris, and others. See https://golang.org/doc/install/source for the full set of supported combinations of target operating systems and compilation architectures.\n"
 },
 {
+	"uri": "https://gwtharg.github.io/28mm/paas/docker_automation/",
+	"title": "Docker Automation",
+	"tags": ["docker", "openshift", "gradle", "logstash"],
+	"description": "",
+	"content": "Logstash Example This document describes an example of the configuration and deployment of a Docker image in a RHEL environment, from a registry URL to the PaaS. It also goes over the CI/CD/Platform tools used in the process. Logstash is part of Centralised Logging on the platform, and is used to collect and manipulate system and application logs sent by fluentd log collectors  It resides on the PaaS and ships its logs to an external set of Elasticsearch VMs, currently in non-prod. This gives us a central way to manage and view large amounts of information in a quick fashion, using the Kibana front end. If you are interested have a read about the ELK stack  .\nThe files will match the layout of this working project  . There will be a note of what to change, should you want to build your own template.\nRequirements:  Access to the non-prod OpenShift environment \u0026amp; relevant platform components (if you wish to replicate) Some understanding of: Elasticsearch (ELK stack), Red Hat Linux, Gradle, Jenkins, Docker, Python, OpenShift  Github layout: We will use a standard for folder structure and Gradle commands to publish a copy of the image, assuming our project is called \u0026lsquo;myproject\u0026rsquo;\nmyproject/caboodle/ myproject/src/ myproject/src/docker/ myproject/src/templates/openshift/ Gradle files: To save some space \u0026amp; time here, I\u0026rsquo;ll refer to a working example for these files and mention what to change:\n This file is our \u0026lsquo;root\u0026rsquo; build, it refers to build and publish tasks contained in other build.gradle files, base repos, and any GoCD version information, which we\u0026rsquo;ll ignore for now.  myproject/build.gradle\n This file describes our dependencies, registry information and publishing to Caboodle/Nexus. Under dependencies we will just set a dependency on openshift-project to demonstrate. Our Logstash instance will only build once an instance of openshift-project becomes available.  /Caboodle/build.gradle\n This file describes the docker build itself  /src/docker/Dockerfile\nOther config files:  /openshift/template.json - How the OpenShift project should be configured, there are a few extra services configured here that can be ignored, but if building your own, replace references of \u0026lsquo;logstash\u0026rsquo; with your project name. It also contains Chieftain env variables which are explained later. myproject/settings.gradle - Defines our included submodules myproject/gradle.properties - Options to configure process used for the build. For a Docker image, change it to something unique (so the Caboodle Logstash isn\u0026rsquo;t overwritten), such as:  ... artifactName=myproject_logstash description=a test config of logstash ...  More info on the use of these two files  .\nDocker config:  Dockerfile the config for building the image logstash.conf for the base Logstash config required for startup, containing fields replaced by the Python script logstash_entrypoint.py is the script to pull Logstash Chieftain config \u0026amp; replace config values pip.conf has the Caboodle URL for installing Python libraries requirements.txt for the actual Python modules  A Docker image is what Logstash will be built and run as our container, to be eventually deployed on OpenShift. The Gradle components are needed to actually build and publish artifacts (including our image), and now we need to configure the image:\nA rhel7 image is used to give us the ability to install Logstash and configure Python libraries required for configuration management. /src/docker/Dockerfile/ also refers to requirements.txt in the parent directory, pointing torequests and pyyaml for REST calls to Chieftain and creation of a .yml file for our Logstash instance respectively.\nLogstash is installed, followed by Python \u0026amp; the module installer pip, Java (Logstash needs 1.8) and the libraries defined in requirements.txt.\nInstall details: Installation of Logstash and the necessary Python components\nRUN yum install -y logstash python2 python2-pip.noarch java \\ \u0026amp;\u0026amp; pip install -r /tmp/requirements.txt\nThe entrypoint is the default command to run when the Docker image starts, here we use the Python script itself. It is run to instrument the configuration of Logstash using our configuration data before the Logstash binary file is run, to ensure we have the most recent snapshot.\nENTRYPOINT [\u0026quot;python\u0026quot;,\u0026quot;/logstash_entrypoint.py\u0026quot;]\nLogstash requires a configuration file logstash.conf to start up, and it needs to point to a bunch of external Elastic non-prod VMs with some authentication, filtering and index config. The script will replace tagged fields in the local file with its Chieftain config, prior to copying it into the default Logstash config directory, and finally starting the Logstash executable that points to this config file.\nChieftain configuration: If we want to build and test the image locally (who doesn\u0026rsquo;t), we need the Chieftain instance and token id, which is automatically generated as environment variables when we build using Composer for an openshift-project. CHIEFTAIN_INSTANCEID, CHIEFTAIN_TOKENID have been provided in the script in debug mode so can be replaced for testing, otherwise they\u0026rsquo;re fetched as environment variables.\nRefer to this working project  to create a unique service component in Chieftain; create an instance and then grab the id. Refer \u0026lsquo;Logstash\u0026rsquo; in Chieftain  as an example.\nBuilding: To test locally, build the logstash image:\n docker build -t myproject .\nTo run (interactively):\ndocker run -it myproject \nTesting: If part of the build fails, it\u0026rsquo;s useful to run the container and investigate at that point, since we might back out too early (with a failed container) in later steps, e.g.\nStep 9 : COPY logstash_entrypoint.py / ---\u0026gt; Using cache ---\u0026gt; 3e14adcc988f docker run -it 3e14adcc988f\nOtherwise, executing a shell on the built image is good to see if everything\u0026rsquo;s in place, grabbing the container ID with the first command\ndocker ps\ndocker exec -it \u0026lt;container id\u0026gt; /bin/bash\nJenkins config: Again the document here  is great for describing the CI build job that will upload the Logstash artifacts (including the Docker image) to Nexus. I recommend using it to create the job. This  is the Jenkins build used for the project as an example.\nComposer: Next we need to Compose! This assumes we have:\n A complete \u0026amp; configured git layout A successful Jenkins build A Chieftain Logstash service component  Go to Composer  and type in the name of your service component, and search the group \u0026lsquo;docker\u0026rsquo; which was defined already in the build config. We can ignore tags for now (without a specific tag it will default to non-prod)\n Add a scale value of 1 Add an OpenShift project name \u0026lsquo;logstash-test\u0026rsquo;  The example json when \u0026lsquo;Compose\u0026rsquo; is selected should look like the below (versions may change). We are creating a new instance of openshift-project; if we want to deploy again in the same environment, we can reference an \u0026lsquo;existing\u0026rsquo; openshift_project - with tags \u0026lsquo;non-prod\u0026rsquo; in Chieftain.\nAfter a while Composer will give us a correlation ID, in the top right of the box, pasting it into Chieftain will provide us with details of the openshift-project and logstash instances now tied to it.\n{ \u0026quot;maven_name\u0026quot;: \u0026quot;com.bank.docker:logstash:0.0.45\u0026quot;, \u0026quot;scale\u0026quot;: [ { \u0026quot;name\u0026quot;: \u0026quot;logstash\u0026quot;, \u0026quot;value\u0026quot;: 1 } ], \u0026quot;new_openshift_project_name\u0026quot;: \u0026quot;logstash-test\u0026quot; } GoCD: In GoCD  we\u0026rsquo;ll hopefully see a full set of green, where the trigger is the call by composer, the OpenShift project is created, and finally Logstash is deployed.\nAnd in non-prod  OpenShift, the project which has successfully deployed!\n"
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/paas/what_is_docker/",
+	"title": "What is Docker?",
+	"tags": ["docker", "openshift"],
+	"description": "",
+	"content": "Docker is an Open Source software development platform. It\u0026rsquo;s main benefit is to package applications into \u0026ldquo;containers\u0026rdquo;, allowing them to be portable and lightweight among any system running the Linux OS. Container technology has been around for a few years, with Solaris Zones, IBM Wpars etc, but the hype around Dockers approach to containers has pushed this technology to the forefront in the last couple of years.\nBenefits of Docker Containers Scalability Container technology allows for a much larger scale of applications in virtualised environment. With a perfectly tuned container, you can have 4-6 times the number of application instances as you can using VM\u0026rsquo;s on the equivalent hardware. This means you reducde the overhead of running a VM, leaving you a small container running your application.\nPortability Containers elimates the \u0026ldquo;it works ok on my machine\u0026rdquo; problem as the same docker container image will run across all Linux based OS platforms.\nSpeed of development Developers can quickly develop, test and deploy docker containers. They don\u0026rsquo;t need to worry about setting up complex development environments.\nCan be pre-packaged Application providers are now starting to ship their applications in pre-built containers. Gone are the days of building an environemnt then having to install your application, it comes already packaged for you.\nFor example, let\u0026rsquo;s dowmload a pre-packaged HTTP server from redhat and launch the docker image:\n docker pull rhscl/httpd-24-rhel7\n  Using default tag: latest Trying to pull repository registry.access.redhat.com/rhscl/httpd-24-rhel7 ... Pulling from registry.access.redhat.com/rhscl/httpd-24-rhel7 4e5a7647df47: Pull complete 0001a3087112: Pull complete 5027fa50d337: Pull complete 503dde528ea5: Pull complete Status: Downloaded newer image for registry.access.redhat.com/rhscl/httpd-24-rhel7:latest  docker run -d -p 8080:8080 registry.access.redhat.com/rhscl/httpd-24-rhel7\n Now navigate to your machines hostname/ip and use port 8080 and voila:\nHow to build a docker image The easiest way to build a docker image is to use an existing image and layer your changes on top of it. This then creates a newer version with your updates applied. Let\u0026rsquo;s take the above pre-packaged http server as an example.\nWe are going to place a simple Hello World index page into the image to display when you access the URL\nTo do this, we create a Dockerfile. this file tells the docker build process what to do. So in our case, we are going to say where the original docker image should come FROM and then COPY in our new index file:\n cat Dockerfile\n FROM registry.access.redhat.com/rhscl/httpd-24-rhel7 COPY index.html /opt/rh/httpd24/root/var/www/html/  cat index.html\n \u0026lt;P\u0026gt;Hello world Once we have our Dockerfile in place, we tell docker to build our image, and give it a new name:\n docker build -t new_http_image .\n Sending build context to Docker daemon 3.072 kB Step 1 : FROM registry.access.redhat.com/rhscl/httpd-24-rhel7 ---\u0026gt; 6bf22bf8b187 Step 2 : COPY index.html /opt/rh/httpd24/root/var/www/html/ ---\u0026gt; d23ebab73188 Removing intermediate container 625cd8470385 Successfully built d23ebab73188 Now that we have our new image, we can execute it:\n docker run -p 8080:8080 new_http_image\n Now navigate to your machines hostname/ip and use port 8080 and voila:\nAs we use Open Shift to deploy docker containers in CYB, please refer to the\nOpenShift OpenShift Documentation  for how to deploy a docker image in OpenShift\nReferences Docker.com  Docker on Wikipedia  "
+},
+{
 	"uri": "https://gwtharg.github.io/28mm/paas/openshift/",
 	"title": "OpenShift Container Platform",
 	"tags": ["docker", "openshift", "kubernetes"],
@@ -60,7 +74,7 @@
 	"title": "Paas",
 	"tags": ["openshift"],
 	"description": "",
-	"content": "Training Notes  OpenShift Container Platform   Platform Engineering Background   "
+	"content": "Training Notes  Docker Automation   What is Docker?   OpenShift Container Platform   Platform Engineering Background   "
 },
 {
 	"uri": "https://gwtharg.github.io/28mm/tfs/",
@@ -77,15 +91,64 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/categories/",
-	"title": "Categories",
+	"uri": "https://gwtharg.github.io/28mm/components/",
+	"title": "Components",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/components/",
-	"title": "Components",
+	"uri": "https://gwtharg.github.io/28mm/authors/cybg/",
+	"title": "cybg",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/docker/",
+	"title": "docker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/components/docker/",
+	"title": "docker",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/gradle/",
+	"title": "gradle",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/logstash/",
+	"title": "logstash",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
+	"title": "openshift",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://gwtharg.github.io/28mm/categories/",
+	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -135,13 +198,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/shortcodes/",
 	"title": "shortcodes",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/",
-	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -217,13 +273,6 @@
 	"content": ""
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/authors/cybg/",
-	"title": "cybg",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/tags/git/",
 	"title": "git",
 	"tags": [],
@@ -280,13 +329,6 @@
 	"content": "date: 2020-04-28T12:04:57+01:00 The html snippet is between our rawhtml shortcode.\n {{ \u0026lt; rawhtml \u0026gt; }} html here {{ \u0026lt; /rawhtml \u0026gt; }}\n   This is embedded html in a markdown file  The href is from localhost in this test   \u0026#x3C;object data=\u0026#x22;/28mm/site_documentation/image/twd.pdf\u0026#x22; type=\u0026#x22;application/pdf\u0026#x22; width=\u0026#x22;800px\u0026#x22; height=\u0026#x22;834px\u0026#x22;\u0026#x3E; \u0026#x3C;embed src=\u0026#x22;/28mm/site_documentation/image/twd.pdf\u0026#x22;\u0026#x3E; \u0026#x3C;p\u0026#x3E;This browser does not support PDFs. Please download the PDF to view it: \u0026#x3C;a href=\u0026#x22;http://localhost/28mm/site_documentation/image/twd.pdf\u0026#x22;\u0026#x3E;Download PDF\u0026#x3C;/a\u0026#x3E;.\u0026#x3C;/p\u0026#x3E; \u0026#x3C;/embed\u0026#x3E; \u0026#x3C;/object\u0026#x3E;   This browser does not support PDFs. Please download the PDF to view it: Download PDF.\n   "
 },
 {
-	"uri": "https://gwtharg.github.io/28mm/tags/openshift/",
-	"title": "openshift",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://gwtharg.github.io/28mm/components/openshift/",
 	"title": "openshift",
 	"tags": [],
@@ -317,13 +359,6 @@
 {
 	"uri": "https://gwtharg.github.io/28mm/tags/visio-convert-help-pdf/",
 	"title": "visio, convert, help, pdf",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://gwtharg.github.io/28mm/tags/docker/",
-	"title": "docker",
 	"tags": [],
 	"description": "",
 	"content": ""
